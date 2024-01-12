@@ -5,10 +5,12 @@ using Adhaar.API.Models.Domain;
 using Adhaar.API.Models.DTO;
 using Adhaar.API.Repositories.Interface;
 using AutoMapper;
+using IronOcr;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using IronOcr;
 
 namespace Adhaar.API.Controllers
 {
@@ -38,7 +40,7 @@ namespace Adhaar.API.Controllers
 
         [HttpGet]
         [Route("{id}")]
-        [Authorize(Roles = "User,Doctor")]
+       //[Authorize(Roles = "User,Admin")]
         public async Task<IActionResult> GetById([FromRoute] string id)
         {
 
@@ -50,7 +52,29 @@ namespace Adhaar.API.Controllers
             }
 
             var userDto = mapper.Map<UserDto>(userDomain);
-            return Ok(userDto);
+
+            bool result = License.IsValidLicense("IRONSUITE.SUNUGUNUS.GMAIL.COM.17184-E3AE17ABDE-AYWB6KC-2WB3DTPND6ZB-6ZUMCAKUWFW3-WUNYOAQLMMJT-YAMXVLVEP36O-VGU2ZJ54UPU2-JX6PVTXS65HP-IMVX6O-TE5YV4XMPPGLUA-DEPLOYMENT.TRIAL-ACBH3K.TRIAL.EXPIRES.11.FEB.2024");
+
+            var ocr = new IronTesseract();
+
+            using (var ocrInput = new OcrInput())
+            {
+                ocrInput.AddImage(@"Images\HAHA.png");
+                ocrInput.AddImage(@"Images\ab.png");
+          
+                ocrInput.EnhanceResolution();
+                ocrInput.DeNoise();
+
+                // Optionally Apply Filters if needed:
+                // ocrInput.Deskew();  // use only if image not straight
+                // ocrInput.DeNoise(); // use only if image contains digital noise
+
+                var ocrResult = ocr.Read(ocrInput);
+                return Ok(ocrResult.Text);
+            }
+
+            return BadRequest();
+          //  return Ok(userDto);
 
         
         }
@@ -129,6 +153,7 @@ namespace Adhaar.API.Controllers
                     if (roles != null)
                     {
                         var jwtToken = tokenRepository.CreateJWTToken(user, roles.ToList());
+                        
                         var response = new LoginResponseDto
                         {
                             Email = loginRequestDto.Username,
@@ -145,6 +170,59 @@ namespace Adhaar.API.Controllers
                 return Ok(loginRequestDto.Username);
             }
             return BadRequest("wrong username or password");
+        }
+
+
+
+        [HttpPost]
+        [Route("Verify")]
+
+
+        public async Task<IActionResult> Verify([FromBody] RegisterUserRequestDto registerRequestDto)
+        {
+
+            var identityUser = new User
+            {
+                UserName = registerRequestDto.Username,
+                Email = registerRequestDto.Username
+            };
+
+            //var identityResult = await userManager.CreateAsync(identityUser, registerRequestDto.Password);
+
+            var identityResult = await userManager.CreateAsync(identityUser, registerRequestDto.Password);
+
+
+            if (identityResult.Succeeded)
+            {
+
+                //Add roles to this User
+                if (registerRequestDto.Roles != null && registerRequestDto.Roles.Any())
+                {
+                    identityResult = await userManager.AddToRolesAsync(identityUser, registerRequestDto.Roles);
+                    if (identityResult.Succeeded)
+                    {
+                        var identity_user = await userRepository.CreateAsync(identityUser);
+                        if (identity_user == null)
+                        {
+
+                            await userManager.DeleteAsync(identityUser);
+
+                            return BadRequest("Oops! something went wrong!");
+                        }
+
+                        var userDTO = mapper.Map<UserDto>(identity_user);
+                        return CreatedAtAction(nameof(GetById), new { id = userDTO.Id }, userDTO);
+
+
+                    }
+                }
+            }
+
+            await userRepository.DeleteAsync(identityUser.Id);
+            await userManager.DeleteAsync(identityUser);
+
+            return BadRequest("Oops! something went wrong!");
+
         }
     }
 }

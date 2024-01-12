@@ -24,13 +24,14 @@ builder.Logging.ClearProviders();
 builder.Logging.AddSerilog(logger);
 
 builder.Services.AddControllers();
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(options =>
 {
     options.SwaggerDoc("v1", new OpenApiInfo
     {
-        Title = "Appointment API",
+        Title = "Adhaar API",
         Version = "v1"
     });
     options.AddSecurityDefinition(JwtBearerDefaults.AuthenticationScheme, new OpenApiSecurityScheme
@@ -102,6 +103,9 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJw
 
     }
     );
+
+
+
 
 
 var app = builder.Build();
