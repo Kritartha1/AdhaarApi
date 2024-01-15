@@ -1,0 +1,236 @@
+2024-01-15 08:51:39.616 +00:00 [INF] User profile is available. Using 'C:\Users\Nath\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-01-15 08:51:40.882 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-15 08:51:40.883 +00:00 [INF] Hosting environment: Development
+2024-01-15 08:51:40.883 +00:00 [INF] Content root path: C:\Users\Nath\source\repos\New folder\New folder (2)\AdhaarApi\Adhaar.API
+2024-01-15 08:51:41.217 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44315/swagger/index.html - -
+2024-01-15 08:51:42.312 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44315/_vs/browserLink - -
+2024-01-15 08:51:42.321 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44315/swagger/index.html - - - 200 - text/html;charset=utf-8 1074.6587ms
+2024-01-15 08:51:42.321 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44315/_framework/aspnetcore-browser-refresh.js - -
+2024-01-15 08:51:42.346 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44315/_framework/aspnetcore-browser-refresh.js - - - 200 13756 application/javascript;+charset=utf-8 24.1800ms
+2024-01-15 08:51:42.840 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44315/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 527.8567ms
+2024-01-15 08:51:42.933 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44315/swagger/v1/swagger.json - -
+2024-01-15 08:51:43.188 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44315/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 253.9557ms
+2024-01-15 08:53:53.503 +00:00 [INF] Request starting HTTP/2 POST https://localhost:44315/api/Auth multipart/form-data;+boundary=----WebKitFormBoundaryWiom0VHAoqzoP3M2 75776
+2024-01-15 08:53:53.510 +00:00 [INF] CORS policy execution successful.
+2024-01-15 08:53:54.140 +00:00 [INF] Executing endpoint 'Adhaar.API.Controllers.AuthController.DoOCR (Adhaar.API)'
+2024-01-15 08:53:54.182 +00:00 [INF] Route matched with {action = "DoOCR", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DoOCR(Adhaar.API.Models.Domain.Image) on controller Adhaar.API.Controllers.AuthController (Adhaar.API).
+2024-01-15 08:53:57.727 +00:00 [INF] Executed action Adhaar.API.Controllers.AuthController.DoOCR (Adhaar.API) in 3539.9851ms
+2024-01-15 08:53:57.731 +00:00 [INF] Executed endpoint 'Adhaar.API.Controllers.AuthController.DoOCR (Adhaar.API)'
+2024-01-15 08:53:57.735 +00:00 [ERR] An unhandled exception has occurred while executing the request.
+System.IO.FileNotFoundException: Could not load OCR input from path 'C:\Users\Nath\source\repos\New folder\New folder (2)\AdhaarApi\Adhaar.API\tessdata'. The file does not exist.
+   at IronSoftware.Logger.LogAndThrow(Exception exception)
+   at IronOcr.OcrInput.Add(String imageFilePath, Rectangle ContentArea, Boolean OnlyImages)
+   at IronOcr.OcrInput.AddImage(String ImagePath)
+   at Adhaar.API.Controllers.AuthController.DoOCR(Image request) in C:\Users\Nath\source\repos\New folder\New folder (2)\AdhaarApi\Adhaar.API\Controllers\AuthController.cs:line 221
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-01-15 08:53:57.925 +00:00 [INF] Request finished HTTP/2 POST https://localhost:44315/api/Auth multipart/form-data;+boundary=----WebKitFormBoundaryWiom0VHAoqzoP3M2 75776 - 500 - text/plain;+charset=utf-8 4423.5954ms
+2024-01-15 08:54:39.460 +00:00 [INF] User profile is available. Using 'C:\Users\Nath\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-01-15 08:54:39.707 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-15 08:54:39.709 +00:00 [INF] Hosting environment: Development
+2024-01-15 08:54:39.709 +00:00 [INF] Content root path: C:\Users\Nath\source\repos\New folder\New folder (2)\AdhaarApi\Adhaar.API
+2024-01-15 08:54:39.767 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44315/swagger/index.html - -
+2024-01-15 08:54:40.286 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44315/_framework/aspnetcore-browser-refresh.js - -
+2024-01-15 08:54:40.295 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44315/_vs/browserLink - -
+2024-01-15 08:54:40.303 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44315/swagger/index.html - - - 200 - text/html;charset=utf-8 535.9613ms
+2024-01-15 08:54:40.303 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44315/_framework/aspnetcore-browser-refresh.js - - - 200 13756 application/javascript;+charset=utf-8 14.3195ms
+2024-01-15 08:54:40.369 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44315/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 74.1994ms
+2024-01-15 08:54:40.645 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44315/swagger/v1/swagger.json - -
+2024-01-15 08:54:40.839 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44315/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 193.3913ms
+2024-01-15 08:55:03.328 +00:00 [INF] Request starting HTTP/2 POST https://localhost:44315/api/Auth multipart/form-data;+boundary=----WebKitFormBoundaryWQbBHM2z5pv2sbRE 75776
+2024-01-15 08:55:03.340 +00:00 [INF] CORS policy execution successful.
+2024-01-15 08:55:03.484 +00:00 [INF] Executing endpoint 'Adhaar.API.Controllers.AuthController.DoOCR (Adhaar.API)'
+2024-01-15 08:55:03.540 +00:00 [INF] Route matched with {action = "DoOCR", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DoOCR(Adhaar.API.Models.Domain.Image) on controller Adhaar.API.Controllers.AuthController (Adhaar.API).
+2024-01-15 08:55:05.951 +00:00 [INF] Executed action Adhaar.API.Controllers.AuthController.DoOCR (Adhaar.API) in 2404.1452ms
+2024-01-15 08:55:05.955 +00:00 [INF] Executed endpoint 'Adhaar.API.Controllers.AuthController.DoOCR (Adhaar.API)'
+2024-01-15 08:55:05.962 +00:00 [ERR] An unhandled exception has occurred while executing the request.
+System.IO.FileNotFoundException: Could not load OCR input from path 'C:\Users\Nath\source\repos\New folder\New folder (2)\AdhaarApi\Adhaar.API\tessdata'. The file does not exist.
+   at IronSoftware.Logger.LogAndThrow(Exception exception)
+   at IronOcr.OcrInput.Add(String imageFilePath, Rectangle ContentArea, Boolean OnlyImages)
+   at IronOcr.OcrInput.AddImage(String ImagePath)
+   at Adhaar.API.Controllers.AuthController.DoOCR(Image request) in C:\Users\Nath\source\repos\New folder\New folder (2)\AdhaarApi\Adhaar.API\Controllers\AuthController.cs:line 221
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-01-15 08:55:06.052 +00:00 [INF] Request finished HTTP/2 POST https://localhost:44315/api/Auth multipart/form-data;+boundary=----WebKitFormBoundaryWQbBHM2z5pv2sbRE 75776 - 500 - text/plain;+charset=utf-8 2724.8895ms
+2024-01-15 09:04:41.978 +00:00 [INF] User profile is available. Using 'C:\Users\Nath\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-01-15 09:04:42.228 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-15 09:04:42.237 +00:00 [INF] Hosting environment: Development
+2024-01-15 09:04:42.238 +00:00 [INF] Content root path: C:\Users\Nath\source\repos\New folder\New folder (2)\AdhaarApi\Adhaar.API
+2024-01-15 09:04:42.277 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44315/swagger/index.html - -
+2024-01-15 09:04:42.761 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44315/swagger/index.html - - - 200 - text/html;charset=utf-8 486.9599ms
+2024-01-15 09:04:42.785 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44315/_framework/aspnetcore-browser-refresh.js - -
+2024-01-15 09:04:42.797 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44315/_framework/aspnetcore-browser-refresh.js - - - 200 13756 application/javascript;+charset=utf-8 7.3864ms
+2024-01-15 09:04:42.822 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44315/_vs/browserLink - -
+2024-01-15 09:04:42.879 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44315/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 57.5972ms
+2024-01-15 09:04:42.976 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44315/swagger/v1/swagger.json - -
+2024-01-15 09:04:43.151 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44315/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 174.8513ms
+2024-01-15 09:05:22.007 +00:00 [INF] User profile is available. Using 'C:\Users\Nath\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-01-15 09:05:22.301 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-15 09:05:22.314 +00:00 [INF] Hosting environment: Development
+2024-01-15 09:05:22.314 +00:00 [INF] Content root path: C:\Users\Nath\source\repos\New folder\New folder (2)\AdhaarApi\Adhaar.API
+2024-01-15 09:05:22.353 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44315/swagger/index.html - -
+2024-01-15 09:05:22.962 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44315/_framework/aspnetcore-browser-refresh.js - -
+2024-01-15 09:05:22.982 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44315/swagger/index.html - - - 200 - text/html;charset=utf-8 630.9699ms
+2024-01-15 09:05:22.987 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44315/_framework/aspnetcore-browser-refresh.js - - - 200 13756 application/javascript;+charset=utf-8 23.8555ms
+2024-01-15 09:05:22.988 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44315/_vs/browserLink - -
+2024-01-15 09:05:23.096 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44315/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 108.6053ms
+2024-01-15 09:05:23.159 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44315/swagger/v1/swagger.json - -
+2024-01-15 09:05:23.429 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44315/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 269.7675ms
+2024-01-15 09:05:47.142 +00:00 [INF] Request starting HTTP/2 POST https://localhost:44315/api/Auth multipart/form-data;+boundary=----WebKitFormBoundaryXUnFeuJGSbCocxSY 75777
+2024-01-15 09:05:47.158 +00:00 [INF] CORS policy execution successful.
+2024-01-15 09:05:47.293 +00:00 [INF] Executing endpoint 'Adhaar.API.Controllers.AuthController.DoOCR (Adhaar.API)'
+2024-01-15 09:05:47.357 +00:00 [INF] Route matched with {action = "DoOCR", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DoOCR(Adhaar.API.Models.Domain.Image) on controller Adhaar.API.Controllers.AuthController (Adhaar.API).
+2024-01-15 09:05:51.955 +00:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-01-15 09:05:51.966 +00:00 [INF] Executed action Adhaar.API.Controllers.AuthController.DoOCR (Adhaar.API) in 4601.7168ms
+2024-01-15 09:05:51.969 +00:00 [INF] Executed endpoint 'Adhaar.API.Controllers.AuthController.DoOCR (Adhaar.API)'
+2024-01-15 09:05:51.976 +00:00 [INF] Request finished HTTP/2 POST https://localhost:44315/api/Auth multipart/form-data;+boundary=----WebKitFormBoundaryXUnFeuJGSbCocxSY 75777 - 200 - text/plain;+charset=utf-8 4833.9105ms
+2024-01-15 09:10:41.040 +00:00 [INF] User profile is available. Using 'C:\Users\Nath\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-01-15 09:10:41.309 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-15 09:10:41.313 +00:00 [INF] Hosting environment: Development
+2024-01-15 09:10:41.313 +00:00 [INF] Content root path: C:\Users\Nath\source\repos\New folder\New folder (2)\AdhaarApi\Adhaar.API
+2024-01-15 09:10:41.364 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44315/swagger/index.html - -
+2024-01-15 09:10:41.830 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44315/swagger/index.html - - - 200 - text/html;charset=utf-8 467.6659ms
+2024-01-15 09:10:41.863 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44315/_framework/aspnetcore-browser-refresh.js - -
+2024-01-15 09:10:41.863 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44315/_vs/browserLink - -
+2024-01-15 09:10:41.920 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44315/_framework/aspnetcore-browser-refresh.js - - - 200 13756 application/javascript;+charset=utf-8 35.9225ms
+2024-01-15 09:10:41.996 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44315/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 132.6081ms
+2024-01-15 09:10:42.066 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44315/swagger/v1/swagger.json - -
+2024-01-15 09:10:42.147 +00:00 [ERR] An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Conflicting method/path combination "POST api/Auth/Register" for actions - Adhaar.API.Controllers.AuthController.Register (Adhaar.API),Adhaar.API.Controllers.AuthController.DoOCR (Adhaar.API). Actions require a unique method/path combination for Swagger/OpenAPI 3.0. Use ConflictingActionsResolver as a workaround
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerDocumentWithoutFilters(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-01-15 09:10:42.204 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44315/swagger/v1/swagger.json - - - 500 - text/plain;+charset=utf-8 137.3258ms
+2024-01-15 09:10:50.673 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44315/swagger/index.html - -
+2024-01-15 09:10:50.682 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44315/swagger/index.html - - - 200 - text/html;charset=utf-8 9.7354ms
+2024-01-15 09:10:50.698 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44315/_framework/aspnetcore-browser-refresh.js - -
+2024-01-15 09:10:50.698 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44315/_vs/browserLink - -
+2024-01-15 09:10:50.702 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44315/_framework/aspnetcore-browser-refresh.js - - - 200 13756 application/javascript;+charset=utf-8 3.9131ms
+2024-01-15 09:10:50.723 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44315/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 24.7228ms
+2024-01-15 09:10:50.833 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44315/swagger/v1/swagger.json - -
+2024-01-15 09:10:50.848 +00:00 [ERR] An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Conflicting method/path combination "POST api/Auth/Register" for actions - Adhaar.API.Controllers.AuthController.Register (Adhaar.API),Adhaar.API.Controllers.AuthController.DoOCR (Adhaar.API). Actions require a unique method/path combination for Swagger/OpenAPI 3.0. Use ConflictingActionsResolver as a workaround
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerDocumentWithoutFilters(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-01-15 09:10:50.860 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44315/swagger/v1/swagger.json - - - 500 - text/plain;+charset=utf-8 26.2718ms
+2024-01-15 09:11:42.610 +00:00 [INF] User profile is available. Using 'C:\Users\Nath\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-01-15 09:11:42.898 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-15 09:11:42.909 +00:00 [INF] Hosting environment: Development
+2024-01-15 09:11:42.909 +00:00 [INF] Content root path: C:\Users\Nath\source\repos\New folder\New folder (2)\AdhaarApi\Adhaar.API
+2024-01-15 09:11:42.950 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44315/swagger/index.html - -
+2024-01-15 09:11:43.477 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44315/_framework/aspnetcore-browser-refresh.js - -
+2024-01-15 09:11:43.489 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44315/_vs/browserLink - -
+2024-01-15 09:11:43.489 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44315/swagger/index.html - - - 200 - text/html;charset=utf-8 510.2185ms
+2024-01-15 09:11:43.495 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44315/_framework/aspnetcore-browser-refresh.js - - - 200 13756 application/javascript;+charset=utf-8 17.4931ms
+2024-01-15 09:11:43.559 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44315/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 70.1065ms
+2024-01-15 09:11:43.642 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44315/swagger/v1/swagger.json - -
+2024-01-15 09:11:43.711 +00:00 [ERR] An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Conflicting method/path combination "POST api/Auth/Register" for actions - Adhaar.API.Controllers.AuthController.Register (Adhaar.API),Adhaar.API.Controllers.AuthController.DoOCR (Adhaar.API). Actions require a unique method/path combination for Swagger/OpenAPI 3.0. Use ConflictingActionsResolver as a workaround
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerDocumentWithoutFilters(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-01-15 09:11:43.759 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44315/swagger/v1/swagger.json - - - 500 - text/plain;+charset=utf-8 116.7256ms
+2024-01-15 09:12:13.497 +00:00 [INF] User profile is available. Using 'C:\Users\Nath\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-01-15 09:12:13.758 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-15 09:12:13.769 +00:00 [INF] Hosting environment: Development
+2024-01-15 09:12:13.769 +00:00 [INF] Content root path: C:\Users\Nath\source\repos\New folder\New folder (2)\AdhaarApi\Adhaar.API
+2024-01-15 09:12:13.808 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44315/swagger/index.html - -
+2024-01-15 09:12:14.370 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44315/swagger/index.html - - - 200 - text/html;charset=utf-8 524.1953ms
+2024-01-15 09:12:14.370 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44315/_framework/aspnetcore-browser-refresh.js - -
+2024-01-15 09:12:14.376 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44315/_vs/browserLink - -
+2024-01-15 09:12:14.383 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44315/_framework/aspnetcore-browser-refresh.js - - - 200 13756 application/javascript;+charset=utf-8 12.1862ms
+2024-01-15 09:12:14.459 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44315/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 83.1810ms
+2024-01-15 09:12:14.526 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44315/swagger/v1/swagger.json - -
+2024-01-15 09:12:14.612 +00:00 [ERR] An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Conflicting method/path combination "POST api/Auth/Register" for actions - Adhaar.API.Controllers.AuthController.Register (Adhaar.API),Adhaar.API.Controllers.AuthController.DoOCR (Adhaar.API). Actions require a unique method/path combination for Swagger/OpenAPI 3.0. Use ConflictingActionsResolver as a workaround
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerDocumentWithoutFilters(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-01-15 09:12:14.664 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44315/swagger/v1/swagger.json - - - 500 - text/plain;+charset=utf-8 137.6493ms
+2024-01-15 09:13:09.755 +00:00 [INF] User profile is available. Using 'C:\Users\Nath\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-01-15 09:13:10.009 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-15 09:13:10.011 +00:00 [INF] Hosting environment: Development
+2024-01-15 09:13:10.012 +00:00 [INF] Content root path: C:\Users\Nath\source\repos\New folder\New folder (2)\AdhaarApi\Adhaar.API
+2024-01-15 09:13:10.066 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44315/swagger/index.html - -
+2024-01-15 09:13:10.607 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44315/swagger/index.html - - - 200 - text/html;charset=utf-8 544.1275ms
+2024-01-15 09:13:10.633 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44315/_vs/browserLink - -
+2024-01-15 09:13:10.633 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44315/_framework/aspnetcore-browser-refresh.js - -
+2024-01-15 09:13:10.641 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44315/_framework/aspnetcore-browser-refresh.js - - - 200 13756 application/javascript;+charset=utf-8 6.2858ms
+2024-01-15 09:13:10.735 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44315/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 101.7998ms
+2024-01-15 09:13:10.817 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44315/swagger/v1/swagger.json - -
+2024-01-15 09:13:11.028 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44315/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 211.0357ms
+2024-01-15 09:13:44.178 +00:00 [INF] Request starting HTTP/2 POST https://localhost:44315/api/Auth/OCR multipart/form-data;+boundary=----WebKitFormBoundaryvqbLozgsKtL7SBm0 75777
+2024-01-15 09:13:44.201 +00:00 [INF] CORS policy execution successful.
+2024-01-15 09:13:44.305 +00:00 [INF] Executing endpoint 'Adhaar.API.Controllers.AuthController.DoOCR (Adhaar.API)'
+2024-01-15 09:13:44.349 +00:00 [INF] Route matched with {action = "DoOCR", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DoOCR(Adhaar.API.Models.Domain.Image) on controller Adhaar.API.Controllers.AuthController (Adhaar.API).
+2024-01-15 09:13:48.079 +00:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-01-15 09:13:48.086 +00:00 [INF] Executed action Adhaar.API.Controllers.AuthController.DoOCR (Adhaar.API) in 3733.1737ms
+2024-01-15 09:13:48.089 +00:00 [INF] Executed endpoint 'Adhaar.API.Controllers.AuthController.DoOCR (Adhaar.API)'
+2024-01-15 09:13:48.098 +00:00 [INF] Request finished HTTP/2 POST https://localhost:44315/api/Auth/OCR multipart/form-data;+boundary=----WebKitFormBoundaryvqbLozgsKtL7SBm0 75777 - 200 - text/plain;+charset=utf-8 3919.5040ms
+2024-01-15 09:13:56.984 +00:00 [INF] Request starting HTTP/2 POST https://localhost:44315/api/Auth/OCR multipart/form-data;+boundary=----WebKitFormBoundaryxApbzue7qYzGSFe9 75778
+2024-01-15 09:13:56.988 +00:00 [INF] CORS policy execution successful.
+2024-01-15 09:13:56.991 +00:00 [INF] Executing endpoint 'Adhaar.API.Controllers.AuthController.DoOCR (Adhaar.API)'
+2024-01-15 09:13:56.991 +00:00 [INF] Route matched with {action = "DoOCR", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DoOCR(Adhaar.API.Models.Domain.Image) on controller Adhaar.API.Controllers.AuthController (Adhaar.API).
+2024-01-15 09:13:58.304 +00:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-01-15 09:13:58.305 +00:00 [INF] Executed action Adhaar.API.Controllers.AuthController.DoOCR (Adhaar.API) in 1313.6679ms
+2024-01-15 09:13:58.306 +00:00 [INF] Executed endpoint 'Adhaar.API.Controllers.AuthController.DoOCR (Adhaar.API)'
+2024-01-15 09:13:58.307 +00:00 [INF] Request finished HTTP/2 POST https://localhost:44315/api/Auth/OCR multipart/form-data;+boundary=----WebKitFormBoundaryxApbzue7qYzGSFe9 75778 - 200 - text/plain;+charset=utf-8 1322.7833ms
+2024-01-15 09:18:32.991 +00:00 [INF] User profile is available. Using 'C:\Users\Nath\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-01-15 09:18:33.245 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-15 09:18:33.257 +00:00 [INF] Hosting environment: Development
+2024-01-15 09:18:33.257 +00:00 [INF] Content root path: C:\Users\Nath\source\repos\New folder\New folder (2)\AdhaarApi\Adhaar.API
+2024-01-15 09:18:33.301 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44315/swagger/index.html - -
+2024-01-15 09:18:33.805 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44315/swagger/index.html - - - 200 - text/html;charset=utf-8 509.5513ms
+2024-01-15 09:18:33.882 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44315/_framework/aspnetcore-browser-refresh.js - -
+2024-01-15 09:18:33.887 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44315/_vs/browserLink - -
+2024-01-15 09:18:33.894 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44315/_framework/aspnetcore-browser-refresh.js - - - 200 13756 application/javascript;+charset=utf-8 11.0128ms
+2024-01-15 09:18:33.960 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44315/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 72.3367ms
+2024-01-15 09:18:34.047 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44315/swagger/v1/swagger.json - -
+2024-01-15 09:18:34.234 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44315/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 187.2622ms
+2024-01-15 09:19:35.271 +00:00 [INF] Request starting HTTP/2 POST https://localhost:44315/api/Auth/OCR multipart/form-data;+boundary=----WebKitFormBoundary7JfPzBJ5Y1MOslyv 975345
+2024-01-15 09:19:35.333 +00:00 [INF] CORS policy execution successful.
+2024-01-15 09:19:35.430 +00:00 [INF] Executing endpoint 'Adhaar.API.Controllers.AuthController.DoOCR (Adhaar.API)'
+2024-01-15 09:19:35.482 +00:00 [INF] Route matched with {action = "DoOCR", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DoOCR(Adhaar.API.Models.Domain.Image) on controller Adhaar.API.Controllers.AuthController (Adhaar.API).
+2024-01-15 09:19:35.990 +00:00 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2024-01-15 09:19:35.999 +00:00 [INF] Executed action Adhaar.API.Controllers.AuthController.DoOCR (Adhaar.API) in 511.9038ms
+2024-01-15 09:19:36.003 +00:00 [INF] Executed endpoint 'Adhaar.API.Controllers.AuthController.DoOCR (Adhaar.API)'
+2024-01-15 09:19:36.016 +00:00 [INF] Request finished HTTP/2 POST https://localhost:44315/api/Auth/OCR multipart/form-data;+boundary=----WebKitFormBoundary7JfPzBJ5Y1MOslyv 975345 - 400 - text/plain;+charset=utf-8 744.7398ms
