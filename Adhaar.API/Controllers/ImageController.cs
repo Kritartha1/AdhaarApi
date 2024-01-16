@@ -55,18 +55,23 @@ namespace Adhaar.API.Controllers
        
 
         [HttpGet]
-        [Route("{id:Guid}")]
+        [Route("{id}")]
         /* [Authorize(Roles = "User,Admin")]*/
-        public async Task<IActionResult> GetById([FromRoute] Guid id)
+        public async Task<IActionResult> GetById([FromRoute] string id)
         {
-
-            var imageDomain = await imageRepository.GetByIdAsync(id);
-            if (imageDomain == null)
+            var userDomain=await userRepository.GetByIdAsync(id);
+            if(userDomain == null)
             {
-                return NotFound();
+                return NotFound("No user found!");
             }
 
-           
+
+
+            var imageDomain = userDomain.Image;
+            if (imageDomain == null)
+            {
+                return NotFound("Not verified");
+            }
             var imageDto = mapper.Map<ImageDto>(imageDomain);
 
 
@@ -111,17 +116,25 @@ namespace Adhaar.API.Controllers
 
             }
             text = text.ToLower();
-           // text = Regex.Replace(text, @"\s", "");
+           
+
             string[] result = Regex.Split(text, @"[\s\p{P}]");
+
+            text = Regex.Replace(text, @"\s+", "");
 
             // Remove empty entries from the resulting array
             result = result.Where(s => !string.IsNullOrWhiteSpace(s)).ToArray();
+
+
+
             foreach (string word in result)
             {
                 logger1.LogInformation(word);
             }
 
-            // logger1.LogInformation(text);
+
+
+            logger1.LogInformation(text);
 
 
 
@@ -134,11 +147,15 @@ namespace Adhaar.API.Controllers
                 )
             {*/
 
+           /*  && result.Contains(imageDomainModel.FirstName.ToLower())
+                && result.Contains(imageDomainModel.LastName.ToLower())*/
+
             if (result.Contains(imageDomainModel.Address.ToLower())
                 && result.Contains(imageDomainModel.State.ToLower())
                 && result.Contains(imageDomainModel.District.ToLower())
                 
-                && result.Contains(imageDomainModel.UID)
+
+                && text.Contains(imageDomainModel.UID)
                 )
                 {
                     var userDomainModel = await userRepository.UpdateAsync(id,
@@ -156,15 +173,6 @@ namespace Adhaar.API.Controllers
             return BadRequest("Details didn't match");
             
            
-
-            
-            
-
-
-
-            //if doOCR is true then verify user 
-            //else delete the addimage and throw an error
-
 
 
             /*var imageDTO = mapper.Map<ImageDto>(imageDomainModel);
@@ -217,5 +225,11 @@ namespace Adhaar.API.Controllers
             return Ok(imageDto);
         }
 
+       
+
     }
+
+
+
+    
 }

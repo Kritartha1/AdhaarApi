@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Adhaar.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+930bc96a087036255f3bff68edc9a896621e4240")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d504387c5af6a1fedcb68f859c80448df7c1d9d3")]
 [assembly: System.Reflection.AssemblyProductAttribute("Adhaar.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Adhaar.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
