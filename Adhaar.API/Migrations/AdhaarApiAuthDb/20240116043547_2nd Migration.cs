@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Adhaar.API.Migrations.AdhaarApiAuthDb
 {
     /// <inheritdoc />
-    public partial class Initialmigration : Migration
+    public partial class _2ndMigration : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

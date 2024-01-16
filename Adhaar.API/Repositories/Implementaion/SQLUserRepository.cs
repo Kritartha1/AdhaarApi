@@ -36,14 +36,14 @@ namespace Adhaar.API.Repositories.Implementaion
 
         public async Task<List<User>> GetAllAsync()
         {
-            return await dbContext.Users.ToListAsync();
+            return await dbContext.Users.Include(a=>a.Image).ToListAsync();
         }
 
         //public async Task<User?> GetByIdAsync(Guid id)
         public async Task<User?> GetByIdAsync(string id)
         {
             //return await dbContext.Users.FirstOrDefaultAsync(x => x.Id.Trim().Equals(id, StringComparison.OrdinalIgnoreCase));
-            return await dbContext.Users.FirstOrDefaultAsync(x => (x.Id).Equals(id));
+            return await dbContext.Users.Include(a=>a.Image).FirstOrDefaultAsync(x => (x.Id).Equals(id));
 
         }
 
@@ -58,10 +58,9 @@ namespace Adhaar.API.Repositories.Implementaion
             existingUser.Email = user.Email == null ? existingUser.Email : user.Email;
             existingUser.PhoneNumber = user.PhoneNumber == null ? existingUser.PhoneNumber : user.PhoneNumber;
             existingUser.PasswordHash = user.PasswordHash == null ? existingUser.PasswordHash : user.PasswordHash;
-            existingUser.FirstName = user.FirstName == null ? existingUser.FirstName : user.FirstName;
-            existingUser.FirstName = user.LastName == null ? existingUser.LastName : user.LastName;
-
-            existingUser.Age = user.Age == 0 ? existingUser.Age : user.Age;
+            existingUser.ImageId=user.ImageId==null ? existingUser.ImageId : user.ImageId;
+            existingUser.Image=user.Image==null ? existingUser.Image : user.Image;
+           
             
 
 

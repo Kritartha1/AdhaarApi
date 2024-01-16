@@ -196,9 +196,10 @@ namespace Adhaar.API.Controllers
        
 
         [HttpPost]
-        [Route("OCR")]
-        public async Task<IActionResult> DoOCR([FromForm] Models.Domain.Image request)
+        [Route("OCR/{id}")]
+        public async Task<IActionResult> DoOCR([FromRoute] string id,[FromForm] ImageAd request)
         {
+            //here id is user id
             try
             {
                 // Validate if the request contains a file
@@ -242,6 +243,8 @@ namespace Adhaar.API.Controllers
                     ocrInput.DeNoise();
 
                     var ocrResult = ocr.Read(ocrInput);
+
+                    //if details match then add the image domain model to the user and return Ok(Image)
                     
                     return Ok(ocrResult.Text);
                 }

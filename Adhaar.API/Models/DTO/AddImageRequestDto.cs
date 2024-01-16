@@ -1,36 +1,30 @@
-﻿using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.DataAnnotations;
 
 namespace Adhaar.API.Models.DTO
 {
-    public class VerifyUserDto
+    public class AddImageRequestDto
     {
-
-
-        [DataType(DataType.EmailAddress)]
-        public string UserName { get; set; }
-
         public string FirstName { get; set; }
 
         public string LastName { get; set; }
 
         public string Address { get; set; }
 
-        public string? Age { get; set; }
+        public int Age { get; set; }
 
-
+        [DataType(DataType.PhoneNumber)]
         public string Phone { get; set; }
 
-        public string? Locality { get; set; }
+        public string Locality { get; set; }
 
-        public string? District { get; set; }
+        public string District { get; set; }
 
         public string State { get; set; }
+
 
         public string UID { get; set; }
 
         public IFormFile File { get; set; }
-
-
     }
 }

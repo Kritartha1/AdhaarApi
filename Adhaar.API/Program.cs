@@ -70,6 +70,7 @@ options.UseSqlServer(builder.Configuration.GetConnectionString("AdhaarConnection
 
 builder.Services.AddScoped<IUserRepository, SQLUserRepository>();
 builder.Services.AddScoped<ITokenRepository, TokenRepository>();
+builder.Services.AddScoped<IImageRepository,ImageRepository>();
 
 
 builder.Services.AddAutoMapper(typeof(AutoMapperprofiles));

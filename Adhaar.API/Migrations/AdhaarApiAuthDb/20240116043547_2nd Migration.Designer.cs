@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Adhaar.API.Migrations.AdhaarApiAuthDb
 {
     [DbContext(typeof(AdhaarApiAuthDbContext))]
-    [Migration("20240112050249_Initial migration")]
-    partial class Initialmigration
+    [Migration("20240116043547_2nd Migration")]
+    partial class _2ndMigration
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
