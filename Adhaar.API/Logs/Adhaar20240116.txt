@@ -2022,3 +2022,93 @@ WHERE [u].[Id] = @__id_0
 2024-01-16 09:02:38.102 +00:00 [INF] Executed action Adhaar.API.Controllers.ImageController.GetById (Adhaar.API) in 64.0591ms
 2024-01-16 09:02:38.104 +00:00 [INF] Executed endpoint 'Adhaar.API.Controllers.ImageController.GetById (Adhaar.API)'
 2024-01-16 09:02:38.107 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7006/api/Image/3deec526-856f-43d1-9d31-4bff9d6e429a - - - 404 - text/plain;+charset=utf-8 80.0065ms
+2024-01-16 09:47:25.874 +00:00 [INF] User profile is available. Using 'C:\Users\Nath\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-01-16 09:47:26.321 +00:00 [INF] Now listening on: https://localhost:7006
+2024-01-16 09:47:26.323 +00:00 [INF] Now listening on: http://localhost:5123
+2024-01-16 09:47:26.327 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-16 09:47:26.329 +00:00 [INF] Hosting environment: Development
+2024-01-16 09:47:26.330 +00:00 [INF] Content root path: C:\Users\Nath\source\repos\New folder\New folder (2)\AdhaarApi\Adhaar.API
+2024-01-16 09:47:27.549 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7006/swagger/index.html - -
+2024-01-16 09:47:28.074 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7006/swagger/index.html - - - 200 - text/html;charset=utf-8 529.9898ms
+2024-01-16 09:47:28.104 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7006/_framework/aspnetcore-browser-refresh.js - -
+2024-01-16 09:47:28.104 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7006/_vs/browserLink - -
+2024-01-16 09:47:28.119 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7006/_framework/aspnetcore-browser-refresh.js - - - 200 13756 application/javascript;+charset=utf-8 15.1582ms
+2024-01-16 09:47:28.202 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7006/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 97.4082ms
+2024-01-16 09:47:28.281 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7006/swagger/v1/swagger.json - -
+2024-01-16 09:47:28.497 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7006/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 216.4228ms
+2024-01-16 09:48:22.412 +00:00 [INF] User profile is available. Using 'C:\Users\Nath\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-01-16 09:48:22.835 +00:00 [INF] Now listening on: https://localhost:7006
+2024-01-16 09:48:22.839 +00:00 [INF] Now listening on: http://localhost:5123
+2024-01-16 09:48:22.851 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-16 09:48:22.853 +00:00 [INF] Hosting environment: Development
+2024-01-16 09:48:22.854 +00:00 [INF] Content root path: C:\Users\Nath\source\repos\New folder\New folder (2)\AdhaarApi\Adhaar.API
+2024-01-16 09:48:23.269 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7006/swagger/index.html - -
+2024-01-16 09:48:23.725 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7006/swagger/index.html - - - 200 - text/html;charset=utf-8 460.7453ms
+2024-01-16 09:48:23.745 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7006/_vs/browserLink - -
+2024-01-16 09:48:23.745 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7006/_framework/aspnetcore-browser-refresh.js - -
+2024-01-16 09:48:23.765 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7006/_framework/aspnetcore-browser-refresh.js - - - 200 13756 application/javascript;+charset=utf-8 19.1705ms
+2024-01-16 09:48:23.831 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7006/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 85.9582ms
+2024-01-16 09:48:23.910 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7006/swagger/v1/swagger.json - -
+2024-01-16 09:48:24.141 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7006/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 231.1870ms
+2024-01-16 09:48:47.798 +00:00 [INF] Request starting HTTP/2 POST https://localhost:7006/api/Auth/Login application/json 62
+2024-01-16 09:48:47.820 +00:00 [INF] CORS policy execution successful.
+2024-01-16 09:48:47.913 +00:00 [INF] Executing endpoint 'Adhaar.API.Controllers.AuthController.Login (Adhaar.API)'
+2024-01-16 09:48:47.951 +00:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Adhaar.API.Models.DTO.LoginRequestDto) on controller Adhaar.API.Controllers.AuthController (Adhaar.API).
+2024-01-16 09:48:49.975 +00:00 [INF] Executed DbCommand (78ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2024-01-16 09:48:50.328 +00:00 [INF] Executed DbCommand (11ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2024-01-16 09:48:50.434 +00:00 [INF] Executing OkObjectResult, writing value of type 'Adhaar.API.Models.DTO.LoginResponseDto'.
+2024-01-16 09:48:50.459 +00:00 [INF] Executed action Adhaar.API.Controllers.AuthController.Login (Adhaar.API) in 2493.9356ms
+2024-01-16 09:48:50.462 +00:00 [INF] Executed endpoint 'Adhaar.API.Controllers.AuthController.Login (Adhaar.API)'
+2024-01-16 09:48:50.473 +00:00 [INF] Request finished HTTP/2 POST https://localhost:7006/api/Auth/Login application/json 62 - 200 - application/json;+charset=utf-8 2675.9625ms
+2024-01-16 10:00:44.377 +00:00 [INF] Request starting HTTP/2 POST https://localhost:7006/api/Auth/Register application/json 89
+2024-01-16 10:00:44.386 +00:00 [INF] CORS policy execution successful.
+2024-01-16 10:00:44.389 +00:00 [INF] Executing endpoint 'Adhaar.API.Controllers.AuthController.Register (Adhaar.API)'
+2024-01-16 10:00:44.397 +00:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(Adhaar.API.Models.DTO.RegisterUserRequestDto) on controller Adhaar.API.Controllers.AuthController (Adhaar.API).
+2024-01-16 10:00:44.644 +00:00 [INF] Executed DbCommand (10ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-01-16 10:00:44.832 +00:00 [INF] Executed DbCommand (6ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (DbType = Int32), @p2='?' (Size = 4000), @p3='?' (Size = 256), @p4='?' (DbType = Boolean), @p5='?' (DbType = Boolean), @p6='?' (DbType = DateTimeOffset), @p7='?' (Size = 256), @p8='?' (Size = 256), @p9='?' (Size = 4000), @p10='?' (Size = 4000), @p11='?' (DbType = Boolean), @p12='?' (Size = 4000), @p13='?' (DbType = Boolean), @p14='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AspNetUsers] ([Id], [AccessFailedCount], [ConcurrencyStamp], [Email], [EmailConfirmed], [LockoutEnabled], [LockoutEnd], [NormalizedEmail], [NormalizedUserName], [PasswordHash], [PhoneNumber], [PhoneNumberConfirmed], [SecurityStamp], [TwoFactorEnabled], [UserName])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14);
+2024-01-16 10:00:44.872 +00:00 [INF] Executed DbCommand (4ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2024-01-16 10:00:44.932 +00:00 [INF] Executed DbCommand (3ms) [Parameters=[@__p_0='?' (Size = 450), @__p_1='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[UserId], [a].[RoleId]
+FROM [AspNetUserRoles] AS [a]
+WHERE [a].[UserId] = @__p_0 AND [a].[RoleId] = @__p_1
+2024-01-16 10:00:44.952 +00:00 [INF] Executed DbCommand (5ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2024-01-16 10:00:44.992 +00:00 [INF] Executed DbCommand (5ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-01-16 10:00:45.087 +00:00 [INF] Executed DbCommand (20ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (Size = 450), @p16='?' (Size = 450), @p2='?' (DbType = Int32), @p3='?' (Size = 4000), @p17='?' (Size = 4000), @p4='?' (Size = 256), @p5='?' (DbType = Boolean), @p6='?' (DbType = Boolean), @p7='?' (DbType = DateTimeOffset), @p8='?' (Size = 256), @p9='?' (Size = 256), @p10='?' (Size = 4000), @p11='?' (Size = 4000), @p12='?' (DbType = Boolean), @p13='?' (Size = 4000), @p14='?' (DbType = Boolean), @p15='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AspNetUserRoles] ([RoleId], [UserId])
+VALUES (@p0, @p1);
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p2, [ConcurrencyStamp] = @p3, [Email] = @p4, [EmailConfirmed] = @p5, [LockoutEnabled] = @p6, [LockoutEnd] = @p7, [NormalizedEmail] = @p8, [NormalizedUserName] = @p9, [PasswordHash] = @p10, [PhoneNumber] = @p11, [PhoneNumberConfirmed] = @p12, [SecurityStamp] = @p13, [TwoFactorEnabled] = @p14, [UserName] = @p15
+OUTPUT 1
+WHERE [Id] = @p16 AND [ConcurrencyStamp] = @p17;
+2024-01-16 10:00:45.341 +00:00 [INF] Executed DbCommand (7ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (DbType = Int32), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (DbType = Boolean), @p5='?' (DbType = Guid), @p6='?' (DbType = Boolean), @p7='?' (DbType = DateTimeOffset), @p8='?' (Size = 4000), @p9='?' (Size = 4000), @p10='?' (Size = 4000), @p11='?' (Size = 4000), @p12='?' (DbType = Boolean), @p13='?' (Size = 4000), @p14='?' (DbType = Boolean), @p15='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Users] ([Id], [AccessFailedCount], [ConcurrencyStamp], [Email], [EmailConfirmed], [ImageId], [LockoutEnabled], [LockoutEnd], [NormalizedEmail], [NormalizedUserName], [PasswordHash], [PhoneNumber], [PhoneNumberConfirmed], [SecurityStamp], [TwoFactorEnabled], [UserName])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15);
+2024-01-16 10:00:45.361 +00:00 [INF] Executing CreatedAtActionResult, writing value of type 'Adhaar.API.Models.DTO.UserDto'.
+2024-01-16 10:00:45.414 +00:00 [INF] Executed action Adhaar.API.Controllers.AuthController.Register (Adhaar.API) in 1013.4875ms
+2024-01-16 10:00:45.416 +00:00 [INF] Executed endpoint 'Adhaar.API.Controllers.AuthController.Register (Adhaar.API)'
+2024-01-16 10:00:45.419 +00:00 [INF] Request finished HTTP/2 POST https://localhost:7006/api/Auth/Register application/json 89 - 201 - application/json;+charset=utf-8 1041.4214ms

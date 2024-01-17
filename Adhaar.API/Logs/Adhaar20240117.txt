@@ -1,0 +1,857 @@
+2024-01-17 04:38:14.497 +00:00 [INF] User profile is available. Using 'C:\Users\Nath\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-01-17 04:38:15.441 +00:00 [INF] Now listening on: https://localhost:7006
+2024-01-17 04:38:15.442 +00:00 [INF] Now listening on: http://localhost:5123
+2024-01-17 04:38:15.446 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-17 04:38:15.448 +00:00 [INF] Hosting environment: Development
+2024-01-17 04:38:15.449 +00:00 [INF] Content root path: C:\Users\Nath\source\repos\New folder\New folder (2)\AdhaarApi\Adhaar.API
+2024-01-17 04:38:17.548 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7006/swagger/index.html - -
+2024-01-17 04:38:18.309 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7006/swagger/index.html - - - 200 - text/html;charset=utf-8 766.0538ms
+2024-01-17 04:38:18.318 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7006/_vs/browserLink - -
+2024-01-17 04:38:18.318 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7006/_framework/aspnetcore-browser-refresh.js - -
+2024-01-17 04:38:18.354 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7006/_framework/aspnetcore-browser-refresh.js - - - 200 13756 application/javascript;+charset=utf-8 35.6167ms
+2024-01-17 04:38:18.429 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7006/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 111.2821ms
+2024-01-17 04:38:18.577 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7006/swagger/v1/swagger.json - -
+2024-01-17 04:38:18.954 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7006/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 377.3555ms
+2024-01-17 04:39:57.105 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7006/api/Image/98de4d95-6bca-43c3-b5aa-99b09c4f9907 - -
+2024-01-17 04:39:57.280 +00:00 [INF] Executing endpoint 'Adhaar.API.Controllers.ImageController.GetById (Adhaar.API)'
+2024-01-17 04:39:57.321 +00:00 [INF] Route matched with {action = "GetById", controller = "Image"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetById(System.String) on controller Adhaar.API.Controllers.ImageController (Adhaar.API).
+2024-01-17 04:39:59.872 +00:00 [INF] Executed DbCommand (70ms) [Parameters=[@__id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[ImageId], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName], [i].[Id], [i].[Address], [i].[Age], [i].[District], [i].[FirstName], [i].[LastName], [i].[Locality], [i].[Phone], [i].[State], [i].[UID]
+FROM [Users] AS [u]
+LEFT JOIN [Images] AS [i] ON [u].[ImageId] = [i].[Id]
+WHERE [u].[Id] = @__id_0
+2024-01-17 04:40:00.089 +00:00 [INF] Executing OkObjectResult, writing value of type 'Adhaar.API.Models.DTO.ImageDto'.
+2024-01-17 04:40:00.127 +00:00 [INF] Executed action Adhaar.API.Controllers.ImageController.GetById (Adhaar.API) in 2797.7532ms
+2024-01-17 04:40:00.130 +00:00 [INF] Executed endpoint 'Adhaar.API.Controllers.ImageController.GetById (Adhaar.API)'
+2024-01-17 04:40:00.146 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7006/api/Image/98de4d95-6bca-43c3-b5aa-99b09c4f9907 - - - 200 - application/json;+charset=utf-8 3041.0705ms
+2024-01-17 04:40:27.713 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7006/api/Auth/98de4d95-6bca-43c3-b5aa-99b09c4f9907 - -
+2024-01-17 04:40:27.730 +00:00 [INF] Executing endpoint 'Adhaar.API.Controllers.AuthController.GetById (Adhaar.API)'
+2024-01-17 04:40:27.740 +00:00 [INF] Route matched with {action = "GetById", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetById(System.String) on controller Adhaar.API.Controllers.AuthController (Adhaar.API).
+2024-01-17 04:40:27.787 +00:00 [INF] Executed DbCommand (6ms) [Parameters=[@__id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[ImageId], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName], [i].[Id], [i].[Address], [i].[Age], [i].[District], [i].[FirstName], [i].[LastName], [i].[Locality], [i].[Phone], [i].[State], [i].[UID]
+FROM [Users] AS [u]
+LEFT JOIN [Images] AS [i] ON [u].[ImageId] = [i].[Id]
+WHERE [u].[Id] = @__id_0
+2024-01-17 04:40:27.800 +00:00 [INF] Executing OkObjectResult, writing value of type 'Adhaar.API.Models.DTO.UserDto'.
+2024-01-17 04:40:27.815 +00:00 [INF] Executed action Adhaar.API.Controllers.AuthController.GetById (Adhaar.API) in 72.1187ms
+2024-01-17 04:40:27.817 +00:00 [INF] Executed endpoint 'Adhaar.API.Controllers.AuthController.GetById (Adhaar.API)'
+2024-01-17 04:40:27.819 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7006/api/Auth/98de4d95-6bca-43c3-b5aa-99b09c4f9907 - - - 200 - application/json;+charset=utf-8 106.1982ms
+2024-01-17 04:59:33.514 +00:00 [INF] Request starting HTTP/2 POST https://localhost:7006/api/Auth/Register application/json 93
+2024-01-17 04:59:33.530 +00:00 [INF] CORS policy execution successful.
+2024-01-17 04:59:33.535 +00:00 [INF] Executing endpoint 'Adhaar.API.Controllers.AuthController.Register (Adhaar.API)'
+2024-01-17 04:59:33.540 +00:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(Adhaar.API.Models.DTO.RegisterUserRequestDto) on controller Adhaar.API.Controllers.AuthController (Adhaar.API).
+2024-01-17 04:59:33.966 +00:00 [INF] Executed DbCommand (15ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-01-17 04:59:34.153 +00:00 [INF] Executed DbCommand (10ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (DbType = Int32), @p2='?' (Size = 4000), @p3='?' (Size = 256), @p4='?' (DbType = Boolean), @p5='?' (DbType = Boolean), @p6='?' (DbType = DateTimeOffset), @p7='?' (Size = 256), @p8='?' (Size = 256), @p9='?' (Size = 4000), @p10='?' (Size = 4000), @p11='?' (DbType = Boolean), @p12='?' (Size = 4000), @p13='?' (DbType = Boolean), @p14='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AspNetUsers] ([Id], [AccessFailedCount], [ConcurrencyStamp], [Email], [EmailConfirmed], [LockoutEnabled], [LockoutEnd], [NormalizedEmail], [NormalizedUserName], [PasswordHash], [PhoneNumber], [PhoneNumberConfirmed], [SecurityStamp], [TwoFactorEnabled], [UserName])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14);
+2024-01-17 04:59:34.193 +00:00 [INF] Executed DbCommand (13ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2024-01-17 04:59:34.237 +00:00 [INF] Executed DbCommand (5ms) [Parameters=[@__p_0='?' (Size = 450), @__p_1='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[UserId], [a].[RoleId]
+FROM [AspNetUserRoles] AS [a]
+WHERE [a].[UserId] = @__p_0 AND [a].[RoleId] = @__p_1
+2024-01-17 04:59:34.246 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2024-01-17 04:59:34.265 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-01-17 04:59:34.324 +00:00 [INF] Executed DbCommand (10ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (Size = 450), @p16='?' (Size = 450), @p2='?' (DbType = Int32), @p3='?' (Size = 4000), @p17='?' (Size = 4000), @p4='?' (Size = 256), @p5='?' (DbType = Boolean), @p6='?' (DbType = Boolean), @p7='?' (DbType = DateTimeOffset), @p8='?' (Size = 256), @p9='?' (Size = 256), @p10='?' (Size = 4000), @p11='?' (Size = 4000), @p12='?' (DbType = Boolean), @p13='?' (Size = 4000), @p14='?' (DbType = Boolean), @p15='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AspNetUserRoles] ([RoleId], [UserId])
+VALUES (@p0, @p1);
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p2, [ConcurrencyStamp] = @p3, [Email] = @p4, [EmailConfirmed] = @p5, [LockoutEnabled] = @p6, [LockoutEnd] = @p7, [NormalizedEmail] = @p8, [NormalizedUserName] = @p9, [PasswordHash] = @p10, [PhoneNumber] = @p11, [PhoneNumberConfirmed] = @p12, [SecurityStamp] = @p13, [TwoFactorEnabled] = @p14, [UserName] = @p15
+OUTPUT 1
+WHERE [Id] = @p16 AND [ConcurrencyStamp] = @p17;
+2024-01-17 04:59:34.379 +00:00 [INF] Executed DbCommand (9ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (DbType = Int32), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (DbType = Boolean), @p5='?' (DbType = Guid), @p6='?' (DbType = Boolean), @p7='?' (DbType = DateTimeOffset), @p8='?' (Size = 4000), @p9='?' (Size = 4000), @p10='?' (Size = 4000), @p11='?' (Size = 4000), @p12='?' (DbType = Boolean), @p13='?' (Size = 4000), @p14='?' (DbType = Boolean), @p15='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Users] ([Id], [AccessFailedCount], [ConcurrencyStamp], [Email], [EmailConfirmed], [ImageId], [LockoutEnabled], [LockoutEnd], [NormalizedEmail], [NormalizedUserName], [PasswordHash], [PhoneNumber], [PhoneNumberConfirmed], [SecurityStamp], [TwoFactorEnabled], [UserName])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15);
+2024-01-17 04:59:34.385 +00:00 [INF] Executing CreatedAtActionResult, writing value of type 'Adhaar.API.Models.DTO.UserDto'.
+2024-01-17 04:59:34.414 +00:00 [INF] Executed action Adhaar.API.Controllers.AuthController.Register (Adhaar.API) in 870.5118ms
+2024-01-17 04:59:34.415 +00:00 [INF] Executed endpoint 'Adhaar.API.Controllers.AuthController.Register (Adhaar.API)'
+2024-01-17 04:59:34.417 +00:00 [INF] Request finished HTTP/2 POST https://localhost:7006/api/Auth/Register application/json 93 - 201 - application/json;+charset=utf-8 903.5370ms
+2024-01-17 05:16:29.214 +00:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7006/api/Auth/Register - -
+2024-01-17 05:16:29.216 +00:00 [INF] CORS policy execution successful.
+2024-01-17 05:16:29.220 +00:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7006/api/Auth/Register - - - 204 - - 7.0781ms
+2024-01-17 05:16:29.224 +00:00 [INF] Request starting HTTP/2 POST https://localhost:7006/api/Auth/Register application/json 73
+2024-01-17 05:16:29.225 +00:00 [INF] CORS policy execution successful.
+2024-01-17 05:16:29.226 +00:00 [INF] Executing endpoint 'Adhaar.API.Controllers.AuthController.Register (Adhaar.API)'
+2024-01-17 05:16:29.228 +00:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(Adhaar.API.Models.DTO.RegisterUserRequestDto) on controller Adhaar.API.Controllers.AuthController (Adhaar.API).
+2024-01-17 05:16:29.381 +00:00 [INF] Executed DbCommand (8ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-01-17 05:16:29.391 +00:00 [INF] Executed DbCommand (4ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (DbType = Int32), @p2='?' (Size = 4000), @p3='?' (Size = 256), @p4='?' (DbType = Boolean), @p5='?' (DbType = Boolean), @p6='?' (DbType = DateTimeOffset), @p7='?' (Size = 256), @p8='?' (Size = 256), @p9='?' (Size = 4000), @p10='?' (Size = 4000), @p11='?' (DbType = Boolean), @p12='?' (Size = 4000), @p13='?' (DbType = Boolean), @p14='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AspNetUsers] ([Id], [AccessFailedCount], [ConcurrencyStamp], [Email], [EmailConfirmed], [LockoutEnabled], [LockoutEnd], [NormalizedEmail], [NormalizedUserName], [PasswordHash], [PhoneNumber], [PhoneNumberConfirmed], [SecurityStamp], [TwoFactorEnabled], [UserName])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14);
+2024-01-17 05:16:29.400 +00:00 [INF] Executed DbCommand (4ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2024-01-17 05:16:29.409 +00:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (Size = 450), @__p_1='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[UserId], [a].[RoleId]
+FROM [AspNetUserRoles] AS [a]
+WHERE [a].[UserId] = @__p_0 AND [a].[RoleId] = @__p_1
+2024-01-17 05:16:29.413 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2024-01-17 05:16:29.418 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-01-17 05:16:29.446 +00:00 [INF] Executed DbCommand (20ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (Size = 450), @p16='?' (Size = 450), @p2='?' (DbType = Int32), @p3='?' (Size = 4000), @p17='?' (Size = 4000), @p4='?' (Size = 256), @p5='?' (DbType = Boolean), @p6='?' (DbType = Boolean), @p7='?' (DbType = DateTimeOffset), @p8='?' (Size = 256), @p9='?' (Size = 256), @p10='?' (Size = 4000), @p11='?' (Size = 4000), @p12='?' (DbType = Boolean), @p13='?' (Size = 4000), @p14='?' (DbType = Boolean), @p15='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AspNetUserRoles] ([RoleId], [UserId])
+VALUES (@p0, @p1);
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p2, [ConcurrencyStamp] = @p3, [Email] = @p4, [EmailConfirmed] = @p5, [LockoutEnabled] = @p6, [LockoutEnd] = @p7, [NormalizedEmail] = @p8, [NormalizedUserName] = @p9, [PasswordHash] = @p10, [PhoneNumber] = @p11, [PhoneNumberConfirmed] = @p12, [SecurityStamp] = @p13, [TwoFactorEnabled] = @p14, [UserName] = @p15
+OUTPUT 1
+WHERE [Id] = @p16 AND [ConcurrencyStamp] = @p17;
+2024-01-17 05:16:29.458 +00:00 [INF] Executed DbCommand (6ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (DbType = Int32), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (DbType = Boolean), @p5='?' (DbType = Guid), @p6='?' (DbType = Boolean), @p7='?' (DbType = DateTimeOffset), @p8='?' (Size = 4000), @p9='?' (Size = 4000), @p10='?' (Size = 4000), @p11='?' (Size = 4000), @p12='?' (DbType = Boolean), @p13='?' (Size = 4000), @p14='?' (DbType = Boolean), @p15='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Users] ([Id], [AccessFailedCount], [ConcurrencyStamp], [Email], [EmailConfirmed], [ImageId], [LockoutEnabled], [LockoutEnd], [NormalizedEmail], [NormalizedUserName], [PasswordHash], [PhoneNumber], [PhoneNumberConfirmed], [SecurityStamp], [TwoFactorEnabled], [UserName])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15);
+2024-01-17 05:16:29.463 +00:00 [INF] Executing CreatedAtActionResult, writing value of type 'Adhaar.API.Models.DTO.UserDto'.
+2024-01-17 05:16:29.467 +00:00 [INF] Executed action Adhaar.API.Controllers.AuthController.Register (Adhaar.API) in 236.6295ms
+2024-01-17 05:16:29.470 +00:00 [INF] Executed endpoint 'Adhaar.API.Controllers.AuthController.Register (Adhaar.API)'
+2024-01-17 05:16:29.472 +00:00 [INF] Request finished HTTP/2 POST https://localhost:7006/api/Auth/Register application/json 73 - 201 - application/json;+charset=utf-8 247.8727ms
+2024-01-17 05:17:40.660 +00:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7006/api/Auth/Register - -
+2024-01-17 05:17:40.662 +00:00 [INF] CORS policy execution successful.
+2024-01-17 05:17:40.663 +00:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7006/api/Auth/Register - - - 204 - - 3.8978ms
+2024-01-17 05:17:40.666 +00:00 [INF] Request starting HTTP/2 POST https://localhost:7006/api/Auth/Register application/json 68
+2024-01-17 05:17:40.668 +00:00 [INF] CORS policy execution successful.
+2024-01-17 05:17:40.670 +00:00 [INF] Executing endpoint 'Adhaar.API.Controllers.AuthController.Register (Adhaar.API)'
+2024-01-17 05:17:40.671 +00:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(Adhaar.API.Models.DTO.RegisterUserRequestDto) on controller Adhaar.API.Controllers.AuthController (Adhaar.API).
+2024-01-17 05:17:40.802 +00:00 [INF] Executed DbCommand (6ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-01-17 05:17:40.812 +00:00 [INF] Executed DbCommand (4ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (DbType = Int32), @p2='?' (Size = 4000), @p3='?' (Size = 256), @p4='?' (DbType = Boolean), @p5='?' (DbType = Boolean), @p6='?' (DbType = DateTimeOffset), @p7='?' (Size = 256), @p8='?' (Size = 256), @p9='?' (Size = 4000), @p10='?' (Size = 4000), @p11='?' (DbType = Boolean), @p12='?' (Size = 4000), @p13='?' (DbType = Boolean), @p14='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AspNetUsers] ([Id], [AccessFailedCount], [ConcurrencyStamp], [Email], [EmailConfirmed], [LockoutEnabled], [LockoutEnd], [NormalizedEmail], [NormalizedUserName], [PasswordHash], [PhoneNumber], [PhoneNumberConfirmed], [SecurityStamp], [TwoFactorEnabled], [UserName])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14);
+2024-01-17 05:17:40.820 +00:00 [INF] Executed DbCommand (3ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2024-01-17 05:17:40.827 +00:00 [INF] Executed DbCommand (3ms) [Parameters=[@__p_0='?' (Size = 450), @__p_1='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[UserId], [a].[RoleId]
+FROM [AspNetUserRoles] AS [a]
+WHERE [a].[UserId] = @__p_0 AND [a].[RoleId] = @__p_1
+2024-01-17 05:17:40.831 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2024-01-17 05:17:40.836 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-01-17 05:17:40.850 +00:00 [INF] Executed DbCommand (7ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (Size = 450), @p16='?' (Size = 450), @p2='?' (DbType = Int32), @p3='?' (Size = 4000), @p17='?' (Size = 4000), @p4='?' (Size = 256), @p5='?' (DbType = Boolean), @p6='?' (DbType = Boolean), @p7='?' (DbType = DateTimeOffset), @p8='?' (Size = 256), @p9='?' (Size = 256), @p10='?' (Size = 4000), @p11='?' (Size = 4000), @p12='?' (DbType = Boolean), @p13='?' (Size = 4000), @p14='?' (DbType = Boolean), @p15='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AspNetUserRoles] ([RoleId], [UserId])
+VALUES (@p0, @p1);
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p2, [ConcurrencyStamp] = @p3, [Email] = @p4, [EmailConfirmed] = @p5, [LockoutEnabled] = @p6, [LockoutEnd] = @p7, [NormalizedEmail] = @p8, [NormalizedUserName] = @p9, [PasswordHash] = @p10, [PhoneNumber] = @p11, [PhoneNumberConfirmed] = @p12, [SecurityStamp] = @p13, [TwoFactorEnabled] = @p14, [UserName] = @p15
+OUTPUT 1
+WHERE [Id] = @p16 AND [ConcurrencyStamp] = @p17;
+2024-01-17 05:17:40.860 +00:00 [INF] Executed DbCommand (4ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (DbType = Int32), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (DbType = Boolean), @p5='?' (DbType = Guid), @p6='?' (DbType = Boolean), @p7='?' (DbType = DateTimeOffset), @p8='?' (Size = 4000), @p9='?' (Size = 4000), @p10='?' (Size = 4000), @p11='?' (Size = 4000), @p12='?' (DbType = Boolean), @p13='?' (Size = 4000), @p14='?' (DbType = Boolean), @p15='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Users] ([Id], [AccessFailedCount], [ConcurrencyStamp], [Email], [EmailConfirmed], [ImageId], [LockoutEnabled], [LockoutEnd], [NormalizedEmail], [NormalizedUserName], [PasswordHash], [PhoneNumber], [PhoneNumberConfirmed], [SecurityStamp], [TwoFactorEnabled], [UserName])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15);
+2024-01-17 05:17:40.864 +00:00 [INF] Executing CreatedAtActionResult, writing value of type 'Adhaar.API.Models.DTO.UserDto'.
+2024-01-17 05:17:40.866 +00:00 [INF] Executed action Adhaar.API.Controllers.AuthController.Register (Adhaar.API) in 193.132ms
+2024-01-17 05:17:40.868 +00:00 [INF] Executed endpoint 'Adhaar.API.Controllers.AuthController.Register (Adhaar.API)'
+2024-01-17 05:17:40.870 +00:00 [INF] Request finished HTTP/2 POST https://localhost:7006/api/Auth/Register application/json 68 - 201 - application/json;+charset=utf-8 203.3660ms
+2024-01-17 05:26:49.167 +00:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7006/api/Auth/Login - -
+2024-01-17 05:26:49.170 +00:00 [INF] CORS policy execution successful.
+2024-01-17 05:26:49.172 +00:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7006/api/Auth/Login - - - 204 - - 4.3497ms
+2024-01-17 05:26:49.180 +00:00 [INF] Request starting HTTP/2 POST https://localhost:7006/api/Auth/Login application/json 56
+2024-01-17 05:26:49.191 +00:00 [INF] CORS policy execution successful.
+2024-01-17 05:26:49.192 +00:00 [INF] Executing endpoint 'Adhaar.API.Controllers.AuthController.Login (Adhaar.API)'
+2024-01-17 05:26:49.201 +00:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Adhaar.API.Models.DTO.LoginRequestDto) on controller Adhaar.API.Controllers.AuthController (Adhaar.API).
+2024-01-17 05:26:49.249 +00:00 [INF] Executed DbCommand (10ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2024-01-17 05:26:49.434 +00:00 [INF] Executed DbCommand (8ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2024-01-17 05:26:49.569 +00:00 [INF] Executing OkObjectResult, writing value of type 'Adhaar.API.Models.DTO.LoginResponseDto'.
+2024-01-17 05:26:49.574 +00:00 [INF] Executed action Adhaar.API.Controllers.AuthController.Login (Adhaar.API) in 370.3547ms
+2024-01-17 05:26:49.580 +00:00 [INF] Executed endpoint 'Adhaar.API.Controllers.AuthController.Login (Adhaar.API)'
+2024-01-17 05:26:49.583 +00:00 [INF] Request finished HTTP/2 POST https://localhost:7006/api/Auth/Login application/json 56 - 200 - application/json;+charset=utf-8 402.5747ms
+2024-01-17 05:40:15.415 +00:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7006/api/Auth/Login - -
+2024-01-17 05:40:15.422 +00:00 [INF] CORS policy execution successful.
+2024-01-17 05:40:15.423 +00:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7006/api/Auth/Login - - - 204 - - 8.2196ms
+2024-01-17 05:40:15.425 +00:00 [INF] Request starting HTTP/2 POST https://localhost:7006/api/Auth/Login application/json 56
+2024-01-17 05:40:15.427 +00:00 [INF] CORS policy execution successful.
+2024-01-17 05:40:15.428 +00:00 [INF] Executing endpoint 'Adhaar.API.Controllers.AuthController.Login (Adhaar.API)'
+2024-01-17 05:40:15.429 +00:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Adhaar.API.Models.DTO.LoginRequestDto) on controller Adhaar.API.Controllers.AuthController (Adhaar.API).
+2024-01-17 05:40:15.456 +00:00 [INF] Executed DbCommand (8ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2024-01-17 05:40:15.561 +00:00 [INF] Executed DbCommand (3ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2024-01-17 05:40:15.566 +00:00 [INF] Executing OkObjectResult, writing value of type 'Adhaar.API.Models.DTO.LoginResponseDto'.
+2024-01-17 05:40:15.568 +00:00 [INF] Executed action Adhaar.API.Controllers.AuthController.Login (Adhaar.API) in 136.4279ms
+2024-01-17 05:40:15.570 +00:00 [INF] Executed endpoint 'Adhaar.API.Controllers.AuthController.Login (Adhaar.API)'
+2024-01-17 05:40:15.571 +00:00 [INF] Request finished HTTP/2 POST https://localhost:7006/api/Auth/Login application/json 56 - 200 - application/json;+charset=utf-8 145.9962ms
+2024-01-17 05:47:46.869 +00:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7006/api/Auth/Login - -
+2024-01-17 05:47:46.871 +00:00 [INF] CORS policy execution successful.
+2024-01-17 05:47:46.873 +00:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7006/api/Auth/Login - - - 204 - - 4.6363ms
+2024-01-17 05:47:46.876 +00:00 [INF] Request starting HTTP/2 POST https://localhost:7006/api/Auth/Login application/json 56
+2024-01-17 05:47:46.878 +00:00 [INF] CORS policy execution successful.
+2024-01-17 05:47:46.879 +00:00 [INF] Executing endpoint 'Adhaar.API.Controllers.AuthController.Login (Adhaar.API)'
+2024-01-17 05:47:46.884 +00:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Adhaar.API.Models.DTO.LoginRequestDto) on controller Adhaar.API.Controllers.AuthController (Adhaar.API).
+2024-01-17 05:47:46.910 +00:00 [INF] Executed DbCommand (6ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2024-01-17 05:47:47.038 +00:00 [INF] Executed DbCommand (5ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2024-01-17 05:47:47.043 +00:00 [INF] Executing OkObjectResult, writing value of type 'Adhaar.API.Models.DTO.LoginResponseDto'.
+2024-01-17 05:47:47.046 +00:00 [INF] Executed action Adhaar.API.Controllers.AuthController.Login (Adhaar.API) in 158.0756ms
+2024-01-17 05:47:47.048 +00:00 [INF] Executed endpoint 'Adhaar.API.Controllers.AuthController.Login (Adhaar.API)'
+2024-01-17 05:47:47.050 +00:00 [INF] Request finished HTTP/2 POST https://localhost:7006/api/Auth/Login application/json 56 - 200 - application/json;+charset=utf-8 173.8735ms
+2024-01-17 05:48:15.029 +00:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7006/api/Auth/Login - -
+2024-01-17 05:48:15.037 +00:00 [INF] CORS policy execution successful.
+2024-01-17 05:48:15.039 +00:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7006/api/Auth/Login - - - 204 - - 10.3417ms
+2024-01-17 05:48:15.042 +00:00 [INF] Request starting HTTP/2 POST https://localhost:7006/api/Auth/Login application/json 56
+2024-01-17 05:48:15.043 +00:00 [INF] CORS policy execution successful.
+2024-01-17 05:48:15.044 +00:00 [INF] Executing endpoint 'Adhaar.API.Controllers.AuthController.Login (Adhaar.API)'
+2024-01-17 05:48:15.047 +00:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Adhaar.API.Models.DTO.LoginRequestDto) on controller Adhaar.API.Controllers.AuthController (Adhaar.API).
+2024-01-17 05:48:15.054 +00:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2024-01-17 05:48:15.179 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2024-01-17 05:48:15.183 +00:00 [INF] Executing OkObjectResult, writing value of type 'Adhaar.API.Models.DTO.LoginResponseDto'.
+2024-01-17 05:48:15.186 +00:00 [INF] Executed action Adhaar.API.Controllers.AuthController.Login (Adhaar.API) in 135.4681ms
+2024-01-17 05:48:15.187 +00:00 [INF] Executed endpoint 'Adhaar.API.Controllers.AuthController.Login (Adhaar.API)'
+2024-01-17 05:48:15.189 +00:00 [INF] Request finished HTTP/2 POST https://localhost:7006/api/Auth/Login application/json 56 - 200 - application/json;+charset=utf-8 146.9965ms
+2024-01-17 05:50:24.626 +00:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7006/api/Auth/Register - -
+2024-01-17 05:50:24.634 +00:00 [INF] CORS policy execution successful.
+2024-01-17 05:50:24.636 +00:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7006/api/Auth/Register - - - 204 - - 9.2306ms
+2024-01-17 05:50:24.649 +00:00 [INF] Request starting HTTP/2 POST https://localhost:7006/api/Auth/Register application/json 46
+2024-01-17 05:50:24.655 +00:00 [INF] CORS policy execution successful.
+2024-01-17 05:50:24.656 +00:00 [INF] Executing endpoint 'Adhaar.API.Controllers.AuthController.Register (Adhaar.API)'
+2024-01-17 05:50:24.657 +00:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(Adhaar.API.Models.DTO.RegisterUserRequestDto) on controller Adhaar.API.Controllers.AuthController (Adhaar.API).
+2024-01-17 05:50:24.682 +00:00 [INF] Executed DbCommand (6ms) [Parameters=[@__id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[ImageId], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__id_0
+2024-01-17 05:50:24.713 +00:00 [INF] Executed DbCommand (13ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+DELETE FROM [AspNetUsers]
+OUTPUT 1
+WHERE [Id] = @p0 AND [ConcurrencyStamp] = @p1;
+2024-01-17 05:50:24.872 +00:00 [ERR] An exception occurred in the database while saving changes for context type 'Adhaar.API.Data.AdhaarApiAuthDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateConcurrencyException: The database operation was expected to affect 1 row(s), but actually affected 0 row(s); data may have been modified or deleted since entities were loaded. See http://go.microsoft.com/fwlink/?LinkId=527962 for information on understanding and handling optimistic concurrency exceptions.
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ThrowAggregateUpdateConcurrencyExceptionAsync(RelationalDataReader reader, Int32 commandIndex, Int32 expectedRowsAffected, Int32 rowsAffected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetWithRowsAffectedOnlyAsync(Int32 commandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateConcurrencyException: The database operation was expected to affect 1 row(s), but actually affected 0 row(s); data may have been modified or deleted since entities were loaded. See http://go.microsoft.com/fwlink/?LinkId=527962 for information on understanding and handling optimistic concurrency exceptions.
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ThrowAggregateUpdateConcurrencyExceptionAsync(RelationalDataReader reader, Int32 commandIndex, Int32 expectedRowsAffected, Int32 rowsAffected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetWithRowsAffectedOnlyAsync(Int32 commandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2024-01-17 05:50:24.894 +00:00 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2024-01-17 05:50:24.896 +00:00 [INF] Executed action Adhaar.API.Controllers.AuthController.Register (Adhaar.API) in 236.7926ms
+2024-01-17 05:50:24.898 +00:00 [INF] Executed endpoint 'Adhaar.API.Controllers.AuthController.Register (Adhaar.API)'
+2024-01-17 05:50:24.901 +00:00 [INF] Request finished HTTP/2 POST https://localhost:7006/api/Auth/Register application/json 46 - 400 - text/plain;+charset=utf-8 251.6105ms
+2024-01-17 05:52:25.248 +00:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7006/api/Auth/Register - -
+2024-01-17 05:52:25.255 +00:00 [INF] CORS policy execution successful.
+2024-01-17 05:52:25.256 +00:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7006/api/Auth/Register - - - 204 - - 8.0265ms
+2024-01-17 05:52:25.258 +00:00 [INF] Request starting HTTP/2 POST https://localhost:7006/api/Auth/Register application/json 74
+2024-01-17 05:52:25.260 +00:00 [INF] CORS policy execution successful.
+2024-01-17 05:52:25.262 +00:00 [INF] Executing endpoint 'Adhaar.API.Controllers.AuthController.Register (Adhaar.API)'
+2024-01-17 05:52:25.263 +00:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(Adhaar.API.Models.DTO.RegisterUserRequestDto) on controller Adhaar.API.Controllers.AuthController (Adhaar.API).
+2024-01-17 05:52:25.415 +00:00 [INF] Executed DbCommand (6ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-01-17 05:52:25.425 +00:00 [INF] Executed DbCommand (5ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (DbType = Int32), @p2='?' (Size = 4000), @p3='?' (Size = 256), @p4='?' (DbType = Boolean), @p5='?' (DbType = Boolean), @p6='?' (DbType = DateTimeOffset), @p7='?' (Size = 256), @p8='?' (Size = 256), @p9='?' (Size = 4000), @p10='?' (Size = 4000), @p11='?' (DbType = Boolean), @p12='?' (Size = 4000), @p13='?' (DbType = Boolean), @p14='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AspNetUsers] ([Id], [AccessFailedCount], [ConcurrencyStamp], [Email], [EmailConfirmed], [LockoutEnabled], [LockoutEnd], [NormalizedEmail], [NormalizedUserName], [PasswordHash], [PhoneNumber], [PhoneNumberConfirmed], [SecurityStamp], [TwoFactorEnabled], [UserName])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14);
+2024-01-17 05:52:25.433 +00:00 [INF] Executed DbCommand (4ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2024-01-17 05:52:25.439 +00:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (Size = 450), @__p_1='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[UserId], [a].[RoleId]
+FROM [AspNetUserRoles] AS [a]
+WHERE [a].[UserId] = @__p_0 AND [a].[RoleId] = @__p_1
+2024-01-17 05:52:25.443 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2024-01-17 05:52:25.451 +00:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-01-17 05:52:25.488 +00:00 [INF] Executed DbCommand (23ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (Size = 450), @p16='?' (Size = 450), @p2='?' (DbType = Int32), @p3='?' (Size = 4000), @p17='?' (Size = 4000), @p4='?' (Size = 256), @p5='?' (DbType = Boolean), @p6='?' (DbType = Boolean), @p7='?' (DbType = DateTimeOffset), @p8='?' (Size = 256), @p9='?' (Size = 256), @p10='?' (Size = 4000), @p11='?' (Size = 4000), @p12='?' (DbType = Boolean), @p13='?' (Size = 4000), @p14='?' (DbType = Boolean), @p15='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AspNetUserRoles] ([RoleId], [UserId])
+VALUES (@p0, @p1);
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p2, [ConcurrencyStamp] = @p3, [Email] = @p4, [EmailConfirmed] = @p5, [LockoutEnabled] = @p6, [LockoutEnd] = @p7, [NormalizedEmail] = @p8, [NormalizedUserName] = @p9, [PasswordHash] = @p10, [PhoneNumber] = @p11, [PhoneNumberConfirmed] = @p12, [SecurityStamp] = @p13, [TwoFactorEnabled] = @p14, [UserName] = @p15
+OUTPUT 1
+WHERE [Id] = @p16 AND [ConcurrencyStamp] = @p17;
+2024-01-17 05:52:25.502 +00:00 [INF] Executed DbCommand (5ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (DbType = Int32), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (DbType = Boolean), @p5='?' (DbType = Guid), @p6='?' (DbType = Boolean), @p7='?' (DbType = DateTimeOffset), @p8='?' (Size = 4000), @p9='?' (Size = 4000), @p10='?' (Size = 4000), @p11='?' (Size = 4000), @p12='?' (DbType = Boolean), @p13='?' (Size = 4000), @p14='?' (DbType = Boolean), @p15='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Users] ([Id], [AccessFailedCount], [ConcurrencyStamp], [Email], [EmailConfirmed], [ImageId], [LockoutEnabled], [LockoutEnd], [NormalizedEmail], [NormalizedUserName], [PasswordHash], [PhoneNumber], [PhoneNumberConfirmed], [SecurityStamp], [TwoFactorEnabled], [UserName])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15);
+2024-01-17 05:52:25.506 +00:00 [INF] Executing CreatedAtActionResult, writing value of type 'Adhaar.API.Models.DTO.UserDto'.
+2024-01-17 05:52:25.508 +00:00 [INF] Executed action Adhaar.API.Controllers.AuthController.Register (Adhaar.API) in 242.2557ms
+2024-01-17 05:52:25.515 +00:00 [INF] Executed endpoint 'Adhaar.API.Controllers.AuthController.Register (Adhaar.API)'
+2024-01-17 05:52:25.517 +00:00 [INF] Request finished HTTP/2 POST https://localhost:7006/api/Auth/Register application/json 74 - 201 - application/json;+charset=utf-8 258.8495ms
+2024-01-17 05:52:47.849 +00:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7006/api/Auth/Login - -
+2024-01-17 05:52:47.850 +00:00 [INF] CORS policy execution successful.
+2024-01-17 05:52:47.852 +00:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7006/api/Auth/Login - - - 204 - - 2.9894ms
+2024-01-17 05:52:47.854 +00:00 [INF] Request starting HTTP/2 POST https://localhost:7006/api/Auth/Login application/json 57
+2024-01-17 05:52:47.856 +00:00 [INF] CORS policy execution successful.
+2024-01-17 05:52:47.858 +00:00 [INF] Executing endpoint 'Adhaar.API.Controllers.AuthController.Login (Adhaar.API)'
+2024-01-17 05:52:47.860 +00:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Adhaar.API.Models.DTO.LoginRequestDto) on controller Adhaar.API.Controllers.AuthController (Adhaar.API).
+2024-01-17 05:52:47.868 +00:00 [INF] Executed DbCommand (4ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2024-01-17 05:52:48.001 +00:00 [INF] Executed DbCommand (5ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2024-01-17 05:52:48.005 +00:00 [INF] Executing OkObjectResult, writing value of type 'Adhaar.API.Models.DTO.LoginResponseDto'.
+2024-01-17 05:52:48.008 +00:00 [INF] Executed action Adhaar.API.Controllers.AuthController.Login (Adhaar.API) in 145.1739ms
+2024-01-17 05:52:48.011 +00:00 [INF] Executed endpoint 'Adhaar.API.Controllers.AuthController.Login (Adhaar.API)'
+2024-01-17 05:52:48.013 +00:00 [INF] Request finished HTTP/2 POST https://localhost:7006/api/Auth/Login application/json 57 - 200 - application/json;+charset=utf-8 158.3614ms
+2024-01-17 05:57:51.511 +00:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7006/api/Auth/Register - -
+2024-01-17 05:57:51.513 +00:00 [INF] CORS policy execution successful.
+2024-01-17 05:57:51.515 +00:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7006/api/Auth/Register - - - 204 - - 4.2187ms
+2024-01-17 05:57:51.517 +00:00 [INF] Request starting HTTP/2 POST https://localhost:7006/api/Auth/Register application/json 46
+2024-01-17 05:57:51.524 +00:00 [INF] CORS policy execution successful.
+2024-01-17 05:57:51.525 +00:00 [INF] Executing endpoint 'Adhaar.API.Controllers.AuthController.Register (Adhaar.API)'
+2024-01-17 05:57:51.526 +00:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(Adhaar.API.Models.DTO.RegisterUserRequestDto) on controller Adhaar.API.Controllers.AuthController (Adhaar.API).
+2024-01-17 05:57:51.549 +00:00 [INF] Executed DbCommand (5ms) [Parameters=[@__id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[ImageId], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__id_0
+2024-01-17 05:57:51.568 +00:00 [INF] Executed DbCommand (12ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+DELETE FROM [AspNetUsers]
+OUTPUT 1
+WHERE [Id] = @p0 AND [ConcurrencyStamp] = @p1;
+2024-01-17 05:57:51.575 +00:00 [ERR] An exception occurred in the database while saving changes for context type 'Adhaar.API.Data.AdhaarApiAuthDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateConcurrencyException: The database operation was expected to affect 1 row(s), but actually affected 0 row(s); data may have been modified or deleted since entities were loaded. See http://go.microsoft.com/fwlink/?LinkId=527962 for information on understanding and handling optimistic concurrency exceptions.
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ThrowAggregateUpdateConcurrencyExceptionAsync(RelationalDataReader reader, Int32 commandIndex, Int32 expectedRowsAffected, Int32 rowsAffected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetWithRowsAffectedOnlyAsync(Int32 commandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateConcurrencyException: The database operation was expected to affect 1 row(s), but actually affected 0 row(s); data may have been modified or deleted since entities were loaded. See http://go.microsoft.com/fwlink/?LinkId=527962 for information on understanding and handling optimistic concurrency exceptions.
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ThrowAggregateUpdateConcurrencyExceptionAsync(RelationalDataReader reader, Int32 commandIndex, Int32 expectedRowsAffected, Int32 rowsAffected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetWithRowsAffectedOnlyAsync(Int32 commandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2024-01-17 05:57:51.592 +00:00 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2024-01-17 05:57:51.594 +00:00 [INF] Executed action Adhaar.API.Controllers.AuthController.Register (Adhaar.API) in 65.8796ms
+2024-01-17 05:57:51.597 +00:00 [INF] Executed endpoint 'Adhaar.API.Controllers.AuthController.Register (Adhaar.API)'
+2024-01-17 05:57:51.599 +00:00 [INF] Request finished HTTP/2 POST https://localhost:7006/api/Auth/Register application/json 46 - 400 - text/plain;+charset=utf-8 81.1097ms
+2024-01-17 05:57:55.252 +00:00 [INF] Request starting HTTP/2 POST https://localhost:7006/api/Auth/Register application/json 46
+2024-01-17 05:57:55.253 +00:00 [INF] CORS policy execution successful.
+2024-01-17 05:57:55.254 +00:00 [INF] Executing endpoint 'Adhaar.API.Controllers.AuthController.Register (Adhaar.API)'
+2024-01-17 05:57:55.255 +00:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(Adhaar.API.Models.DTO.RegisterUserRequestDto) on controller Adhaar.API.Controllers.AuthController (Adhaar.API).
+2024-01-17 05:57:55.261 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[ImageId], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__id_0
+2024-01-17 05:57:55.269 +00:00 [INF] Executed DbCommand (3ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+DELETE FROM [AspNetUsers]
+OUTPUT 1
+WHERE [Id] = @p0 AND [ConcurrencyStamp] = @p1;
+2024-01-17 05:57:55.275 +00:00 [ERR] An exception occurred in the database while saving changes for context type 'Adhaar.API.Data.AdhaarApiAuthDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateConcurrencyException: The database operation was expected to affect 1 row(s), but actually affected 0 row(s); data may have been modified or deleted since entities were loaded. See http://go.microsoft.com/fwlink/?LinkId=527962 for information on understanding and handling optimistic concurrency exceptions.
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ThrowAggregateUpdateConcurrencyExceptionAsync(RelationalDataReader reader, Int32 commandIndex, Int32 expectedRowsAffected, Int32 rowsAffected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetWithRowsAffectedOnlyAsync(Int32 commandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateConcurrencyException: The database operation was expected to affect 1 row(s), but actually affected 0 row(s); data may have been modified or deleted since entities were loaded. See http://go.microsoft.com/fwlink/?LinkId=527962 for information on understanding and handling optimistic concurrency exceptions.
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ThrowAggregateUpdateConcurrencyExceptionAsync(RelationalDataReader reader, Int32 commandIndex, Int32 expectedRowsAffected, Int32 rowsAffected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetWithRowsAffectedOnlyAsync(Int32 commandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2024-01-17 05:57:55.293 +00:00 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2024-01-17 05:57:55.294 +00:00 [INF] Executed action Adhaar.API.Controllers.AuthController.Register (Adhaar.API) in 36.7531ms
+2024-01-17 05:57:55.296 +00:00 [INF] Executed endpoint 'Adhaar.API.Controllers.AuthController.Register (Adhaar.API)'
+2024-01-17 05:57:55.298 +00:00 [INF] Request finished HTTP/2 POST https://localhost:7006/api/Auth/Register application/json 46 - 400 - text/plain;+charset=utf-8 46.4239ms
+2024-01-17 05:58:22.978 +00:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7006/api/Auth/Register - -
+2024-01-17 05:58:23.016 +00:00 [INF] CORS policy execution successful.
+2024-01-17 05:58:23.017 +00:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7006/api/Auth/Register - - - 204 - - 39.1692ms
+2024-01-17 05:58:23.021 +00:00 [INF] Request starting HTTP/2 POST https://localhost:7006/api/Auth/Register application/json 46
+2024-01-17 05:58:23.027 +00:00 [INF] CORS policy execution successful.
+2024-01-17 05:58:23.031 +00:00 [INF] Executing endpoint 'Adhaar.API.Controllers.AuthController.Register (Adhaar.API)'
+2024-01-17 05:58:23.032 +00:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(Adhaar.API.Models.DTO.RegisterUserRequestDto) on controller Adhaar.API.Controllers.AuthController (Adhaar.API).
+2024-01-17 05:58:23.039 +00:00 [INF] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[ImageId], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__id_0
+2024-01-17 05:58:23.045 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+DELETE FROM [AspNetUsers]
+OUTPUT 1
+WHERE [Id] = @p0 AND [ConcurrencyStamp] = @p1;
+2024-01-17 05:58:23.052 +00:00 [ERR] An exception occurred in the database while saving changes for context type 'Adhaar.API.Data.AdhaarApiAuthDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateConcurrencyException: The database operation was expected to affect 1 row(s), but actually affected 0 row(s); data may have been modified or deleted since entities were loaded. See http://go.microsoft.com/fwlink/?LinkId=527962 for information on understanding and handling optimistic concurrency exceptions.
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ThrowAggregateUpdateConcurrencyExceptionAsync(RelationalDataReader reader, Int32 commandIndex, Int32 expectedRowsAffected, Int32 rowsAffected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetWithRowsAffectedOnlyAsync(Int32 commandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateConcurrencyException: The database operation was expected to affect 1 row(s), but actually affected 0 row(s); data may have been modified or deleted since entities were loaded. See http://go.microsoft.com/fwlink/?LinkId=527962 for information on understanding and handling optimistic concurrency exceptions.
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ThrowAggregateUpdateConcurrencyExceptionAsync(RelationalDataReader reader, Int32 commandIndex, Int32 expectedRowsAffected, Int32 rowsAffected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetWithRowsAffectedOnlyAsync(Int32 commandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2024-01-17 05:58:23.067 +00:00 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2024-01-17 05:58:23.068 +00:00 [INF] Executed action Adhaar.API.Controllers.AuthController.Register (Adhaar.API) in 34.0884ms
+2024-01-17 05:58:23.070 +00:00 [INF] Executed endpoint 'Adhaar.API.Controllers.AuthController.Register (Adhaar.API)'
+2024-01-17 05:58:23.072 +00:00 [INF] Request finished HTTP/2 POST https://localhost:7006/api/Auth/Register application/json 46 - 400 - text/plain;+charset=utf-8 51.2699ms
+2024-01-17 06:08:27.623 +00:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7006/api/Auth/Login - -
+2024-01-17 06:08:27.631 +00:00 [INF] CORS policy execution successful.
+2024-01-17 06:08:27.632 +00:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7006/api/Auth/Login - - - 204 - - 9.2615ms
+2024-01-17 06:08:27.635 +00:00 [INF] Request starting HTTP/2 POST https://localhost:7006/api/Auth/Login application/json 56
+2024-01-17 06:08:27.636 +00:00 [INF] CORS policy execution successful.
+2024-01-17 06:08:27.637 +00:00 [INF] Executing endpoint 'Adhaar.API.Controllers.AuthController.Login (Adhaar.API)'
+2024-01-17 06:08:27.639 +00:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Adhaar.API.Models.DTO.LoginRequestDto) on controller Adhaar.API.Controllers.AuthController (Adhaar.API).
+2024-01-17 06:08:27.671 +00:00 [INF] Executed DbCommand (12ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2024-01-17 06:08:27.820 +00:00 [INF] Executed DbCommand (5ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2024-01-17 06:08:27.825 +00:00 [INF] Executing OkObjectResult, writing value of type 'Adhaar.API.Models.DTO.LoginResponseDto'.
+2024-01-17 06:08:27.827 +00:00 [INF] Executed action Adhaar.API.Controllers.AuthController.Login (Adhaar.API) in 185.3627ms
+2024-01-17 06:08:27.830 +00:00 [INF] Executed endpoint 'Adhaar.API.Controllers.AuthController.Login (Adhaar.API)'
+2024-01-17 06:08:27.832 +00:00 [INF] Request finished HTTP/2 POST https://localhost:7006/api/Auth/Login application/json 56 - 200 - application/json;+charset=utf-8 197.5676ms
+2024-01-17 06:32:48.314 +00:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7006/api/Auth/Login - -
+2024-01-17 06:32:48.323 +00:00 [INF] CORS policy execution successful.
+2024-01-17 06:32:48.325 +00:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7006/api/Auth/Login - - - 204 - - 10.7785ms
+2024-01-17 06:32:48.327 +00:00 [INF] Request starting HTTP/2 POST https://localhost:7006/api/Auth/Login application/json 51
+2024-01-17 06:32:48.331 +00:00 [INF] CORS policy execution successful.
+2024-01-17 06:32:48.332 +00:00 [INF] Executing endpoint 'Adhaar.API.Controllers.AuthController.Login (Adhaar.API)'
+2024-01-17 06:32:48.333 +00:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Adhaar.API.Models.DTO.LoginRequestDto) on controller Adhaar.API.Controllers.AuthController (Adhaar.API).
+2024-01-17 06:32:48.372 +00:00 [INF] Executed DbCommand (19ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2024-01-17 06:32:48.543 +00:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-01-17 06:32:48.545 +00:00 [INF] Executed action Adhaar.API.Controllers.AuthController.Login (Adhaar.API) in 208.7242ms
+2024-01-17 06:32:48.547 +00:00 [INF] Executed endpoint 'Adhaar.API.Controllers.AuthController.Login (Adhaar.API)'
+2024-01-17 06:32:48.551 +00:00 [INF] Request finished HTTP/2 POST https://localhost:7006/api/Auth/Login application/json 51 - 200 - text/plain;+charset=utf-8 223.5116ms
+2024-01-17 06:33:27.478 +00:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7006/api/Auth/Login - -
+2024-01-17 06:33:27.480 +00:00 [INF] CORS policy execution successful.
+2024-01-17 06:33:27.484 +00:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7006/api/Auth/Login - - - 204 - - 6.0813ms
+2024-01-17 06:33:27.495 +00:00 [INF] Request starting HTTP/2 POST https://localhost:7006/api/Auth/Login application/json 51
+2024-01-17 06:33:27.498 +00:00 [INF] CORS policy execution successful.
+2024-01-17 06:33:27.499 +00:00 [INF] Executing endpoint 'Adhaar.API.Controllers.AuthController.Login (Adhaar.API)'
+2024-01-17 06:33:27.500 +00:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Adhaar.API.Models.DTO.LoginRequestDto) on controller Adhaar.API.Controllers.AuthController (Adhaar.API).
+2024-01-17 06:33:27.507 +00:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2024-01-17 06:33:27.619 +00:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-01-17 06:33:27.620 +00:00 [INF] Executed action Adhaar.API.Controllers.AuthController.Login (Adhaar.API) in 117.825ms
+2024-01-17 06:33:27.623 +00:00 [INF] Executed endpoint 'Adhaar.API.Controllers.AuthController.Login (Adhaar.API)'
+2024-01-17 06:33:27.624 +00:00 [INF] Request finished HTTP/2 POST https://localhost:7006/api/Auth/Login application/json 51 - 200 - text/plain;+charset=utf-8 129.3357ms
+2024-01-17 06:34:32.002 +00:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7006/api/Auth/Login - -
+2024-01-17 06:34:32.005 +00:00 [INF] CORS policy execution successful.
+2024-01-17 06:34:32.006 +00:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7006/api/Auth/Login - - - 204 - - 4.0415ms
+2024-01-17 06:34:32.010 +00:00 [INF] Request starting HTTP/2 POST https://localhost:7006/api/Auth/Login application/json 51
+2024-01-17 06:34:32.011 +00:00 [INF] CORS policy execution successful.
+2024-01-17 06:34:32.012 +00:00 [INF] Executing endpoint 'Adhaar.API.Controllers.AuthController.Login (Adhaar.API)'
+2024-01-17 06:34:32.014 +00:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Adhaar.API.Models.DTO.LoginRequestDto) on controller Adhaar.API.Controllers.AuthController (Adhaar.API).
+2024-01-17 06:34:32.026 +00:00 [INF] Executed DbCommand (8ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2024-01-17 06:34:32.146 +00:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-01-17 06:34:32.149 +00:00 [INF] Executed action Adhaar.API.Controllers.AuthController.Login (Adhaar.API) in 133.0702ms
+2024-01-17 06:34:32.152 +00:00 [INF] Executed endpoint 'Adhaar.API.Controllers.AuthController.Login (Adhaar.API)'
+2024-01-17 06:34:32.153 +00:00 [INF] Request finished HTTP/2 POST https://localhost:7006/api/Auth/Login application/json 51 - 200 - text/plain;+charset=utf-8 143.9539ms
+2024-01-17 06:34:34.492 +00:00 [INF] Request starting HTTP/2 POST https://localhost:7006/api/Auth/Login application/json 51
+2024-01-17 06:34:34.493 +00:00 [INF] CORS policy execution successful.
+2024-01-17 06:34:34.494 +00:00 [INF] Executing endpoint 'Adhaar.API.Controllers.AuthController.Login (Adhaar.API)'
+2024-01-17 06:34:34.496 +00:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Adhaar.API.Models.DTO.LoginRequestDto) on controller Adhaar.API.Controllers.AuthController (Adhaar.API).
+2024-01-17 06:34:34.502 +00:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2024-01-17 06:34:34.634 +00:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-01-17 06:34:34.636 +00:00 [INF] Executed action Adhaar.API.Controllers.AuthController.Login (Adhaar.API) in 136.8878ms
+2024-01-17 06:34:34.637 +00:00 [INF] Executed endpoint 'Adhaar.API.Controllers.AuthController.Login (Adhaar.API)'
+2024-01-17 06:34:34.639 +00:00 [INF] Request finished HTTP/2 POST https://localhost:7006/api/Auth/Login application/json 51 - 200 - text/plain;+charset=utf-8 147.1591ms
+2024-01-17 06:34:47.949 +00:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7006/api/Auth/Login - -
+2024-01-17 06:34:47.952 +00:00 [INF] CORS policy execution successful.
+2024-01-17 06:34:47.953 +00:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7006/api/Auth/Login - - - 204 - - 4.2912ms
+2024-01-17 06:34:47.958 +00:00 [INF] Request starting HTTP/2 POST https://localhost:7006/api/Auth/Login application/json 56
+2024-01-17 06:34:47.960 +00:00 [INF] CORS policy execution successful.
+2024-01-17 06:34:47.961 +00:00 [INF] Executing endpoint 'Adhaar.API.Controllers.AuthController.Login (Adhaar.API)'
+2024-01-17 06:34:47.962 +00:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Adhaar.API.Models.DTO.LoginRequestDto) on controller Adhaar.API.Controllers.AuthController (Adhaar.API).
+2024-01-17 06:34:47.977 +00:00 [INF] Executed DbCommand (10ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2024-01-17 06:34:48.144 +00:00 [INF] Executed DbCommand (6ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2024-01-17 06:34:48.148 +00:00 [INF] Executing OkObjectResult, writing value of type 'Adhaar.API.Models.DTO.LoginResponseDto'.
+2024-01-17 06:34:48.150 +00:00 [INF] Executed action Adhaar.API.Controllers.AuthController.Login (Adhaar.API) in 185.1196ms
+2024-01-17 06:34:48.153 +00:00 [INF] Executed endpoint 'Adhaar.API.Controllers.AuthController.Login (Adhaar.API)'
+2024-01-17 06:34:48.155 +00:00 [INF] Request finished HTTP/2 POST https://localhost:7006/api/Auth/Login application/json 56 - 200 - application/json;+charset=utf-8 196.8047ms
+2024-01-17 06:35:12.331 +00:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7006/api/Auth/Login - -
+2024-01-17 06:35:12.343 +00:00 [INF] CORS policy execution successful.
+2024-01-17 06:35:12.345 +00:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7006/api/Auth/Login - - - 204 - - 14.0411ms
+2024-01-17 06:35:12.348 +00:00 [INF] Request starting HTTP/2 POST https://localhost:7006/api/Auth/Login application/json 51
+2024-01-17 06:35:12.349 +00:00 [INF] CORS policy execution successful.
+2024-01-17 06:35:12.351 +00:00 [INF] Executing endpoint 'Adhaar.API.Controllers.AuthController.Login (Adhaar.API)'
+2024-01-17 06:35:12.352 +00:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Adhaar.API.Models.DTO.LoginRequestDto) on controller Adhaar.API.Controllers.AuthController (Adhaar.API).
+2024-01-17 06:35:12.362 +00:00 [INF] Executed DbCommand (4ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2024-01-17 06:35:12.477 +00:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-01-17 06:35:12.479 +00:00 [INF] Executed action Adhaar.API.Controllers.AuthController.Login (Adhaar.API) in 123.5341ms
+2024-01-17 06:35:12.484 +00:00 [INF] Executed endpoint 'Adhaar.API.Controllers.AuthController.Login (Adhaar.API)'
+2024-01-17 06:35:12.486 +00:00 [INF] Request finished HTTP/2 POST https://localhost:7006/api/Auth/Login application/json 51 - 200 - text/plain;+charset=utf-8 137.4956ms
+2024-01-17 06:39:18.741 +00:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7006/api/Auth/Login - -
+2024-01-17 06:39:18.756 +00:00 [INF] CORS policy execution successful.
+2024-01-17 06:39:18.760 +00:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7006/api/Auth/Login - - - 204 - - 19.0317ms
+2024-01-17 06:39:18.778 +00:00 [INF] Request starting HTTP/2 POST https://localhost:7006/api/Auth/Login application/json 51
+2024-01-17 06:39:18.779 +00:00 [INF] CORS policy execution successful.
+2024-01-17 06:39:18.780 +00:00 [INF] Executing endpoint 'Adhaar.API.Controllers.AuthController.Login (Adhaar.API)'
+2024-01-17 06:39:18.782 +00:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Adhaar.API.Models.DTO.LoginRequestDto) on controller Adhaar.API.Controllers.AuthController (Adhaar.API).
+2024-01-17 06:39:18.801 +00:00 [INF] Executed DbCommand (12ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2024-01-17 06:39:18.921 +00:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-01-17 06:39:18.925 +00:00 [INF] Executed action Adhaar.API.Controllers.AuthController.Login (Adhaar.API) in 140.0785ms
+2024-01-17 06:39:18.926 +00:00 [INF] Executed endpoint 'Adhaar.API.Controllers.AuthController.Login (Adhaar.API)'
+2024-01-17 06:39:18.928 +00:00 [INF] Request finished HTTP/2 POST https://localhost:7006/api/Auth/Login application/json 51 - 200 - text/plain;+charset=utf-8 150.0737ms
+2024-01-17 06:39:49.554 +00:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7006/api/Auth/Login - -
+2024-01-17 06:39:49.556 +00:00 [INF] CORS policy execution successful.
+2024-01-17 06:39:49.559 +00:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7006/api/Auth/Login - - - 204 - - 4.6502ms
+2024-01-17 06:39:49.562 +00:00 [INF] Request starting HTTP/2 POST https://localhost:7006/api/Auth/Login application/json 51
+2024-01-17 06:39:49.573 +00:00 [INF] CORS policy execution successful.
+2024-01-17 06:39:49.574 +00:00 [INF] Executing endpoint 'Adhaar.API.Controllers.AuthController.Login (Adhaar.API)'
+2024-01-17 06:39:49.576 +00:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Adhaar.API.Models.DTO.LoginRequestDto) on controller Adhaar.API.Controllers.AuthController (Adhaar.API).
+2024-01-17 06:39:49.583 +00:00 [INF] Executed DbCommand (3ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2024-01-17 06:39:49.723 +00:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-01-17 06:39:49.725 +00:00 [INF] Executed action Adhaar.API.Controllers.AuthController.Login (Adhaar.API) in 147.0511ms
+2024-01-17 06:39:49.728 +00:00 [INF] Executed endpoint 'Adhaar.API.Controllers.AuthController.Login (Adhaar.API)'
+2024-01-17 06:39:49.729 +00:00 [INF] Request finished HTTP/2 POST https://localhost:7006/api/Auth/Login application/json 51 - 200 - text/plain;+charset=utf-8 166.9331ms
+2024-01-17 06:41:47.699 +00:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7006/api/Auth/Login - -
+2024-01-17 06:41:47.701 +00:00 [INF] CORS policy execution successful.
+2024-01-17 06:41:47.702 +00:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7006/api/Auth/Login - - - 204 - - 3.4395ms
+2024-01-17 06:41:47.706 +00:00 [INF] Request starting HTTP/2 POST https://localhost:7006/api/Auth/Login application/json 51
+2024-01-17 06:41:47.710 +00:00 [INF] CORS policy execution successful.
+2024-01-17 06:41:47.712 +00:00 [INF] Executing endpoint 'Adhaar.API.Controllers.AuthController.Login (Adhaar.API)'
+2024-01-17 06:41:47.714 +00:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Adhaar.API.Models.DTO.LoginRequestDto) on controller Adhaar.API.Controllers.AuthController (Adhaar.API).
+2024-01-17 06:41:47.729 +00:00 [INF] Executed DbCommand (10ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2024-01-17 06:41:47.893 +00:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-01-17 06:41:47.895 +00:00 [INF] Executed action Adhaar.API.Controllers.AuthController.Login (Adhaar.API) in 178.1196ms
+2024-01-17 06:41:47.910 +00:00 [INF] Executed endpoint 'Adhaar.API.Controllers.AuthController.Login (Adhaar.API)'
+2024-01-17 06:41:47.912 +00:00 [INF] Request finished HTTP/2 POST https://localhost:7006/api/Auth/Login application/json 51 - 200 - text/plain;+charset=utf-8 206.0449ms
+2024-01-17 06:42:19.446 +00:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7006/api/Auth/Login - -
+2024-01-17 06:42:19.447 +00:00 [INF] CORS policy execution successful.
+2024-01-17 06:42:19.448 +00:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7006/api/Auth/Login - - - 204 - - 2.8829ms
+2024-01-17 06:42:19.457 +00:00 [INF] Request starting HTTP/2 POST https://localhost:7006/api/Auth/Login application/json 51
+2024-01-17 06:42:19.458 +00:00 [INF] CORS policy execution successful.
+2024-01-17 06:42:19.459 +00:00 [INF] Executing endpoint 'Adhaar.API.Controllers.AuthController.Login (Adhaar.API)'
+2024-01-17 06:42:19.460 +00:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Adhaar.API.Models.DTO.LoginRequestDto) on controller Adhaar.API.Controllers.AuthController (Adhaar.API).
+2024-01-17 06:42:19.473 +00:00 [INF] Executed DbCommand (7ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2024-01-17 06:42:19.672 +00:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-01-17 06:42:19.745 +00:00 [INF] Executed action Adhaar.API.Controllers.AuthController.Login (Adhaar.API) in 282.0946ms
+2024-01-17 06:42:19.748 +00:00 [INF] Executed endpoint 'Adhaar.API.Controllers.AuthController.Login (Adhaar.API)'
+2024-01-17 06:42:19.753 +00:00 [INF] Request finished HTTP/2 POST https://localhost:7006/api/Auth/Login application/json 51 - 200 - text/plain;+charset=utf-8 296.6042ms
+2024-01-17 06:43:00.279 +00:00 [INF] Request starting HTTP/2 POST https://localhost:7006/api/Auth/Login application/json 60
+2024-01-17 06:43:00.290 +00:00 [INF] CORS policy execution successful.
+2024-01-17 06:43:00.291 +00:00 [INF] Executing endpoint 'Adhaar.API.Controllers.AuthController.Login (Adhaar.API)'
+2024-01-17 06:43:00.292 +00:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Adhaar.API.Models.DTO.LoginRequestDto) on controller Adhaar.API.Controllers.AuthController (Adhaar.API).
+2024-01-17 06:43:00.305 +00:00 [INF] Executed DbCommand (9ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2024-01-17 06:43:00.416 +00:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-01-17 06:43:00.417 +00:00 [INF] Executed action Adhaar.API.Controllers.AuthController.Login (Adhaar.API) in 123.423ms
+2024-01-17 06:43:00.419 +00:00 [INF] Executed endpoint 'Adhaar.API.Controllers.AuthController.Login (Adhaar.API)'
+2024-01-17 06:43:00.420 +00:00 [INF] Request finished HTTP/2 POST https://localhost:7006/api/Auth/Login application/json 60 - 200 - text/plain;+charset=utf-8 142.6723ms
+2024-01-17 06:43:26.033 +00:00 [INF] Request starting HTTP/2 POST https://localhost:7006/api/Auth/Login application/json 65
+2024-01-17 06:43:26.041 +00:00 [INF] CORS policy execution successful.
+2024-01-17 06:43:26.044 +00:00 [INF] Executing endpoint 'Adhaar.API.Controllers.AuthController.Login (Adhaar.API)'
+2024-01-17 06:43:26.045 +00:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Adhaar.API.Models.DTO.LoginRequestDto) on controller Adhaar.API.Controllers.AuthController (Adhaar.API).
+2024-01-17 06:43:26.055 +00:00 [INF] Executed DbCommand (5ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2024-01-17 06:43:26.223 +00:00 [INF] Executed DbCommand (6ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2024-01-17 06:43:26.227 +00:00 [INF] Executing OkObjectResult, writing value of type 'Adhaar.API.Models.DTO.LoginResponseDto'.
+2024-01-17 06:43:26.229 +00:00 [INF] Executed action Adhaar.API.Controllers.AuthController.Login (Adhaar.API) in 181.0429ms
+2024-01-17 06:43:26.231 +00:00 [INF] Executed endpoint 'Adhaar.API.Controllers.AuthController.Login (Adhaar.API)'
+2024-01-17 06:43:26.238 +00:00 [INF] Request finished HTTP/2 POST https://localhost:7006/api/Auth/Login application/json 65 - 200 - application/json;+charset=utf-8 201.2678ms
+2024-01-17 06:48:30.169 +00:00 [INF] User profile is available. Using 'C:\Users\Nath\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-01-17 06:48:30.593 +00:00 [INF] Now listening on: https://localhost:7006
+2024-01-17 06:48:30.595 +00:00 [INF] Now listening on: http://localhost:5123
+2024-01-17 06:48:30.599 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-17 06:48:30.601 +00:00 [INF] Hosting environment: Development
+2024-01-17 06:48:30.602 +00:00 [INF] Content root path: C:\Users\Nath\source\repos\New folder\New folder (2)\AdhaarApi\Adhaar.API
+2024-01-17 06:48:32.936 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7006/swagger/index.html - -
+2024-01-17 06:48:33.380 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7006/swagger/index.html - - - 200 - text/html;charset=utf-8 448.5292ms
+2024-01-17 06:48:33.403 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7006/_vs/browserLink - -
+2024-01-17 06:48:33.418 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7006/_framework/aspnetcore-browser-refresh.js - -
+2024-01-17 06:48:33.451 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7006/_framework/aspnetcore-browser-refresh.js - - - 200 13756 application/javascript;+charset=utf-8 32.5544ms
+2024-01-17 06:48:33.495 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7006/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 91.9329ms
+2024-01-17 06:48:33.625 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7006/swagger/v1/swagger.json - -
+2024-01-17 06:48:33.955 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7006/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 329.6548ms
+2024-01-17 06:48:57.365 +00:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7006/api/Auth/Login - -
+2024-01-17 06:48:57.375 +00:00 [INF] CORS policy execution successful.
+2024-01-17 06:48:57.379 +00:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7006/api/Auth/Login - - - 204 - - 16.0090ms
+2024-01-17 06:48:57.382 +00:00 [INF] Request starting HTTP/2 POST https://localhost:7006/api/Auth/Login application/json 51
+2024-01-17 06:48:57.387 +00:00 [INF] CORS policy execution successful.
+2024-01-17 06:48:57.509 +00:00 [INF] Executing endpoint 'Adhaar.API.Controllers.AuthController.Login (Adhaar.API)'
+2024-01-17 06:48:57.570 +00:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Adhaar.API.Models.DTO.LoginRequestDto) on controller Adhaar.API.Controllers.AuthController (Adhaar.API).
+2024-01-17 06:49:00.166 +00:00 [INF] Executed DbCommand (78ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2024-01-17 06:49:00.610 +00:00 [INF] Executed DbCommand (10ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2024-01-17 06:49:00.713 +00:00 [INF] Executing OkObjectResult, writing value of type 'Adhaar.API.Models.DTO.LoginResponseDto'.
+2024-01-17 06:49:00.734 +00:00 [INF] Executed action Adhaar.API.Controllers.AuthController.Login (Adhaar.API) in 3155.5105ms
+2024-01-17 06:49:00.738 +00:00 [INF] Executed endpoint 'Adhaar.API.Controllers.AuthController.Login (Adhaar.API)'
+2024-01-17 06:49:00.796 +00:00 [INF] Request finished HTTP/2 POST https://localhost:7006/api/Auth/Login application/json 51 - 200 - application/json;+charset=utf-8 3413.8943ms
+2024-01-17 07:17:02.528 +00:00 [INF] Request starting HTTP/2 POST https://localhost:7006/api/Image/b9c1168c-d47f-4b76-8344-a5c3fbaab1d4 multipart/form-data;+boundary=----WebKitFormBoundaryr2yScRu4P4wjAa7z 111170
+2024-01-17 07:17:02.537 +00:00 [INF] CORS policy execution successful.
+2024-01-17 07:17:02.540 +00:00 [INF] Executing endpoint 'Adhaar.API.Controllers.ImageController.Create (Adhaar.API)'
+2024-01-17 07:17:02.551 +00:00 [INF] Route matched with {action = "Create", controller = "Image"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(System.String, Adhaar.API.Models.DTO.AddImageRequestDto) on controller Adhaar.API.Controllers.ImageController (Adhaar.API).
+2024-01-17 07:17:02.971 +00:00 [INF] Executed DbCommand (8ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = 4000), @p2='?' (DbType = Int32), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (Size = 4000), @p9='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Images] ([Id], [Address], [Age], [District], [FirstName], [LastName], [Locality], [Phone], [State], [UID])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);
+2024-01-17 07:17:02.991 +00:00 [INF] Id of image is : 9291ea90-9f78-4917-4fe5-08dc172c4d9c
+2024-01-17 07:17:03.042 +00:00 [INF] Executed DbCommand (6ms) [Parameters=[@__id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[ImageId], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName], [i].[Id], [i].[Address], [i].[Age], [i].[District], [i].[FirstName], [i].[LastName], [i].[Locality], [i].[Phone], [i].[State], [i].[UID]
+FROM [Users] AS [u]
+LEFT JOIN [Images] AS [i] ON [u].[ImageId] = [i].[Id]
+WHERE [u].[Id] = @__id_0
+2024-01-17 07:17:08.655 +00:00 [INF] le
+2024-01-17 07:17:08.656 +00:00 [INF] oo
+2024-01-17 07:17:08.658 +00:00 [INF] ss
+2024-01-17 07:17:08.659 +00:00 [INF] ee
+2024-01-17 07:17:08.660 +00:00 [INF] os
+2024-01-17 07:17:08.661 +00:00 [INF] ulc
+2024-01-17 07:17:08.662 +00:00 [INF] del
+2024-01-17 07:17:08.663 +00:00 [INF] c
+2024-01-17 07:17:08.664 +00:00 [INF] mn
+2024-01-17 07:17:08.665 +00:00 [INF] ore
+2024-01-17 07:17:08.666 +00:00 [INF] attic
+2024-01-17 07:17:08.667 +00:00 [INF] oe
+2024-01-17 07:17:08.668 +00:00 [INF] eluiiapecs
+2024-01-17 07:17:08.669 +00:00 [INF] efpeiiiifectitera
+2024-01-17 07:17:08.670 +00:00 [INF] najiarenaigy
+2024-01-17 07:17:08.671 +00:00 [INF] olf
+2024-01-17 07:17:08.672 +00:00 [INF] frolic
+2024-01-17 07:17:08.673 +00:00 [INF] aia
+2024-01-17 07:17:08.674 +00:00 [INF] bal
+2024-01-17 07:17:08.675 +00:00 [INF] enrolment
+2024-01-17 07:17:08.676 +00:00 [INF] no
+2024-01-17 07:17:08.677 +00:00 [INF] 0656
+2024-01-17 07:17:08.679 +00:00 [INF] 68779
+2024-01-17 07:17:08.680 +00:00 [INF] 00251
+2024-01-17 07:17:08.681 +00:00 [INF] to
+2024-01-17 07:17:08.682 +00:00 [INF] fera
+2024-01-17 07:17:08.683 +00:00 [INF] a
+2024-01-17 07:17:08.684 +00:00 [INF] kraartha
+2024-01-17 07:17:08.685 +00:00 [INF] nath
+2024-01-17 07:17:08.686 +00:00 [INF] c
+2024-01-17 07:17:08.687 +00:00 [INF] o
+2024-01-17 07:17:08.688 +00:00 [INF] chandra
+2024-01-17 07:17:08.689 +00:00 [INF] kanta
+2024-01-17 07:17:08.690 +00:00 [INF] nath
+2024-01-17 07:17:08.692 +00:00 [INF] vtc
+2024-01-17 07:17:08.693 +00:00 [INF] dahali
+2024-01-17 07:17:08.694 +00:00 [INF] po
+2024-01-17 07:17:08.695 +00:00 [INF] byoynagar
+2024-01-17 07:17:08.696 +00:00 [INF] sub
+2024-01-17 07:17:08.697 +00:00 [INF] ostet
+2024-01-17 07:17:08.698 +00:00 [INF] palasbar
+2024-01-17 07:17:08.699 +00:00 [INF] orstnct
+2024-01-17 07:17:08.700 +00:00 [INF] kamrup
+2024-01-17 07:17:08.701 +00:00 [INF] state
+2024-01-17 07:17:08.702 +00:00 [INF] assam
+2024-01-17 07:17:08.703 +00:00 [INF] pin
+2024-01-17 07:17:08.704 +00:00 [INF] code
+2024-01-17 07:17:08.706 +00:00 [INF] 781122
+2024-01-17 07:17:08.707 +00:00 [INF] mobile
+2024-01-17 07:17:08.708 +00:00 [INF] 8473054431
+2024-01-17 07:17:08.709 +00:00 [INF] 3g
+2024-01-17 07:17:08.710 +00:00 [INF] sten
+2024-01-17 07:17:08.711 +00:00 [INF] hath
+2024-01-17 07:17:08.712 +00:00 [INF] your
+2024-01-17 07:17:08.713 +00:00 [INF] aadhaar
+2024-01-17 07:17:08.714 +00:00 [INF] no
+2024-01-17 07:17:08.715 +00:00 [INF] 5028
+2024-01-17 07:17:08.716 +00:00 [INF] 0067
+2024-01-17 07:17:08.717 +00:00 [INF] 8996
+2024-01-17 07:17:08.718 +00:00 [INF] vio
+2024-01-17 07:17:08.719 +00:00 [INF] 9122
+2024-01-17 07:17:08.720 +00:00 [INF] 0893
+2024-01-17 07:17:08.721 +00:00 [INF] 1383
+2024-01-17 07:17:08.723 +00:00 [INF] 6951
+2024-01-17 07:17:08.724 +00:00 [INF] aa
+2024-01-17 07:17:08.725 +00:00 [INF] ae
+2024-01-17 07:17:08.726 +00:00 [INF] any
+2024-01-17 07:17:08.727 +00:00 [INF] aguret
+2024-01-17 07:17:08.728 +00:00 [INF] leoosseeosulcdelcmnoreatticoeeluiiapecs[efpeiiiifectitera“najiarenaigyolffrolic)aiabalenrolmentno.:0656/68779/00251toferaakraarthanathc/o.chandrakantanath,vtc:dahali,po:byoynagar,subostet:palasbar,orstnct:kamrup,state:assam,pincode.781122,mobile:84730544313gstenhath/youraadhaarno.:502800678996vio:9122089313836951aaae,anyaguret
+2024-01-17 07:17:08.740 +00:00 [INF] Executed DbCommand (3ms) [Parameters=[@__id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[ImageId], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__id_0
+2024-01-17 07:17:08.787 +00:00 [INF] Executed DbCommand (7ms) [Parameters=[@p1='?' (Size = 450), @p0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Users] SET [ImageId] = @p0
+OUTPUT 1
+WHERE [Id] = @p1;
+2024-01-17 07:17:08.797 +00:00 [INF] Executing OkObjectResult, writing value of type 'Adhaar.API.Models.DTO.UserDto'.
+2024-01-17 07:17:08.835 +00:00 [INF] Executed action Adhaar.API.Controllers.ImageController.Create (Adhaar.API) in 6281.8826ms
+2024-01-17 07:17:08.837 +00:00 [INF] Executed endpoint 'Adhaar.API.Controllers.ImageController.Create (Adhaar.API)'
+2024-01-17 07:17:08.841 +00:00 [INF] Request finished HTTP/2 POST https://localhost:7006/api/Image/b9c1168c-d47f-4b76-8344-a5c3fbaab1d4 multipart/form-data;+boundary=----WebKitFormBoundaryr2yScRu4P4wjAa7z 111170 - 200 - application/json;+charset=utf-8 6313.3967ms

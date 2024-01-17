@@ -19,8 +19,7 @@ namespace Adhaar.API.Controllers
     [ApiController]
     public class AuthController : ControllerBase
     {
-
-
+        private readonly ILogger<AuthController> logger;
         private readonly UserManager<IdentityUser> userManager;
         private readonly ITokenRepository tokenRepository;
         private readonly IMapper mapper;
@@ -29,9 +28,9 @@ namespace Adhaar.API.Controllers
         private readonly string[] exts;
         private const string folderName = "Images/";
 
-        public AuthController(UserManager<IdentityUser> userManager, ITokenRepository tokenRepository, IMapper mapper, AdhaarApiDbContext dbContext, IUserRepository userRepository)
+        public AuthController(ILogger<AuthController> logger,UserManager<IdentityUser> userManager, ITokenRepository tokenRepository, IMapper mapper, AdhaarApiDbContext dbContext, IUserRepository userRepository)
         {
-
+            this.logger = logger;
             this.userManager = userManager;
             this.tokenRepository = tokenRepository;
             this.mapper = mapper;
@@ -118,6 +117,7 @@ namespace Adhaar.API.Controllers
                     {
                         var jwtToken = tokenRepository.CreateJWTToken(user, roles.ToList());
                         
+                     
                         var response = new LoginResponseDto
                         {
                             Email = loginRequestDto.Username,
@@ -129,9 +129,9 @@ namespace Adhaar.API.Controllers
 
                     }
                     //create token
-                    return Ok();
+                    return BadRequest("No roles provided!");
                 }
-                return Ok(loginRequestDto.Username);
+                return BadRequest("Wrong password!");
             }
             return BadRequest("wrong username or password");
         }
