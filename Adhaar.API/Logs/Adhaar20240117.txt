@@ -855,3 +855,706 @@ WHERE [Id] = @p1;
 2024-01-17 07:17:08.835 +00:00 [INF] Executed action Adhaar.API.Controllers.ImageController.Create (Adhaar.API) in 6281.8826ms
 2024-01-17 07:17:08.837 +00:00 [INF] Executed endpoint 'Adhaar.API.Controllers.ImageController.Create (Adhaar.API)'
 2024-01-17 07:17:08.841 +00:00 [INF] Request finished HTTP/2 POST https://localhost:7006/api/Image/b9c1168c-d47f-4b76-8344-a5c3fbaab1d4 multipart/form-data;+boundary=----WebKitFormBoundaryr2yScRu4P4wjAa7z 111170 - 200 - application/json;+charset=utf-8 6313.3967ms
+2024-01-17 08:17:23.056 +00:00 [INF] User profile is available. Using 'C:\Users\Nath\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-01-17 08:17:24.828 +00:00 [INF] Now listening on: https://localhost:7006
+2024-01-17 08:17:24.830 +00:00 [INF] Now listening on: http://localhost:5123
+2024-01-17 08:17:24.834 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-17 08:17:24.836 +00:00 [INF] Hosting environment: Development
+2024-01-17 08:17:24.837 +00:00 [INF] Content root path: C:\Users\Nath\source\repos\New folder\New folder (2)\AdhaarApi\Adhaar.API
+2024-01-17 08:17:27.951 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7006/swagger/index.html - -
+2024-01-17 08:17:28.848 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7006/swagger/index.html - - - 200 - text/html;charset=utf-8 901.2173ms
+2024-01-17 08:17:28.857 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7006/_vs/browserLink - -
+2024-01-17 08:17:28.916 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7006/_framework/aspnetcore-browser-refresh.js - -
+2024-01-17 08:17:28.929 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7006/_framework/aspnetcore-browser-refresh.js - - - 200 13756 application/javascript;+charset=utf-8 12.7503ms
+2024-01-17 08:17:28.981 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7006/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 124.4933ms
+2024-01-17 08:17:29.071 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7006/swagger/v1/swagger.json - -
+2024-01-17 08:17:29.442 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7006/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 370.6639ms
+2024-01-17 08:24:16.076 +00:00 [INF] Request starting HTTP/2 POST https://localhost:7006/api/Auth/Create/b9c1168c-d47f-4b76-8344-a5c3fbaab1d4 multipart/form-data;+boundary=----WebKitFormBoundary6XAqufgHcM0HIP5R 1058
+2024-01-17 08:24:16.085 +00:00 [INF] CORS policy execution successful.
+2024-01-17 08:24:16.201 +00:00 [INF] Request finished HTTP/2 POST https://localhost:7006/api/Auth/Create/b9c1168c-d47f-4b76-8344-a5c3fbaab1d4 multipart/form-data;+boundary=----WebKitFormBoundary6XAqufgHcM0HIP5R 1058 - 404 0 - 125.2604ms
+2024-01-17 08:26:18.743 +00:00 [INF] Request starting HTTP/2 POST https://localhost:7006/api/Auth/Create/b9c1168c-d47f-4b76-8344-a5c3fbaab1d4 multipart/form-data;+boundary=----WebKitFormBoundaryGDAtJArwIJvBodNv 1058
+2024-01-17 08:26:18.747 +00:00 [INF] CORS policy execution successful.
+2024-01-17 08:26:18.760 +00:00 [INF] Request finished HTTP/2 POST https://localhost:7006/api/Auth/Create/b9c1168c-d47f-4b76-8344-a5c3fbaab1d4 multipart/form-data;+boundary=----WebKitFormBoundaryGDAtJArwIJvBodNv 1058 - 404 0 - 17.5044ms
+2024-01-17 08:28:49.727 +00:00 [INF] Request starting HTTP/2 POST https://localhost:7006/api/Auth/Create/b9c1168c-d47f-4b76-8344-a5c3fbaab1d4 multipart/form-data;+boundary=----WebKitFormBoundaryo3plwaphzJ40J7eB 1058
+2024-01-17 08:28:49.737 +00:00 [INF] CORS policy execution successful.
+2024-01-17 08:28:49.741 +00:00 [INF] Request finished HTTP/2 POST https://localhost:7006/api/Auth/Create/b9c1168c-d47f-4b76-8344-a5c3fbaab1d4 multipart/form-data;+boundary=----WebKitFormBoundaryo3plwaphzJ40J7eB 1058 - 404 0 - 13.9834ms
+2024-01-17 08:32:31.134 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7006/api/Image - -
+2024-01-17 08:32:31.148 +00:00 [INF] Executing endpoint 'Adhaar.API.Controllers.ImageController.GetAll (Adhaar.API)'
+2024-01-17 08:32:31.185 +00:00 [INF] Route matched with {action = "GetAll", controller = "Image"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller Adhaar.API.Controllers.ImageController (Adhaar.API).
+2024-01-17 08:32:31.472 +00:00 [INF] GetAll users Action method was invoked
+2024-01-17 08:32:32.838 +00:00 [INF] Executed DbCommand (45ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [i].[Id], [i].[Address], [i].[Age], [i].[District], [i].[FirstName], [i].[LastName], [i].[Locality], [i].[Phone], [i].[State], [i].[UID]
+FROM [Images] AS [i]
+2024-01-17 08:32:32.987 +00:00 [INF] Finished GetAllUsers request with data:[{"Id":"2a5e38dd-7abb-4670-908b-08dc16599109","FirstName":"kritartha","LastName":"nath","Address":"dahali","Age":23,"Phone":"7008196889","Locality":"haha","District":"kamrup","State":"Assam","UID":"502800678996","File":null},{"Id":"05bb1c48-618a-432d-6a10-08dc165a09e4","FirstName":"kritartha","LastName":"nath","Address":"dahali","Age":23,"Phone":"7008196889","Locality":"haha","District":"kamrup","State":"Assam","UID":"502800678996","File":null},{"Id":"f10e5fc7-90c2-457f-67c4-08dc165fd913","FirstName":"kritartha","LastName":"nath","Address":"dahali","Age":23,"Phone":"7008196889","Locality":"haha","District":"kamrup","State":"Assam","UID":"502800678996","File":null},{"Id":"ca56e0d7-448f-4e8d-e44e-08dc1660b33c","FirstName":"kritartha","LastName":"nath","Address":"dahali","Age":23,"Phone":"7008196889","Locality":"haha","District":"kamrup","State":"Assam","UID":"502800678996","File":null},{"Id":"741b1f37-36af-43f9-6d61-08dc1661ab7b","FirstName":"kritartha","LastName":"nath","Address":"dahali","Age":23,"Phone":"7008196889","Locality":"haha","District":"kamrup","State":"Assam","UID":"502800678996","File":null},{"Id":"506ecfbf-8a84-4da1-3081-08dc1664dab6","FirstName":"kritartha","LastName":"nath","Address":"dahali","Age":23,"Phone":"7008196889","Locality":"haha","District":"kamrup","State":"Assam","UID":"502800678996","File":null},{"Id":"64455936-ac99-4bee-1aac-08dc16657987","FirstName":"kritart","LastName":"nath","Address":"dahali","Age":23,"Phone":"7008196889","Locality":"haha","District":"kamrup","State":"Assam","UID":"502800678996","File":null},{"Id":"219903b9-65a8-4da0-3a0c-08dc1665ad10","FirstName":"kritartha","LastName":"nath","Address":"dahal","Age":23,"Phone":"7008196889","Locality":"haha","District":"kamrup","State":"Assam","UID":"502800678996","File":null},{"Id":"4487203b-2d6a-4fde-5129-08dc1665d447","FirstName":"kritartha","LastName":"nath","Address":"dahal","Age":23,"Phone":"7008196889","Locality":"haha","District":"kamrup","State":"Assam","UID":"502800678996","File":null},{"Id":"e18cf155-9db6-4a61-0321-08dc1666131e","FirstName":"kritartha","LastName":"nath","Address":"dahali","Age":23,"Phone":"7008196889","Locality":"haha","District":"kamrup","State":"Assam","UID":"502800678996","File":null},{"Id":"3a2a6fd4-3c7d-4392-5005-08dc166ecf7c","FirstName":"kritartha","LastName":"nath","Address":"dahali","Age":23,"Phone":"7008196889","Locality":"haha","District":"kamrup","State":"Assam","UID":"502800678996","File":null},{"Id":"59ca58d0-d774-42f0-dcf4-08dc166f4248","FirstName":"kritartha","LastName":"nath","Address":"dahali","Age":23,"Phone":"7008196889","Locality":"haha","District":"kamrup","State":"Assam","UID":"502800678996","File":null},{"Id":"ae28e21a-735e-4dfd-f979-08dc166f7a91","FirstName":"kritartha","LastName":"nath","Address":"dahali","Age":23,"Phone":"7008196889","Locality":"haha","District":"kamrup","State":"Assam","UID":"502800678996","File":null},{"Id":"5feff619-8968-4b54-49ca-08dc167021cc","FirstName":"kritartha","LastName":"nath","Address":"dahali","Age":23,"Phone":"7008196889","Locality":"haha","District":"kamrup","State":"Assam","UID":"502800678996","File":null},{"Id":"95bbd7e4-20e1-42f0-49cb-08dc167021cc","FirstName":"kritartha","LastName":"nath","Address":"dahal","Age":23,"Phone":"7008196889","Locality":"haha","District":"kamrup","State":"Assam","UID":"502800678996","File":null},{"Id":"d454a335-1f7a-44b9-68e8-08dc16707a94","FirstName":"kritarth","LastName":"nath","Address":"dahali","Age":23,"Phone":"7008196889","Locality":"haha","District":"kamrup","State":"Assam","UID":"502800678996","File":null},{"Id":"4b4a19be-bcd4-4383-68e9-08dc16707a94","FirstName":"kritartha","LastName":"nath","Address":"dahali","Age":23,"Phone":"7008196889","Locality":"haha","District":"kamrup","State":"Assam","UID":"502800678996","File":null},{"Id":"d4fa8273-b8d1-4495-d379-08dc1670fc4c","FirstName":"kritartha","LastName":"nath","Address":"dahali","Age":23,"Phone":"7008196889","Locality":"haha","District":"kamrup","State":"Assam","UID":"502800678996","File":null},{"Id":"9291ea90-9f78-4917-4fe5-08dc172c4d9c","FirstName":"kritartha","LastName":"nath","Address":"dahali","Age":23,"Phone":"7008196889","Locality":"haha","District":"kamrup","State":"Assam","UID":"502800678996","File":null}]
+2024-01-17 08:32:33.029 +00:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Adhaar.API.Models.DTO.ImageDto, Adhaar.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-01-17 08:32:33.059 +00:00 [INF] Executed action Adhaar.API.Controllers.ImageController.GetAll (Adhaar.API) in 1866.5535ms
+2024-01-17 08:32:33.061 +00:00 [INF] Executed endpoint 'Adhaar.API.Controllers.ImageController.GetAll (Adhaar.API)'
+2024-01-17 08:32:33.071 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7006/api/Image - - - 200 - application/json;+charset=utf-8 1936.9738ms
+2024-01-17 08:33:27.375 +00:00 [INF] Request starting HTTP/2 POST https://localhost:7006/api/Image/870156b2-6917-40d9-9125-8389345736b7 multipart/form-data;+boundary=----WebKitFormBoundaryfdHgQAfP2aBGa3Xo 76250
+2024-01-17 08:33:27.380 +00:00 [INF] CORS policy execution successful.
+2024-01-17 08:33:27.382 +00:00 [INF] Executing endpoint 'Adhaar.API.Controllers.ImageController.Create (Adhaar.API)'
+2024-01-17 08:33:27.402 +00:00 [INF] Route matched with {action = "Create", controller = "Image"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(System.String, Adhaar.API.Models.DTO.AddImageRequestDto) on controller Adhaar.API.Controllers.ImageController (Adhaar.API).
+2024-01-17 08:33:27.698 +00:00 [INF] Executed DbCommand (29ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = 4000), @p2='?' (DbType = Int32), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (Size = 4000), @p9='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Images] ([Id], [Address], [Age], [District], [FirstName], [LastName], [Locality], [Phone], [State], [UID])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);
+2024-01-17 08:33:27.716 +00:00 [INF] Id of image is : 5c5d83bb-33ac-48b7-855d-08dc1736fa55
+2024-01-17 08:33:27.881 +00:00 [INF] Executed DbCommand (4ms) [Parameters=[@__id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[ImageId], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName], [i].[Id], [i].[Address], [i].[Age], [i].[District], [i].[FirstName], [i].[LastName], [i].[Locality], [i].[Phone], [i].[State], [i].[UID]
+FROM [Users] AS [u]
+LEFT JOIN [Images] AS [i] ON [u].[ImageId] = [i].[Id]
+WHERE [u].[Id] = @__id_0
+2024-01-17 08:33:32.061 +00:00 [INF] es
+2024-01-17 08:33:32.062 +00:00 [INF] unique
+2024-01-17 08:33:32.064 +00:00 [INF] identification
+2024-01-17 08:33:32.065 +00:00 [INF] authority
+2024-01-17 08:33:32.066 +00:00 [INF] of
+2024-01-17 08:33:32.067 +00:00 [INF] india
+2024-01-17 08:33:32.068 +00:00 [INF] wer
+2024-01-17 08:33:32.069 +00:00 [INF] ar
+2024-01-17 08:33:32.070 +00:00 [INF] oz
+2024-01-17 08:33:32.071 +00:00 [INF] fz
+2024-01-17 08:33:32.072 +00:00 [INF] te
+2024-01-17 08:33:32.073 +00:00 [INF] art
+2024-01-17 08:33:32.074 +00:00 [INF] flare
+2024-01-17 08:33:32.075 +00:00 [INF] eae
+2024-01-17 08:33:32.077 +00:00 [INF] garen
+2024-01-17 08:33:32.078 +00:00 [INF] 781222
+2024-01-17 08:33:32.079 +00:00 [INF] address
+2024-01-17 08:33:32.081 +00:00 [INF] scio
+2024-01-17 08:33:32.082 +00:00 [INF] chandra
+2024-01-17 08:33:32.083 +00:00 [INF] kanta
+2024-01-17 08:33:32.084 +00:00 [INF] nath
+2024-01-17 08:33:32.085 +00:00 [INF] dahali
+2024-01-17 08:33:32.086 +00:00 [INF] po
+2024-01-17 08:33:32.087 +00:00 [INF] biyoynagar
+2024-01-17 08:33:32.088 +00:00 [INF] dist
+2024-01-17 08:33:32.089 +00:00 [INF] kamrup
+2024-01-17 08:33:32.090 +00:00 [INF] assam
+2024-01-17 08:33:32.091 +00:00 [INF] 781122
+2024-01-17 08:33:32.092 +00:00 [INF] 4
+2024-01-17 08:33:32.093 +00:00 [INF] i
+2024-01-17 08:33:32.094 +00:00 [INF] brigiss
+2024-01-17 08:33:32.095 +00:00 [INF] 5028
+2024-01-17 08:33:32.096 +00:00 [INF] 0067
+2024-01-17 08:33:32.097 +00:00 [INF] 8996
+2024-01-17 08:33:32.099 +00:00 [INF] vid
+2024-01-17 08:33:32.100 +00:00 [INF] 9122
+2024-01-17 08:33:32.101 +00:00 [INF] 0893
+2024-01-17 08:33:32.102 +00:00 [INF] 1383
+2024-01-17 08:33:32.103 +00:00 [INF] 6951
+2024-01-17 08:33:32.104 +00:00 [INF] zr
+2024-01-17 08:33:32.105 +00:00 [INF] w47
+2024-01-17 08:33:32.106 +00:00 [INF] |
+2024-01-17 08:33:32.107 +00:00 [INF] c2
+2024-01-17 08:33:32.109 +00:00 [INF] helpeuidai
+2024-01-17 08:33:32.110 +00:00 [INF] gowin
+2024-01-17 08:33:32.111 +00:00 [INF] |
+2024-01-17 08:33:32.112 +00:00 [INF] qed
+2024-01-17 08:33:32.114 +00:00 [INF] wow
+2024-01-17 08:33:32.115 +00:00 [INF] uldat
+2024-01-17 08:33:32.116 +00:00 [INF] gov
+2024-01-17 08:33:32.117 +00:00 [INF] in
+2024-01-17 08:33:32.118 +00:00 [INF] esuniqueidentificationauthorityofindiawerarozfzte,art,flare,eae,garen-781222&address:scio-chandrakantanath.dahali,po:biyoynagar,dist:kamrup,§assam-7811224ibrigiss.502800678996vid:9122089313836951zrw47|c2helpeuidaigowin|qedwowuldatgov.in
+2024-01-17 08:33:32.131 +00:00 [INF] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[ImageId], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__id_0
+2024-01-17 08:33:32.173 +00:00 [INF] Executed DbCommand (6ms) [Parameters=[@p1='?' (Size = 450), @p0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Users] SET [ImageId] = @p0
+OUTPUT 1
+WHERE [Id] = @p1;
+2024-01-17 08:33:32.183 +00:00 [INF] Executing OkObjectResult, writing value of type 'Adhaar.API.Models.DTO.UserDto'.
+2024-01-17 08:33:32.204 +00:00 [INF] Executed action Adhaar.API.Controllers.ImageController.Create (Adhaar.API) in 4799.4664ms
+2024-01-17 08:33:32.207 +00:00 [INF] Executed endpoint 'Adhaar.API.Controllers.ImageController.Create (Adhaar.API)'
+2024-01-17 08:33:32.211 +00:00 [INF] Request finished HTTP/2 POST https://localhost:7006/api/Image/870156b2-6917-40d9-9125-8389345736b7 multipart/form-data;+boundary=----WebKitFormBoundaryfdHgQAfP2aBGa3Xo 76250 - 200 - application/json;+charset=utf-8 4835.7701ms
+2024-01-17 08:38:03.806 +00:00 [INF] Request starting HTTP/2 POST https://localhost:7006/api/Auth/Create/b9c1168c-d47f-4b76-8344-a5c3fbaab1d4 multipart/form-data;+boundary=----WebKitFormBoundaryY1hMxwIzAkfronar 1058
+2024-01-17 08:38:03.809 +00:00 [INF] CORS policy execution successful.
+2024-01-17 08:38:03.811 +00:00 [INF] Request finished HTTP/2 POST https://localhost:7006/api/Auth/Create/b9c1168c-d47f-4b76-8344-a5c3fbaab1d4 multipart/form-data;+boundary=----WebKitFormBoundaryY1hMxwIzAkfronar 1058 - 404 0 - 4.6567ms
+2024-01-17 08:39:36.384 +00:00 [INF] Request starting HTTP/2 POST https://localhost:7006/api/Auth/Image/b9c1168c-d47f-4b76-8344-a5c3fbaab1d4 multipart/form-data;+boundary=----WebKitFormBoundaryJKMCphr53WbZjleW 1058
+2024-01-17 08:39:36.386 +00:00 [INF] CORS policy execution successful.
+2024-01-17 08:39:36.388 +00:00 [INF] Request finished HTTP/2 POST https://localhost:7006/api/Auth/Image/b9c1168c-d47f-4b76-8344-a5c3fbaab1d4 multipart/form-data;+boundary=----WebKitFormBoundaryJKMCphr53WbZjleW 1058 - 404 0 - 3.4306ms
+2024-01-17 08:40:17.900 +00:00 [INF] Request starting HTTP/2 POST https://localhost:7006/api/Image/b9c1168c-d47f-4b76-8344-a5c3fbaab1d4 multipart/form-data;+boundary=----WebKitFormBoundarykevZUthWy97vKyl8 1058
+2024-01-17 08:40:17.902 +00:00 [INF] CORS policy execution successful.
+2024-01-17 08:40:17.906 +00:00 [INF] Executing endpoint 'Adhaar.API.Controllers.ImageController.Create (Adhaar.API)'
+2024-01-17 08:40:17.907 +00:00 [INF] Route matched with {action = "Create", controller = "Image"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(System.String, Adhaar.API.Models.DTO.AddImageRequestDto) on controller Adhaar.API.Controllers.ImageController (Adhaar.API).
+2024-01-17 08:40:17.923 +00:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-01-17 08:40:17.937 +00:00 [INF] Executed action Adhaar.API.Controllers.ImageController.Create (Adhaar.API) in 26.9323ms
+2024-01-17 08:40:17.951 +00:00 [INF] Executed endpoint 'Adhaar.API.Controllers.ImageController.Create (Adhaar.API)'
+2024-01-17 08:40:17.953 +00:00 [INF] Request finished HTTP/2 POST https://localhost:7006/api/Image/b9c1168c-d47f-4b76-8344-a5c3fbaab1d4 multipart/form-data;+boundary=----WebKitFormBoundarykevZUthWy97vKyl8 1058 - 400 - application/problem+json;+charset=utf-8 52.7401ms
+2024-01-17 08:43:54.171 +00:00 [INF] Request starting HTTP/2 POST https://localhost:7006/api/Image/b9c1168c-d47f-4b76-8344-a5c3fbaab1d4 multipart/form-data;+boundary=----WebKitFormBoundaryGFxGZWs7oV2TlGdt 1058
+2024-01-17 08:43:54.184 +00:00 [INF] CORS policy execution successful.
+2024-01-17 08:43:54.185 +00:00 [INF] Executing endpoint 'Adhaar.API.Controllers.ImageController.Create (Adhaar.API)'
+2024-01-17 08:43:54.187 +00:00 [INF] Route matched with {action = "Create", controller = "Image"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(System.String, Adhaar.API.Models.DTO.AddImageRequestDto) on controller Adhaar.API.Controllers.ImageController (Adhaar.API).
+2024-01-17 08:43:54.192 +00:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-01-17 08:43:54.195 +00:00 [INF] Executed action Adhaar.API.Controllers.ImageController.Create (Adhaar.API) in 4.44ms
+2024-01-17 08:43:54.196 +00:00 [INF] Executed endpoint 'Adhaar.API.Controllers.ImageController.Create (Adhaar.API)'
+2024-01-17 08:43:54.198 +00:00 [INF] Request finished HTTP/2 POST https://localhost:7006/api/Image/b9c1168c-d47f-4b76-8344-a5c3fbaab1d4 multipart/form-data;+boundary=----WebKitFormBoundaryGFxGZWs7oV2TlGdt 1058 - 400 - application/problem+json;+charset=utf-8 26.6054ms
+2024-01-17 08:46:34.135 +00:00 [INF] Request starting HTTP/2 POST https://localhost:7006/api/Image/b9c1168c-d47f-4b76-8344-a5c3fbaab1d4 multipart/form-data;+boundary=----WebKitFormBoundaryphc53g6GwgpBeOG6 1058
+2024-01-17 08:46:34.147 +00:00 [INF] CORS policy execution successful.
+2024-01-17 08:46:34.149 +00:00 [INF] Executing endpoint 'Adhaar.API.Controllers.ImageController.Create (Adhaar.API)'
+2024-01-17 08:46:34.154 +00:00 [INF] Route matched with {action = "Create", controller = "Image"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(System.String, Adhaar.API.Models.DTO.AddImageRequestDto) on controller Adhaar.API.Controllers.ImageController (Adhaar.API).
+2024-01-17 08:46:34.159 +00:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-01-17 08:46:34.161 +00:00 [INF] Executed action Adhaar.API.Controllers.ImageController.Create (Adhaar.API) in 4.2342ms
+2024-01-17 08:46:34.171 +00:00 [INF] Executed endpoint 'Adhaar.API.Controllers.ImageController.Create (Adhaar.API)'
+2024-01-17 08:46:34.173 +00:00 [INF] Request finished HTTP/2 POST https://localhost:7006/api/Image/b9c1168c-d47f-4b76-8344-a5c3fbaab1d4 multipart/form-data;+boundary=----WebKitFormBoundaryphc53g6GwgpBeOG6 1058 - 400 - application/problem+json;+charset=utf-8 38.1939ms
+2024-01-17 08:46:47.115 +00:00 [INF] Request starting HTTP/2 POST https://localhost:7006/api/Image/b9c1168c-d47f-4b76-8344-a5c3fbaab1d4 multipart/form-data;+boundary=----WebKitFormBoundaryi6Y6nhIhGeBQEacI 1058
+2024-01-17 08:46:47.117 +00:00 [INF] CORS policy execution successful.
+2024-01-17 08:46:47.118 +00:00 [INF] Executing endpoint 'Adhaar.API.Controllers.ImageController.Create (Adhaar.API)'
+2024-01-17 08:46:47.123 +00:00 [INF] Route matched with {action = "Create", controller = "Image"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(System.String, Adhaar.API.Models.DTO.AddImageRequestDto) on controller Adhaar.API.Controllers.ImageController (Adhaar.API).
+2024-01-17 08:46:47.127 +00:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-01-17 08:46:47.134 +00:00 [INF] Executed action Adhaar.API.Controllers.ImageController.Create (Adhaar.API) in 8.2343ms
+2024-01-17 08:46:47.139 +00:00 [INF] Executed endpoint 'Adhaar.API.Controllers.ImageController.Create (Adhaar.API)'
+2024-01-17 08:46:47.141 +00:00 [INF] Request finished HTTP/2 POST https://localhost:7006/api/Image/b9c1168c-d47f-4b76-8344-a5c3fbaab1d4 multipart/form-data;+boundary=----WebKitFormBoundaryi6Y6nhIhGeBQEacI 1058 - 400 - application/problem+json;+charset=utf-8 26.1636ms
+2024-01-17 08:47:34.634 +00:00 [INF] Request starting HTTP/2 POST https://localhost:7006/api/Image/b9c1168c-d47f-4b76-8344-a5c3fbaab1d4 multipart/form-data;+boundary=----WebKitFormBoundaryqe71ma4zdlsraWRP 1058
+2024-01-17 08:47:34.640 +00:00 [INF] CORS policy execution successful.
+2024-01-17 08:47:34.641 +00:00 [INF] Executing endpoint 'Adhaar.API.Controllers.ImageController.Create (Adhaar.API)'
+2024-01-17 08:47:34.643 +00:00 [INF] Route matched with {action = "Create", controller = "Image"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(System.String, Adhaar.API.Models.DTO.AddImageRequestDto) on controller Adhaar.API.Controllers.ImageController (Adhaar.API).
+2024-01-17 08:47:34.647 +00:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-01-17 08:47:34.649 +00:00 [INF] Executed action Adhaar.API.Controllers.ImageController.Create (Adhaar.API) in 2.9858ms
+2024-01-17 08:47:34.651 +00:00 [INF] Executed endpoint 'Adhaar.API.Controllers.ImageController.Create (Adhaar.API)'
+2024-01-17 08:47:34.655 +00:00 [INF] Request finished HTTP/2 POST https://localhost:7006/api/Image/b9c1168c-d47f-4b76-8344-a5c3fbaab1d4 multipart/form-data;+boundary=----WebKitFormBoundaryqe71ma4zdlsraWRP 1058 - 400 - application/problem+json;+charset=utf-8 21.3893ms
+2024-01-17 09:05:04.854 +00:00 [INF] Request starting HTTP/2 POST https://localhost:7006/api/Image/b9c1168c-d47f-4b76-8344-a5c3fbaab1d4 multipart/form-data;+boundary=----WebKitFormBoundaryJUPqigXVE9bjOLOb 1058
+2024-01-17 09:05:04.873 +00:00 [INF] CORS policy execution successful.
+2024-01-17 09:05:04.874 +00:00 [INF] Executing endpoint 'Adhaar.API.Controllers.ImageController.Create (Adhaar.API)'
+2024-01-17 09:05:04.876 +00:00 [INF] Route matched with {action = "Create", controller = "Image"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(System.String, Adhaar.API.Models.DTO.AddImageRequestDto) on controller Adhaar.API.Controllers.ImageController (Adhaar.API).
+2024-01-17 09:05:04.880 +00:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-01-17 09:05:04.883 +00:00 [INF] Executed action Adhaar.API.Controllers.ImageController.Create (Adhaar.API) in 4.3692ms
+2024-01-17 09:05:04.885 +00:00 [INF] Executed endpoint 'Adhaar.API.Controllers.ImageController.Create (Adhaar.API)'
+2024-01-17 09:05:04.886 +00:00 [INF] Request finished HTTP/2 POST https://localhost:7006/api/Image/b9c1168c-d47f-4b76-8344-a5c3fbaab1d4 multipart/form-data;+boundary=----WebKitFormBoundaryJUPqigXVE9bjOLOb 1058 - 400 - application/problem+json;+charset=utf-8 32.4036ms
+2024-01-17 09:13:11.672 +00:00 [INF] Request starting HTTP/2 POST https://localhost:7006/api/Image/b9c1168c-d47f-4b76-8344-a5c3fbaab1d4 multipart/form-data;+boundary=----WebKitFormBoundaryy1WxgcwAMgZodVAX 1058
+2024-01-17 09:13:11.682 +00:00 [INF] CORS policy execution successful.
+2024-01-17 09:13:11.683 +00:00 [INF] Executing endpoint 'Adhaar.API.Controllers.ImageController.Create (Adhaar.API)'
+2024-01-17 09:13:11.685 +00:00 [INF] Route matched with {action = "Create", controller = "Image"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(System.String, Adhaar.API.Models.DTO.AddImageRequestDto) on controller Adhaar.API.Controllers.ImageController (Adhaar.API).
+2024-01-17 09:13:11.689 +00:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-01-17 09:13:11.695 +00:00 [INF] Executed action Adhaar.API.Controllers.ImageController.Create (Adhaar.API) in 6.8286ms
+2024-01-17 09:13:11.704 +00:00 [INF] Executed endpoint 'Adhaar.API.Controllers.ImageController.Create (Adhaar.API)'
+2024-01-17 09:13:11.710 +00:00 [INF] Request finished HTTP/2 POST https://localhost:7006/api/Image/b9c1168c-d47f-4b76-8344-a5c3fbaab1d4 multipart/form-data;+boundary=----WebKitFormBoundaryy1WxgcwAMgZodVAX 1058 - 400 - application/problem+json;+charset=utf-8 37.8406ms
+2024-01-17 09:21:29.868 +00:00 [INF] Request starting HTTP/1.1 GET https://localhost:7006/api/Image/870156b2-6917-40d9-9125-8389345736b7 multipart/form-data;+boundary=--------------------------438229129050348402820418 76388
+2024-01-17 09:21:29.871 +00:00 [INF] Executing endpoint 'Adhaar.API.Controllers.ImageController.GetById (Adhaar.API)'
+2024-01-17 09:21:29.881 +00:00 [INF] Route matched with {action = "GetById", controller = "Image"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetById(System.String) on controller Adhaar.API.Controllers.ImageController (Adhaar.API).
+2024-01-17 09:21:30.014 +00:00 [INF] Executed DbCommand (7ms) [Parameters=[@__id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[ImageId], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName], [i].[Id], [i].[Address], [i].[Age], [i].[District], [i].[FirstName], [i].[LastName], [i].[Locality], [i].[Phone], [i].[State], [i].[UID]
+FROM [Users] AS [u]
+LEFT JOIN [Images] AS [i] ON [u].[ImageId] = [i].[Id]
+WHERE [u].[Id] = @__id_0
+2024-01-17 09:21:30.081 +00:00 [INF] Executing OkObjectResult, writing value of type 'Adhaar.API.Models.DTO.ImageDto'.
+2024-01-17 09:21:30.088 +00:00 [INF] Executed action Adhaar.API.Controllers.ImageController.GetById (Adhaar.API) in 203.7287ms
+2024-01-17 09:21:30.089 +00:00 [INF] Executed endpoint 'Adhaar.API.Controllers.ImageController.GetById (Adhaar.API)'
+2024-01-17 09:21:30.102 +00:00 [INF] Request finished HTTP/1.1 GET https://localhost:7006/api/Image/870156b2-6917-40d9-9125-8389345736b7 multipart/form-data;+boundary=--------------------------438229129050348402820418 76388 - 200 - application/json;+charset=utf-8 234.1344ms
+2024-01-17 09:21:43.439 +00:00 [INF] Request starting HTTP/1.1 POST https://localhost:7006/api/Image/870156b2-6917-40d9-9125-8389345736b7 multipart/form-data;+boundary=--------------------------239366287738438987394288 76388
+2024-01-17 09:21:43.443 +00:00 [INF] Executing endpoint 'Adhaar.API.Controllers.ImageController.Create (Adhaar.API)'
+2024-01-17 09:21:43.445 +00:00 [INF] Route matched with {action = "Create", controller = "Image"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(System.String, Adhaar.API.Models.DTO.AddImageRequestDto) on controller Adhaar.API.Controllers.ImageController (Adhaar.API).
+2024-01-17 09:21:43.462 +00:00 [INF] Executed DbCommand (3ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = 4000), @p2='?' (DbType = Int32), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (Size = 4000), @p9='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Images] ([Id], [Address], [Age], [District], [FirstName], [LastName], [Locality], [Phone], [State], [UID])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);
+2024-01-17 09:21:43.475 +00:00 [INF] Id of image is : 48ae6d63-8637-4a18-855e-08dc1736fa55
+2024-01-17 09:21:43.478 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[ImageId], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName], [i].[Id], [i].[Address], [i].[Age], [i].[District], [i].[FirstName], [i].[LastName], [i].[Locality], [i].[Phone], [i].[State], [i].[UID]
+FROM [Users] AS [u]
+LEFT JOIN [Images] AS [i] ON [u].[ImageId] = [i].[Id]
+WHERE [u].[Id] = @__id_0
+2024-01-17 09:21:45.014 +00:00 [INF] es
+2024-01-17 09:21:45.015 +00:00 [INF] unique
+2024-01-17 09:21:45.017 +00:00 [INF] identification
+2024-01-17 09:21:45.019 +00:00 [INF] authority
+2024-01-17 09:21:45.021 +00:00 [INF] of
+2024-01-17 09:21:45.022 +00:00 [INF] india
+2024-01-17 09:21:45.024 +00:00 [INF] wer
+2024-01-17 09:21:45.025 +00:00 [INF] ar
+2024-01-17 09:21:45.027 +00:00 [INF] oz
+2024-01-17 09:21:45.035 +00:00 [INF] fz
+2024-01-17 09:21:45.037 +00:00 [INF] te
+2024-01-17 09:21:45.038 +00:00 [INF] art
+2024-01-17 09:21:45.040 +00:00 [INF] flare
+2024-01-17 09:21:45.041 +00:00 [INF] eae
+2024-01-17 09:21:45.043 +00:00 [INF] garen
+2024-01-17 09:21:45.047 +00:00 [INF] 781222
+2024-01-17 09:21:45.049 +00:00 [INF] address
+2024-01-17 09:21:45.050 +00:00 [INF] scio
+2024-01-17 09:21:45.051 +00:00 [INF] chandra
+2024-01-17 09:21:45.053 +00:00 [INF] kanta
+2024-01-17 09:21:45.055 +00:00 [INF] nath
+2024-01-17 09:21:45.056 +00:00 [INF] dahali
+2024-01-17 09:21:45.058 +00:00 [INF] po
+2024-01-17 09:21:45.065 +00:00 [INF] biyoynagar
+2024-01-17 09:21:45.067 +00:00 [INF] dist
+2024-01-17 09:21:45.069 +00:00 [INF] kamrup
+2024-01-17 09:21:45.071 +00:00 [INF] assam
+2024-01-17 09:21:45.073 +00:00 [INF] 781122
+2024-01-17 09:21:45.075 +00:00 [INF] 4
+2024-01-17 09:21:45.080 +00:00 [INF] i
+2024-01-17 09:21:45.082 +00:00 [INF] brigiss
+2024-01-17 09:21:45.083 +00:00 [INF] 5028
+2024-01-17 09:21:45.085 +00:00 [INF] 0067
+2024-01-17 09:21:45.088 +00:00 [INF] 8996
+2024-01-17 09:21:45.090 +00:00 [INF] vid
+2024-01-17 09:21:45.098 +00:00 [INF] 9122
+2024-01-17 09:21:45.100 +00:00 [INF] 0893
+2024-01-17 09:21:45.101 +00:00 [INF] 1383
+2024-01-17 09:21:45.103 +00:00 [INF] 6951
+2024-01-17 09:21:45.105 +00:00 [INF] zr
+2024-01-17 09:21:45.107 +00:00 [INF] w47
+2024-01-17 09:21:45.111 +00:00 [INF] |
+2024-01-17 09:21:45.113 +00:00 [INF] c2
+2024-01-17 09:21:45.115 +00:00 [INF] helpeuidai
+2024-01-17 09:21:45.117 +00:00 [INF] gowin
+2024-01-17 09:21:45.119 +00:00 [INF] |
+2024-01-17 09:21:45.121 +00:00 [INF] qed
+2024-01-17 09:21:45.129 +00:00 [INF] wow
+2024-01-17 09:21:45.131 +00:00 [INF] uldat
+2024-01-17 09:21:45.133 +00:00 [INF] gov
+2024-01-17 09:21:45.135 +00:00 [INF] in
+2024-01-17 09:21:45.137 +00:00 [INF] esuniqueidentificationauthorityofindiawerarozfzte,art,flare,eae,garen-781222&address:scio-chandrakantanath.dahali,po:biyoynagar,dist:kamrup,§assam-7811224ibrigiss.502800678996vid:9122089313836951zrw47|c2helpeuidaigowin|qedwowuldatgov.in
+2024-01-17 09:21:45.145 +00:00 [INF] Executed DbCommand (3ms) [Parameters=[@__id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[ImageId], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__id_0
+2024-01-17 09:21:45.167 +00:00 [INF] Executed DbCommand (6ms) [Parameters=[@p1='?' (Size = 450), @p0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Users] SET [ImageId] = @p0
+OUTPUT 1
+WHERE [Id] = @p1;
+2024-01-17 09:21:45.174 +00:00 [INF] Executing OkObjectResult, writing value of type 'Adhaar.API.Models.DTO.UserDto'.
+2024-01-17 09:21:45.183 +00:00 [INF] Executed action Adhaar.API.Controllers.ImageController.Create (Adhaar.API) in 1733.5416ms
+2024-01-17 09:21:45.202 +00:00 [INF] Executed endpoint 'Adhaar.API.Controllers.ImageController.Create (Adhaar.API)'
+2024-01-17 09:21:45.206 +00:00 [INF] Request finished HTTP/1.1 POST https://localhost:7006/api/Image/870156b2-6917-40d9-9125-8389345736b7 multipart/form-data;+boundary=--------------------------239366287738438987394288 76388 - 200 - application/json;+charset=utf-8 1767.1677ms
+2024-01-17 09:26:51.861 +00:00 [INF] Request starting HTTP/2 POST https://localhost:7006/api/Image/b9c1168c-d47f-4b76-8344-a5c3fbaab1d4 multipart/form-data;+boundary=----WebKitFormBoundaryQmcBZsj3mAFQ09Bt 76256
+2024-01-17 09:26:51.876 +00:00 [INF] CORS policy execution successful.
+2024-01-17 09:26:51.887 +00:00 [INF] Executing endpoint 'Adhaar.API.Controllers.ImageController.Create (Adhaar.API)'
+2024-01-17 09:26:51.890 +00:00 [INF] Route matched with {action = "Create", controller = "Image"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(System.String, Adhaar.API.Models.DTO.AddImageRequestDto) on controller Adhaar.API.Controllers.ImageController (Adhaar.API).
+2024-01-17 09:26:51.918 +00:00 [INF] Executed DbCommand (14ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = 4000), @p2='?' (DbType = Int32), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (Size = 4000), @p9='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Images] ([Id], [Address], [Age], [District], [FirstName], [LastName], [Locality], [Phone], [State], [UID])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);
+2024-01-17 09:26:51.957 +00:00 [INF] Id of image is : e2bd6031-824b-44a3-855f-08dc1736fa55
+2024-01-17 09:26:51.978 +00:00 [INF] Executed DbCommand (19ms) [Parameters=[@__id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[ImageId], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName], [i].[Id], [i].[Address], [i].[Age], [i].[District], [i].[FirstName], [i].[LastName], [i].[Locality], [i].[Phone], [i].[State], [i].[UID]
+FROM [Users] AS [u]
+LEFT JOIN [Images] AS [i] ON [u].[ImageId] = [i].[Id]
+WHERE [u].[Id] = @__id_0
+2024-01-17 09:26:53.406 +00:00 [INF] es
+2024-01-17 09:26:53.407 +00:00 [INF] unique
+2024-01-17 09:26:53.411 +00:00 [INF] identification
+2024-01-17 09:26:53.412 +00:00 [INF] authority
+2024-01-17 09:26:53.413 +00:00 [INF] of
+2024-01-17 09:26:53.415 +00:00 [INF] india
+2024-01-17 09:26:53.418 +00:00 [INF] wer
+2024-01-17 09:26:53.420 +00:00 [INF] ar
+2024-01-17 09:26:53.421 +00:00 [INF] oz
+2024-01-17 09:26:53.423 +00:00 [INF] fz
+2024-01-17 09:26:53.425 +00:00 [INF] te
+2024-01-17 09:26:53.426 +00:00 [INF] art
+2024-01-17 09:26:53.428 +00:00 [INF] flare
+2024-01-17 09:26:53.429 +00:00 [INF] eae
+2024-01-17 09:26:53.431 +00:00 [INF] garen
+2024-01-17 09:26:53.435 +00:00 [INF] 781222
+2024-01-17 09:26:53.436 +00:00 [INF] address
+2024-01-17 09:26:53.438 +00:00 [INF] scio
+2024-01-17 09:26:53.441 +00:00 [INF] chandra
+2024-01-17 09:26:53.442 +00:00 [INF] kanta
+2024-01-17 09:26:53.444 +00:00 [INF] nath
+2024-01-17 09:26:53.445 +00:00 [INF] dahali
+2024-01-17 09:26:53.449 +00:00 [INF] po
+2024-01-17 09:26:53.450 +00:00 [INF] biyoynagar
+2024-01-17 09:26:53.452 +00:00 [INF] dist
+2024-01-17 09:26:53.453 +00:00 [INF] kamrup
+2024-01-17 09:26:53.455 +00:00 [INF] assam
+2024-01-17 09:26:53.456 +00:00 [INF] 781122
+2024-01-17 09:26:53.458 +00:00 [INF] 4
+2024-01-17 09:26:53.460 +00:00 [INF] i
+2024-01-17 09:26:53.464 +00:00 [INF] brigiss
+2024-01-17 09:26:53.465 +00:00 [INF] 5028
+2024-01-17 09:26:53.467 +00:00 [INF] 0067
+2024-01-17 09:26:53.468 +00:00 [INF] 8996
+2024-01-17 09:26:53.470 +00:00 [INF] vid
+2024-01-17 09:26:53.472 +00:00 [INF] 9122
+2024-01-17 09:26:53.474 +00:00 [INF] 0893
+2024-01-17 09:26:53.475 +00:00 [INF] 1383
+2024-01-17 09:26:53.477 +00:00 [INF] 6951
+2024-01-17 09:26:53.480 +00:00 [INF] zr
+2024-01-17 09:26:53.482 +00:00 [INF] w47
+2024-01-17 09:26:53.484 +00:00 [INF] |
+2024-01-17 09:26:53.485 +00:00 [INF] c2
+2024-01-17 09:26:53.487 +00:00 [INF] helpeuidai
+2024-01-17 09:26:53.488 +00:00 [INF] gowin
+2024-01-17 09:26:53.490 +00:00 [INF] |
+2024-01-17 09:26:53.491 +00:00 [INF] qed
+2024-01-17 09:26:53.495 +00:00 [INF] wow
+2024-01-17 09:26:53.497 +00:00 [INF] uldat
+2024-01-17 09:26:53.498 +00:00 [INF] gov
+2024-01-17 09:26:53.500 +00:00 [INF] in
+2024-01-17 09:26:53.501 +00:00 [INF] esuniqueidentificationauthorityofindiawerarozfzte,art,flare,eae,garen-781222&address:scio-chandrakantanath.dahali,po:biyoynagar,dist:kamrup,§assam-7811224ibrigiss.502800678996vid:9122089313836951zrw47|c2helpeuidaigowin|qedwowuldatgov.in
+2024-01-17 09:26:53.514 +00:00 [INF] Executed DbCommand (7ms) [Parameters=[@__id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[ImageId], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__id_0
+2024-01-17 09:26:53.548 +00:00 [INF] Executed DbCommand (9ms) [Parameters=[@p1='?' (Size = 450), @p0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Users] SET [ImageId] = @p0
+OUTPUT 1
+WHERE [Id] = @p1;
+2024-01-17 09:26:53.561 +00:00 [INF] Executing OkObjectResult, writing value of type 'Adhaar.API.Models.DTO.UserDto'.
+2024-01-17 09:26:53.564 +00:00 [INF] Executed action Adhaar.API.Controllers.ImageController.Create (Adhaar.API) in 1669.2182ms
+2024-01-17 09:26:53.576 +00:00 [INF] Executed endpoint 'Adhaar.API.Controllers.ImageController.Create (Adhaar.API)'
+2024-01-17 09:26:53.670 +00:00 [INF] Request finished HTTP/2 POST https://localhost:7006/api/Image/b9c1168c-d47f-4b76-8344-a5c3fbaab1d4 multipart/form-data;+boundary=----WebKitFormBoundaryQmcBZsj3mAFQ09Bt 76256 - 200 - application/json;+charset=utf-8 1807.2277ms
+2024-01-17 09:31:22.554 +00:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7006/api/Auth/Login - -
+2024-01-17 09:31:22.556 +00:00 [INF] CORS policy execution successful.
+2024-01-17 09:31:22.563 +00:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7006/api/Auth/Login - - - 204 - - 8.8716ms
+2024-01-17 09:31:22.566 +00:00 [INF] Request starting HTTP/2 POST https://localhost:7006/api/Auth/Login application/json 56
+2024-01-17 09:31:22.573 +00:00 [INF] CORS policy execution successful.
+2024-01-17 09:31:22.575 +00:00 [INF] Executing endpoint 'Adhaar.API.Controllers.AuthController.Login (Adhaar.API)'
+2024-01-17 09:31:22.584 +00:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Adhaar.API.Models.DTO.LoginRequestDto) on controller Adhaar.API.Controllers.AuthController (Adhaar.API).
+2024-01-17 09:31:22.948 +00:00 [INF] Executed DbCommand (11ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2024-01-17 09:31:23.308 +00:00 [INF] Executed DbCommand (26ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2024-01-17 09:31:23.410 +00:00 [INF] Executing OkObjectResult, writing value of type 'Adhaar.API.Models.DTO.LoginResponseDto'.
+2024-01-17 09:31:23.416 +00:00 [INF] Executed action Adhaar.API.Controllers.AuthController.Login (Adhaar.API) in 828.9044ms
+2024-01-17 09:31:23.418 +00:00 [INF] Executed endpoint 'Adhaar.API.Controllers.AuthController.Login (Adhaar.API)'
+2024-01-17 09:31:23.422 +00:00 [INF] Request finished HTTP/2 POST https://localhost:7006/api/Auth/Login application/json 56 - 200 - application/json;+charset=utf-8 855.9215ms
+2024-01-17 09:31:46.487 +00:00 [INF] Request starting HTTP/2 POST https://localhost:7006/api/Image/b1041d2b-d1ab-464b-867e-9d40fd1da6e9 multipart/form-data;+boundary=----WebKitFormBoundary8H6C9fQEgTdYNOqj 76256
+2024-01-17 09:31:46.500 +00:00 [INF] CORS policy execution successful.
+2024-01-17 09:31:46.502 +00:00 [INF] Executing endpoint 'Adhaar.API.Controllers.ImageController.Create (Adhaar.API)'
+2024-01-17 09:31:46.504 +00:00 [INF] Route matched with {action = "Create", controller = "Image"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(System.String, Adhaar.API.Models.DTO.AddImageRequestDto) on controller Adhaar.API.Controllers.ImageController (Adhaar.API).
+2024-01-17 09:31:46.530 +00:00 [INF] Executed DbCommand (7ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = 4000), @p2='?' (DbType = Int32), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (Size = 4000), @p9='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Images] ([Id], [Address], [Age], [District], [FirstName], [LastName], [Locality], [Phone], [State], [UID])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);
+2024-01-17 09:31:46.546 +00:00 [INF] Id of image is : 5d6f11ab-d205-4cfc-8560-08dc1736fa55
+2024-01-17 09:31:46.558 +00:00 [INF] Executed DbCommand (8ms) [Parameters=[@__id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[ImageId], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName], [i].[Id], [i].[Address], [i].[Age], [i].[District], [i].[FirstName], [i].[LastName], [i].[Locality], [i].[Phone], [i].[State], [i].[UID]
+FROM [Users] AS [u]
+LEFT JOIN [Images] AS [i] ON [u].[ImageId] = [i].[Id]
+WHERE [u].[Id] = @__id_0
+2024-01-17 09:31:48.683 +00:00 [INF] es
+2024-01-17 09:31:48.684 +00:00 [INF] unique
+2024-01-17 09:31:48.686 +00:00 [INF] identification
+2024-01-17 09:31:48.688 +00:00 [INF] authority
+2024-01-17 09:31:48.691 +00:00 [INF] of
+2024-01-17 09:31:48.693 +00:00 [INF] india
+2024-01-17 09:31:48.696 +00:00 [INF] wer
+2024-01-17 09:31:48.700 +00:00 [INF] ar
+2024-01-17 09:31:48.702 +00:00 [INF] oz
+2024-01-17 09:31:48.703 +00:00 [INF] fz
+2024-01-17 09:31:48.705 +00:00 [INF] te
+2024-01-17 09:31:48.707 +00:00 [INF] art
+2024-01-17 09:31:48.709 +00:00 [INF] flare
+2024-01-17 09:31:48.711 +00:00 [INF] eae
+2024-01-17 09:31:48.715 +00:00 [INF] garen
+2024-01-17 09:31:48.717 +00:00 [INF] 781222
+2024-01-17 09:31:48.719 +00:00 [INF] address
+2024-01-17 09:31:48.721 +00:00 [INF] scio
+2024-01-17 09:31:48.722 +00:00 [INF] chandra
+2024-01-17 09:31:48.724 +00:00 [INF] kanta
+2024-01-17 09:31:48.728 +00:00 [INF] nath
+2024-01-17 09:31:48.733 +00:00 [INF] dahali
+2024-01-17 09:31:48.735 +00:00 [INF] po
+2024-01-17 09:31:48.736 +00:00 [INF] biyoynagar
+2024-01-17 09:31:48.738 +00:00 [INF] dist
+2024-01-17 09:31:48.740 +00:00 [INF] kamrup
+2024-01-17 09:31:48.742 +00:00 [INF] assam
+2024-01-17 09:31:48.754 +00:00 [INF] 781122
+2024-01-17 09:31:48.756 +00:00 [INF] 4
+2024-01-17 09:31:48.762 +00:00 [INF] i
+2024-01-17 09:31:48.764 +00:00 [INF] brigiss
+2024-01-17 09:31:48.765 +00:00 [INF] 5028
+2024-01-17 09:31:48.767 +00:00 [INF] 0067
+2024-01-17 09:31:48.769 +00:00 [INF] 8996
+2024-01-17 09:31:48.771 +00:00 [INF] vid
+2024-01-17 09:31:48.773 +00:00 [INF] 9122
+2024-01-17 09:31:48.774 +00:00 [INF] 0893
+2024-01-17 09:31:48.779 +00:00 [INF] 1383
+2024-01-17 09:31:48.781 +00:00 [INF] 6951
+2024-01-17 09:31:48.782 +00:00 [INF] zr
+2024-01-17 09:31:48.784 +00:00 [INF] w47
+2024-01-17 09:31:48.786 +00:00 [INF] |
+2024-01-17 09:31:48.788 +00:00 [INF] c2
+2024-01-17 09:31:48.790 +00:00 [INF] helpeuidai
+2024-01-17 09:31:48.795 +00:00 [INF] gowin
+2024-01-17 09:31:48.796 +00:00 [INF] |
+2024-01-17 09:31:48.798 +00:00 [INF] qed
+2024-01-17 09:31:48.800 +00:00 [INF] wow
+2024-01-17 09:31:48.802 +00:00 [INF] uldat
+2024-01-17 09:31:48.803 +00:00 [INF] gov
+2024-01-17 09:31:48.805 +00:00 [INF] in
+2024-01-17 09:31:48.810 +00:00 [INF] esuniqueidentificationauthorityofindiawerarozfzte,art,flare,eae,garen-781222&address:scio-chandrakantanath.dahali,po:biyoynagar,dist:kamrup,§assam-7811224ibrigiss.502800678996vid:9122089313836951zrw47|c2helpeuidaigowin|qedwowuldatgov.in
+2024-01-17 09:31:48.817 +00:00 [INF] Executed DbCommand (3ms) [Parameters=[@__id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[ImageId], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__id_0
+2024-01-17 09:31:48.835 +00:00 [INF] Executed DbCommand (7ms) [Parameters=[@p1='?' (Size = 450), @p0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Users] SET [ImageId] = @p0
+OUTPUT 1
+WHERE [Id] = @p1;
+2024-01-17 09:31:48.843 +00:00 [INF] Executing OkObjectResult, writing value of type 'Adhaar.API.Models.DTO.UserDto'.
+2024-01-17 09:31:48.848 +00:00 [INF] Executed action Adhaar.API.Controllers.ImageController.Create (Adhaar.API) in 2332.9696ms
+2024-01-17 09:31:48.857 +00:00 [INF] Executed endpoint 'Adhaar.API.Controllers.ImageController.Create (Adhaar.API)'
+2024-01-17 09:31:48.861 +00:00 [INF] Request finished HTTP/2 POST https://localhost:7006/api/Image/b1041d2b-d1ab-464b-867e-9d40fd1da6e9 multipart/form-data;+boundary=----WebKitFormBoundary8H6C9fQEgTdYNOqj 76256 - 200 - application/json;+charset=utf-8 2373.3920ms
+2024-01-17 09:32:24.213 +00:00 [INF] Request starting HTTP/2 POST https://localhost:7006/api/Image/b1041d2b-d1ab-464b-867e-9d40fd1da6e9 multipart/form-data;+boundary=----WebKitFormBoundaryOHhDvR7fFj6kEDUm 76256
+2024-01-17 09:32:24.238 +00:00 [INF] CORS policy execution successful.
+2024-01-17 09:32:24.240 +00:00 [INF] Executing endpoint 'Adhaar.API.Controllers.ImageController.Create (Adhaar.API)'
+2024-01-17 09:32:24.241 +00:00 [INF] Route matched with {action = "Create", controller = "Image"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(System.String, Adhaar.API.Models.DTO.AddImageRequestDto) on controller Adhaar.API.Controllers.ImageController (Adhaar.API).
+2024-01-17 09:32:24.270 +00:00 [INF] Executed DbCommand (19ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = 4000), @p2='?' (DbType = Int32), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (Size = 4000), @p9='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Images] ([Id], [Address], [Age], [District], [FirstName], [LastName], [Locality], [Phone], [State], [UID])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);
+2024-01-17 09:32:24.278 +00:00 [INF] Id of image is : b0f85543-edcd-4b9a-8561-08dc1736fa55
+2024-01-17 09:32:24.294 +00:00 [INF] Executed DbCommand (12ms) [Parameters=[@__id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[ImageId], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName], [i].[Id], [i].[Address], [i].[Age], [i].[District], [i].[FirstName], [i].[LastName], [i].[Locality], [i].[Phone], [i].[State], [i].[UID]
+FROM [Users] AS [u]
+LEFT JOIN [Images] AS [i] ON [u].[ImageId] = [i].[Id]
+WHERE [u].[Id] = @__id_0
+2024-01-17 09:32:26.317 +00:00 [INF] es
+2024-01-17 09:32:26.320 +00:00 [INF] unique
+2024-01-17 09:32:26.322 +00:00 [INF] identification
+2024-01-17 09:32:26.324 +00:00 [INF] authority
+2024-01-17 09:32:26.326 +00:00 [INF] of
+2024-01-17 09:32:26.328 +00:00 [INF] india
+2024-01-17 09:32:26.329 +00:00 [INF] wer
+2024-01-17 09:32:26.332 +00:00 [INF] ar
+2024-01-17 09:32:26.336 +00:00 [INF] oz
+2024-01-17 09:32:26.337 +00:00 [INF] fz
+2024-01-17 09:32:26.339 +00:00 [INF] te
+2024-01-17 09:32:26.341 +00:00 [INF] art
+2024-01-17 09:32:26.343 +00:00 [INF] flare
+2024-01-17 09:32:26.344 +00:00 [INF] eae
+2024-01-17 09:32:26.346 +00:00 [INF] garen
+2024-01-17 09:32:26.350 +00:00 [INF] 781222
+2024-01-17 09:32:26.352 +00:00 [INF] address
+2024-01-17 09:32:26.354 +00:00 [INF] scio
+2024-01-17 09:32:26.356 +00:00 [INF] chandra
+2024-01-17 09:32:26.358 +00:00 [INF] kanta
+2024-01-17 09:32:26.359 +00:00 [INF] nath
+2024-01-17 09:32:26.361 +00:00 [INF] dahali
+2024-01-17 09:32:26.368 +00:00 [INF] po
+2024-01-17 09:32:26.370 +00:00 [INF] biyoynagar
+2024-01-17 09:32:26.372 +00:00 [INF] dist
+2024-01-17 09:32:26.373 +00:00 [INF] kamrup
+2024-01-17 09:32:26.375 +00:00 [INF] assam
+2024-01-17 09:32:26.379 +00:00 [INF] 781122
+2024-01-17 09:32:26.381 +00:00 [INF] 4
+2024-01-17 09:32:26.386 +00:00 [INF] i
+2024-01-17 09:32:26.388 +00:00 [INF] brigiss
+2024-01-17 09:32:26.389 +00:00 [INF] 5028
+2024-01-17 09:32:26.391 +00:00 [INF] 0067
+2024-01-17 09:32:26.393 +00:00 [INF] 8996
+2024-01-17 09:32:26.397 +00:00 [INF] vid
+2024-01-17 09:32:26.398 +00:00 [INF] 9122
+2024-01-17 09:32:26.400 +00:00 [INF] 0893
+2024-01-17 09:32:26.402 +00:00 [INF] 1383
+2024-01-17 09:32:26.404 +00:00 [INF] 6951
+2024-01-17 09:32:26.406 +00:00 [INF] zr
+2024-01-17 09:32:26.407 +00:00 [INF] w47
+2024-01-17 09:32:26.412 +00:00 [INF] |
+2024-01-17 09:32:26.415 +00:00 [INF] c2
+2024-01-17 09:32:26.417 +00:00 [INF] helpeuidai
+2024-01-17 09:32:26.419 +00:00 [INF] gowin
+2024-01-17 09:32:26.421 +00:00 [INF] |
+2024-01-17 09:32:26.423 +00:00 [INF] qed
+2024-01-17 09:32:26.428 +00:00 [INF] wow
+2024-01-17 09:32:26.430 +00:00 [INF] uldat
+2024-01-17 09:32:26.437 +00:00 [INF] gov
+2024-01-17 09:32:26.442 +00:00 [INF] in
+2024-01-17 09:32:26.445 +00:00 [INF] esuniqueidentificationauthorityofindiawerarozfzte,art,flare,eae,garen-781222&address:scio-chandrakantanath.dahali,po:biyoynagar,dist:kamrup,§assam-7811224ibrigiss.502800678996vid:9122089313836951zrw47|c2helpeuidaigowin|qedwowuldatgov.in
+2024-01-17 09:32:26.449 +00:00 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2024-01-17 09:32:26.452 +00:00 [INF] Executed action Adhaar.API.Controllers.ImageController.Create (Adhaar.API) in 2207.0642ms
+2024-01-17 09:32:26.457 +00:00 [INF] Executed endpoint 'Adhaar.API.Controllers.ImageController.Create (Adhaar.API)'
+2024-01-17 09:32:26.460 +00:00 [INF] Request finished HTTP/2 POST https://localhost:7006/api/Image/b1041d2b-d1ab-464b-867e-9d40fd1da6e9 multipart/form-data;+boundary=----WebKitFormBoundaryOHhDvR7fFj6kEDUm 76256 - 400 - text/plain;+charset=utf-8 2246.8877ms
+2024-01-17 09:42:11.304 +00:00 [INF] Request starting HTTP/2 POST https://localhost:7006/api/Image/b1041d2b-d1ab-464b-867e-9d40fd1da6e9 multipart/form-data;+boundary=----WebKitFormBoundaryoqG8KN7OBqtNGuJX 989
+2024-01-17 09:42:11.313 +00:00 [INF] CORS policy execution successful.
+2024-01-17 09:42:11.315 +00:00 [INF] Executing endpoint 'Adhaar.API.Controllers.ImageController.Create (Adhaar.API)'
+2024-01-17 09:42:11.317 +00:00 [INF] Route matched with {action = "Create", controller = "Image"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(System.String, Adhaar.API.Models.DTO.AddImageRequestDto) on controller Adhaar.API.Controllers.ImageController (Adhaar.API).
+2024-01-17 09:42:11.326 +00:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-01-17 09:42:11.328 +00:00 [INF] Executed action Adhaar.API.Controllers.ImageController.Create (Adhaar.API) in 4.6773ms
+2024-01-17 09:42:11.341 +00:00 [INF] Executed endpoint 'Adhaar.API.Controllers.ImageController.Create (Adhaar.API)'
+2024-01-17 09:42:11.343 +00:00 [INF] Request finished HTTP/2 POST https://localhost:7006/api/Image/b1041d2b-d1ab-464b-867e-9d40fd1da6e9 multipart/form-data;+boundary=----WebKitFormBoundaryoqG8KN7OBqtNGuJX 989 - 400 - application/problem+json;+charset=utf-8 38.5227ms
+2024-01-17 09:54:04.960 +00:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7006/api/Auth/Login - -
+2024-01-17 09:54:04.974 +00:00 [INF] CORS policy execution successful.
+2024-01-17 09:54:04.975 +00:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7006/api/Auth/Login - - - 204 - - 15.7372ms
+2024-01-17 09:54:04.979 +00:00 [INF] Request starting HTTP/2 POST https://localhost:7006/api/Auth/Login application/json 56
+2024-01-17 09:54:04.982 +00:00 [INF] CORS policy execution successful.
+2024-01-17 09:54:04.983 +00:00 [INF] Executing endpoint 'Adhaar.API.Controllers.AuthController.Login (Adhaar.API)'
+2024-01-17 09:54:04.985 +00:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Adhaar.API.Models.DTO.LoginRequestDto) on controller Adhaar.API.Controllers.AuthController (Adhaar.API).
+2024-01-17 09:54:05.022 +00:00 [INF] Executed DbCommand (7ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2024-01-17 09:54:05.221 +00:00 [INF] Executed DbCommand (11ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2024-01-17 09:54:05.228 +00:00 [INF] Executing OkObjectResult, writing value of type 'Adhaar.API.Models.DTO.LoginResponseDto'.
+2024-01-17 09:54:05.230 +00:00 [INF] Executed action Adhaar.API.Controllers.AuthController.Login (Adhaar.API) in 241.9243ms
+2024-01-17 09:54:05.233 +00:00 [INF] Executed endpoint 'Adhaar.API.Controllers.AuthController.Login (Adhaar.API)'
+2024-01-17 09:54:05.236 +00:00 [INF] Request finished HTTP/2 POST https://localhost:7006/api/Auth/Login application/json 56 - 200 - application/json;+charset=utf-8 257.8446ms
+2024-01-17 09:55:04.021 +00:00 [INF] Request starting HTTP/2 POST https://localhost:7006/api/Image/b1041d2b-d1ab-464b-867e-9d40fd1da6e9 multipart/form-data;+boundary=----WebKitFormBoundaryBloRstGyzNAAYA1p 76256
+2024-01-17 09:55:04.025 +00:00 [INF] CORS policy execution successful.
+2024-01-17 09:55:04.028 +00:00 [INF] Executing endpoint 'Adhaar.API.Controllers.ImageController.Create (Adhaar.API)'
+2024-01-17 09:55:04.036 +00:00 [INF] Route matched with {action = "Create", controller = "Image"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(System.String, Adhaar.API.Models.DTO.AddImageRequestDto) on controller Adhaar.API.Controllers.ImageController (Adhaar.API).
+2024-01-17 09:55:04.065 +00:00 [INF] Executed DbCommand (11ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = 4000), @p2='?' (DbType = Int32), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (Size = 4000), @p9='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Images] ([Id], [Address], [Age], [District], [FirstName], [LastName], [Locality], [Phone], [State], [UID])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);
+2024-01-17 09:55:04.071 +00:00 [INF] Id of image is : f8d6fc3a-5356-45f7-8562-08dc1736fa55
+2024-01-17 09:55:04.086 +00:00 [INF] Executed DbCommand (11ms) [Parameters=[@__id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[ImageId], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName], [i].[Id], [i].[Address], [i].[Age], [i].[District], [i].[FirstName], [i].[LastName], [i].[Locality], [i].[Phone], [i].[State], [i].[UID]
+FROM [Users] AS [u]
+LEFT JOIN [Images] AS [i] ON [u].[ImageId] = [i].[Id]
+WHERE [u].[Id] = @__id_0
+2024-01-17 09:55:06.270 +00:00 [INF] es
+2024-01-17 09:55:06.286 +00:00 [INF] unique
+2024-01-17 09:55:06.288 +00:00 [INF] identification
+2024-01-17 09:55:06.289 +00:00 [INF] authority
+2024-01-17 09:55:06.292 +00:00 [INF] of
+2024-01-17 09:55:06.293 +00:00 [INF] india
+2024-01-17 09:55:06.295 +00:00 [INF] wer
+2024-01-17 09:55:06.297 +00:00 [INF] ar
+2024-01-17 09:55:06.298 +00:00 [INF] oz
+2024-01-17 09:55:06.299 +00:00 [INF] fz
+2024-01-17 09:55:06.301 +00:00 [INF] te
+2024-01-17 09:55:06.302 +00:00 [INF] art
+2024-01-17 09:55:06.303 +00:00 [INF] flare
+2024-01-17 09:55:06.305 +00:00 [INF] eae
+2024-01-17 09:55:06.307 +00:00 [INF] garen
+2024-01-17 09:55:06.309 +00:00 [INF] 781222
+2024-01-17 09:55:06.312 +00:00 [INF] address
+2024-01-17 09:55:06.315 +00:00 [INF] scio
+2024-01-17 09:55:06.327 +00:00 [INF] chandra
+2024-01-17 09:55:06.329 +00:00 [INF] kanta
+2024-01-17 09:55:06.330 +00:00 [INF] nath
+2024-01-17 09:55:06.332 +00:00 [INF] dahali
+2024-01-17 09:55:06.333 +00:00 [INF] po
+2024-01-17 09:55:06.335 +00:00 [INF] biyoynagar
+2024-01-17 09:55:06.336 +00:00 [INF] dist
+2024-01-17 09:55:06.338 +00:00 [INF] kamrup
+2024-01-17 09:55:06.339 +00:00 [INF] assam
+2024-01-17 09:55:06.341 +00:00 [INF] 781122
+2024-01-17 09:55:06.343 +00:00 [INF] 4
+2024-01-17 09:55:06.344 +00:00 [INF] i
+2024-01-17 09:55:06.346 +00:00 [INF] brigiss
+2024-01-17 09:55:06.347 +00:00 [INF] 5028
+2024-01-17 09:55:06.348 +00:00 [INF] 0067
+2024-01-17 09:55:06.350 +00:00 [INF] 8996
+2024-01-17 09:55:06.351 +00:00 [INF] vid
+2024-01-17 09:55:06.353 +00:00 [INF] 9122
+2024-01-17 09:55:06.354 +00:00 [INF] 0893
+2024-01-17 09:55:06.356 +00:00 [INF] 1383
+2024-01-17 09:55:06.357 +00:00 [INF] 6951
+2024-01-17 09:55:06.359 +00:00 [INF] zr
+2024-01-17 09:55:06.360 +00:00 [INF] w47
+2024-01-17 09:55:06.361 +00:00 [INF] |
+2024-01-17 09:55:06.363 +00:00 [INF] c2
+2024-01-17 09:55:06.364 +00:00 [INF] helpeuidai
+2024-01-17 09:55:06.378 +00:00 [INF] gowin
+2024-01-17 09:55:06.381 +00:00 [INF] |
+2024-01-17 09:55:06.382 +00:00 [INF] qed
+2024-01-17 09:55:06.384 +00:00 [INF] wow
+2024-01-17 09:55:06.386 +00:00 [INF] uldat
+2024-01-17 09:55:06.387 +00:00 [INF] gov
+2024-01-17 09:55:06.388 +00:00 [INF] in
+2024-01-17 09:55:06.389 +00:00 [INF] esuniqueidentificationauthorityofindiawerarozfzte,art,flare,eae,garen-781222&address:scio-chandrakantanath.dahali,po:biyoynagar,dist:kamrup,§assam-7811224ibrigiss.502800678996vid:9122089313836951zrw47|c2helpeuidaigowin|qedwowuldatgov.in
+2024-01-17 09:55:06.392 +00:00 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2024-01-17 09:55:06.394 +00:00 [INF] Executed action Adhaar.API.Controllers.ImageController.Create (Adhaar.API) in 2353.9301ms
+2024-01-17 09:55:06.397 +00:00 [INF] Executed endpoint 'Adhaar.API.Controllers.ImageController.Create (Adhaar.API)'
+2024-01-17 09:55:06.408 +00:00 [INF] Request finished HTTP/2 POST https://localhost:7006/api/Image/b1041d2b-d1ab-464b-867e-9d40fd1da6e9 multipart/form-data;+boundary=----WebKitFormBoundaryBloRstGyzNAAYA1p 76256 - 400 - text/plain;+charset=utf-8 2386.6316ms
+2024-01-17 09:55:23.844 +00:00 [INF] Request starting HTTP/2 POST https://localhost:7006/api/Image/b1041d2b-d1ab-464b-867e-9d40fd1da6e9 multipart/form-data;+boundary=----WebKitFormBoundarykJa7pO9leK2r1B6N 76256
+2024-01-17 09:55:23.848 +00:00 [INF] CORS policy execution successful.
+2024-01-17 09:55:23.850 +00:00 [INF] Executing endpoint 'Adhaar.API.Controllers.ImageController.Create (Adhaar.API)'
+2024-01-17 09:55:23.852 +00:00 [INF] Route matched with {action = "Create", controller = "Image"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(System.String, Adhaar.API.Models.DTO.AddImageRequestDto) on controller Adhaar.API.Controllers.ImageController (Adhaar.API).
+2024-01-17 09:55:23.881 +00:00 [INF] Executed DbCommand (10ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = 4000), @p2='?' (DbType = Int32), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (Size = 4000), @p9='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Images] ([Id], [Address], [Age], [District], [FirstName], [LastName], [Locality], [Phone], [State], [UID])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);
+2024-01-17 09:55:23.887 +00:00 [INF] Id of image is : a5cd0482-d35b-4905-8563-08dc1736fa55
+2024-01-17 09:55:23.899 +00:00 [INF] Executed DbCommand (9ms) [Parameters=[@__id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[ImageId], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName], [i].[Id], [i].[Address], [i].[Age], [i].[District], [i].[FirstName], [i].[LastName], [i].[Locality], [i].[Phone], [i].[State], [i].[UID]
+FROM [Users] AS [u]
+LEFT JOIN [Images] AS [i] ON [u].[ImageId] = [i].[Id]
+WHERE [u].[Id] = @__id_0
+2024-01-17 09:55:25.953 +00:00 [INF] es
+2024-01-17 09:55:25.955 +00:00 [INF] unique
+2024-01-17 09:55:25.956 +00:00 [INF] identification
+2024-01-17 09:55:25.958 +00:00 [INF] authority
+2024-01-17 09:55:25.959 +00:00 [INF] of
+2024-01-17 09:55:25.960 +00:00 [INF] india
+2024-01-17 09:55:25.962 +00:00 [INF] wer
+2024-01-17 09:55:25.963 +00:00 [INF] ar
+2024-01-17 09:55:25.964 +00:00 [INF] oz
+2024-01-17 09:55:25.966 +00:00 [INF] fz
+2024-01-17 09:55:25.968 +00:00 [INF] te
+2024-01-17 09:55:25.969 +00:00 [INF] art
+2024-01-17 09:55:25.971 +00:00 [INF] flare
+2024-01-17 09:55:25.972 +00:00 [INF] eae
+2024-01-17 09:55:25.975 +00:00 [INF] garen
+2024-01-17 09:55:25.977 +00:00 [INF] 781222
+2024-01-17 09:55:25.987 +00:00 [INF] address
+2024-01-17 09:55:25.994 +00:00 [INF] scio
+2024-01-17 09:55:25.995 +00:00 [INF] chandra
+2024-01-17 09:55:25.997 +00:00 [INF] kanta
+2024-01-17 09:55:26.001 +00:00 [INF] nath
+2024-01-17 09:55:26.002 +00:00 [INF] dahali
+2024-01-17 09:55:26.004 +00:00 [INF] po
+2024-01-17 09:55:26.006 +00:00 [INF] biyoynagar
+2024-01-17 09:55:26.007 +00:00 [INF] dist
+2024-01-17 09:55:26.008 +00:00 [INF] kamrup
+2024-01-17 09:55:26.010 +00:00 [INF] assam
+2024-01-17 09:55:26.011 +00:00 [INF] 781122
+2024-01-17 09:55:26.013 +00:00 [INF] 4
+2024-01-17 09:55:26.014 +00:00 [INF] i
+2024-01-17 09:55:26.015 +00:00 [INF] brigiss
+2024-01-17 09:55:26.017 +00:00 [INF] 5028
+2024-01-17 09:55:26.018 +00:00 [INF] 0067
+2024-01-17 09:55:26.020 +00:00 [INF] 8996
+2024-01-17 09:55:26.022 +00:00 [INF] vid
+2024-01-17 09:55:26.023 +00:00 [INF] 9122
+2024-01-17 09:55:26.025 +00:00 [INF] 0893
+2024-01-17 09:55:26.026 +00:00 [INF] 1383
+2024-01-17 09:55:26.028 +00:00 [INF] 6951
+2024-01-17 09:55:26.029 +00:00 [INF] zr
+2024-01-17 09:55:26.032 +00:00 [INF] w47
+2024-01-17 09:55:26.033 +00:00 [INF] |
+2024-01-17 09:55:26.034 +00:00 [INF] c2
+2024-01-17 09:55:26.036 +00:00 [INF] helpeuidai
+2024-01-17 09:55:26.037 +00:00 [INF] gowin
+2024-01-17 09:55:26.038 +00:00 [INF] |
+2024-01-17 09:55:26.040 +00:00 [INF] qed
+2024-01-17 09:55:26.041 +00:00 [INF] wow
+2024-01-17 09:55:26.043 +00:00 [INF] uldat
+2024-01-17 09:55:26.044 +00:00 [INF] gov
+2024-01-17 09:55:26.045 +00:00 [INF] in
+2024-01-17 09:55:26.047 +00:00 [INF] esuniqueidentificationauthorityofindiawerarozfzte,art,flare,eae,garen-781222&address:scio-chandrakantanath.dahali,po:biyoynagar,dist:kamrup,§assam-7811224ibrigiss.502800678996vid:9122089313836951zrw47|c2helpeuidaigowin|qedwowuldatgov.in
+2024-01-17 09:55:26.062 +00:00 [INF] Executed DbCommand (12ms) [Parameters=[@__id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[ImageId], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__id_0
+2024-01-17 09:55:26.080 +00:00 [INF] Executed DbCommand (7ms) [Parameters=[@p1='?' (Size = 450), @p0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Users] SET [ImageId] = @p0
+OUTPUT 1
+WHERE [Id] = @p1;
+2024-01-17 09:55:26.086 +00:00 [INF] Executing OkObjectResult, writing value of type 'Adhaar.API.Models.DTO.UserDto'.
+2024-01-17 09:55:26.089 +00:00 [INF] Executed action Adhaar.API.Controllers.ImageController.Create (Adhaar.API) in 2227.5975ms
+2024-01-17 09:55:26.097 +00:00 [INF] Executed endpoint 'Adhaar.API.Controllers.ImageController.Create (Adhaar.API)'
+2024-01-17 09:55:26.101 +00:00 [INF] Request finished HTTP/2 POST https://localhost:7006/api/Image/b1041d2b-d1ab-464b-867e-9d40fd1da6e9 multipart/form-data;+boundary=----WebKitFormBoundarykJa7pO9leK2r1B6N 76256 - 200 - application/json;+charset=utf-8 2256.2563ms
