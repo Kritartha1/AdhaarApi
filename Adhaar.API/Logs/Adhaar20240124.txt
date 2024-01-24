@@ -1,0 +1,106 @@
+2024-01-24 09:20:35.505 +00:00 [INF] User profile is available. Using 'C:\Users\Nath\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-01-24 09:20:36.651 +00:00 [INF] Now listening on: https://localhost:7006
+2024-01-24 09:20:36.653 +00:00 [INF] Now listening on: http://localhost:5123
+2024-01-24 09:20:36.657 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-24 09:20:36.658 +00:00 [INF] Hosting environment: Development
+2024-01-24 09:20:36.659 +00:00 [INF] Content root path: C:\Users\Nath\source\repos\New folder\New folder (2)\AdhaarApi\Adhaar.API
+2024-01-24 09:20:37.625 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7006/swagger/index.html - -
+2024-01-24 09:20:38.246 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7006/swagger/index.html - - - 200 - text/html;charset=utf-8 624.9623ms
+2024-01-24 09:20:38.266 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7006/_framework/aspnetcore-browser-refresh.js - -
+2024-01-24 09:20:38.266 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7006/_vs/browserLink - -
+2024-01-24 09:20:38.277 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7006/_framework/aspnetcore-browser-refresh.js - - - 200 13756 application/javascript;+charset=utf-8 10.3867ms
+2024-01-24 09:20:38.383 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7006/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 116.6780ms
+2024-01-24 09:20:38.459 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7006/swagger/v1/swagger.json - -
+2024-01-24 09:20:38.612 +00:00 [ERR] An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Ambiguous HTTP method for action - Adhaar.API.Controllers.AuthController.SetFileSystem (Adhaar.API). Actions require an explicit HttpMethod binding for Swagger/OpenAPI 3.0
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerDocumentWithoutFilters(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-01-24 09:20:38.669 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7006/swagger/v1/swagger.json - - - 500 - text/plain;+charset=utf-8 209.9700ms
+2024-01-24 09:21:37.716 +00:00 [INF] User profile is available. Using 'C:\Users\Nath\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-01-24 09:21:37.968 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-24 09:21:37.977 +00:00 [INF] Hosting environment: Development
+2024-01-24 09:21:37.977 +00:00 [INF] Content root path: C:\Users\Nath\source\repos\New folder\New folder (2)\AdhaarApi\Adhaar.API
+2024-01-24 09:21:38.017 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44315/swagger/index.html - -
+2024-01-24 09:21:38.576 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44315/_framework/aspnetcore-browser-refresh.js - -
+2024-01-24 09:21:38.585 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44315/_framework/aspnetcore-browser-refresh.js - - - 200 13756 application/javascript;+charset=utf-8 8.3361ms
+2024-01-24 09:21:38.585 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44315/swagger/index.html - - - 200 - text/html;charset=utf-8 566.0421ms
+2024-01-24 09:21:38.587 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44315/_vs/browserLink - -
+2024-01-24 09:21:38.652 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44315/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 64.3769ms
+2024-01-24 09:21:38.863 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44315/swagger/v1/swagger.json - -
+2024-01-24 09:21:39.026 +00:00 [ERR] An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Ambiguous HTTP method for action - Adhaar.API.Controllers.AuthController.SetFileSystem (Adhaar.API). Actions require an explicit HttpMethod binding for Swagger/OpenAPI 3.0
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerDocumentWithoutFilters(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-01-24 09:21:39.074 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44315/swagger/v1/swagger.json - - - 500 - text/plain;+charset=utf-8 210.5470ms
+2024-01-24 09:23:56.227 +00:00 [INF] User profile is available. Using 'C:\Users\Nath\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-01-24 09:23:56.696 +00:00 [INF] Now listening on: https://localhost:7006
+2024-01-24 09:23:56.698 +00:00 [INF] Now listening on: http://localhost:5123
+2024-01-24 09:23:56.701 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-24 09:23:56.703 +00:00 [INF] Hosting environment: Development
+2024-01-24 09:23:56.704 +00:00 [INF] Content root path: C:\Users\Nath\source\repos\New folder\New folder (2)\AdhaarApi\Adhaar.API
+2024-01-24 09:23:58.724 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7006/swagger/index.html - -
+2024-01-24 09:23:59.273 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7006/swagger/index.html - - - 200 - text/html;charset=utf-8 553.2142ms
+2024-01-24 09:23:59.285 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7006/_framework/aspnetcore-browser-refresh.js - -
+2024-01-24 09:23:59.285 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7006/_vs/browserLink - -
+2024-01-24 09:23:59.297 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7006/_framework/aspnetcore-browser-refresh.js - - - 200 13756 application/javascript;+charset=utf-8 12.2064ms
+2024-01-24 09:23:59.367 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7006/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 82.3107ms
+2024-01-24 09:23:59.467 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7006/swagger/v1/swagger.json - -
+2024-01-24 09:23:59.627 +00:00 [ERR] An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Ambiguous HTTP method for action - Adhaar.API.Controllers.AuthController.SetFileSystem (Adhaar.API). Actions require an explicit HttpMethod binding for Swagger/OpenAPI 3.0
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerDocumentWithoutFilters(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-01-24 09:23:59.675 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7006/swagger/v1/swagger.json - - - 500 - text/plain;+charset=utf-8 207.9930ms
+2024-01-24 09:24:09.817 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7006/ - -
+2024-01-24 09:24:10.734 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7006/ - - - 404 0 - 917.6316ms
+2024-01-24 09:24:12.929 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7006/ - -
+2024-01-24 09:24:12.937 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7006/ - - - 404 0 - 7.7624ms
+2024-01-24 09:24:14.726 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7006/_framework/aspnetcore-browser-refresh.js - -
+2024-01-24 09:24:14.733 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7006/_framework/aspnetcore-browser-refresh.js - - - 200 13756 application/javascript;+charset=utf-8 7.3852ms
+2024-01-24 09:26:06.952 +00:00 [INF] User profile is available. Using 'C:\Users\Nath\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-01-24 09:26:07.388 +00:00 [INF] Now listening on: https://localhost:7006
+2024-01-24 09:26:07.395 +00:00 [INF] Now listening on: http://localhost:5123
+2024-01-24 09:26:07.400 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-24 09:26:07.402 +00:00 [INF] Hosting environment: Development
+2024-01-24 09:26:07.403 +00:00 [INF] Content root path: C:\Users\Nath\source\repos\New folder\New folder (2)\AdhaarApi\Adhaar.API
+2024-01-24 09:26:09.064 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7006/swagger/index.html - -
+2024-01-24 09:26:09.802 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7006/swagger/index.html - - - 200 - text/html;charset=utf-8 743.3714ms
+2024-01-24 09:26:09.818 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7006/_framework/aspnetcore-browser-refresh.js - -
+2024-01-24 09:26:09.820 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7006/_vs/browserLink - -
+2024-01-24 09:26:09.832 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7006/_framework/aspnetcore-browser-refresh.js - - - 200 13756 application/javascript;+charset=utf-8 14.6507ms
+2024-01-24 09:26:09.948 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7006/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 127.9670ms
+2024-01-24 09:26:10.036 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7006/swagger/v1/swagger.json - -
+2024-01-24 09:26:10.228 +00:00 [ERR] An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Ambiguous HTTP method for action - Adhaar.API.Controllers.AuthController.SetFileSystem (Adhaar.API). Actions require an explicit HttpMethod binding for Swagger/OpenAPI 3.0
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerDocumentWithoutFilters(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-01-24 09:26:10.294 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7006/swagger/v1/swagger.json - - - 500 - text/plain;+charset=utf-8 257.1228ms
+2024-01-24 09:27:50.603 +00:00 [INF] User profile is available. Using 'C:\Users\Nath\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-01-24 09:27:51.179 +00:00 [INF] Now listening on: https://localhost:7006
+2024-01-24 09:27:51.181 +00:00 [INF] Now listening on: http://localhost:5123
+2024-01-24 09:27:51.185 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-24 09:27:51.187 +00:00 [INF] Hosting environment: Development
+2024-01-24 09:27:51.188 +00:00 [INF] Content root path: C:\Users\Nath\source\repos\New folder\New folder (2)\AdhaarApi\Adhaar.API
+2024-01-24 09:27:52.636 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7006/swagger/index.html - -
+2024-01-24 09:27:53.181 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7006/swagger/index.html - - - 200 - text/html;charset=utf-8 549.5005ms
+2024-01-24 09:27:53.205 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7006/_vs/browserLink - -
+2024-01-24 09:27:53.205 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7006/_framework/aspnetcore-browser-refresh.js - -
+2024-01-24 09:27:53.218 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7006/_framework/aspnetcore-browser-refresh.js - - - 200 13756 application/javascript;+charset=utf-8 12.3622ms
+2024-01-24 09:27:53.270 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7006/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 65.1159ms
+2024-01-24 09:27:53.356 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7006/swagger/v1/swagger.json - -
+2024-01-24 09:27:53.528 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7006/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 171.2343ms

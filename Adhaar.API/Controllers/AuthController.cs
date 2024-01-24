@@ -12,6 +12,8 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using IronOcr;
 using Tesseract;
+using Microsoft.VisualBasic.FileIO;
+using System.IO.Abstractions;
 
 namespace Adhaar.API.Controllers
 {
@@ -27,8 +29,21 @@ namespace Adhaar.API.Controllers
         private readonly IUserRepository userRepository;
         private readonly string[] exts;
         private const string folderName = "Images/";
+        /* private readonly IFileSystem fileSystem;*/
 
-        public AuthController(ILogger<AuthController> logger,UserManager<IdentityUser> userManager, ITokenRepository tokenRepository, IMapper mapper, AdhaarApiDbContext dbContext, IUserRepository userRepository)
+        /* public AuthController(ILogger<AuthController> logger,UserManager<IdentityUser> userManager, ITokenRepository tokenRepository, IMapper mapper, AdhaarApiDbContext dbContext, IUserRepository userRepository,IFileSystem fileSystem)
+         {
+             this.logger = logger;
+             this.userManager = userManager;
+             this.tokenRepository = tokenRepository;
+             this.mapper = mapper;
+             this.dbContext = dbContext;
+             this.userRepository = userRepository;
+             exts =new string[3]{ ".jpeg",".jpg",".png"};
+             this.fileSystem = fileSystem;
+
+         }*/
+        public AuthController(ILogger<AuthController> logger, UserManager<IdentityUser> userManager, ITokenRepository tokenRepository, IMapper mapper, AdhaarApiDbContext dbContext, IUserRepository userRepository)
         {
             this.logger = logger;
             this.userManager = userManager;
@@ -36,19 +51,14 @@ namespace Adhaar.API.Controllers
             this.mapper = mapper;
             this.dbContext = dbContext;
             this.userRepository = userRepository;
-            exts =new string[3]{ ".jpeg",".jpg",".png"};
+            exts = new string[3] { ".jpeg", ".jpg", ".png" };
            
+
         }
-
-       
-
-      
 
         //Post :  /api/Auth/Register
         [HttpPost]
         [Route("Register")]
-
-
         public async Task<IActionResult> Register([FromBody] RegisterUserRequestDto registerRequestDto)
         {
 
@@ -97,7 +107,6 @@ namespace Adhaar.API.Controllers
         }
 
 
-
         //Post :  /api/Auth/Login
 
         [HttpPost]
@@ -136,64 +145,6 @@ namespace Adhaar.API.Controllers
             return BadRequest("wrong username or password");
         }
 
-
-
-        [HttpPost]
-        [Route("Verify")]
-
-
-        public async Task<IActionResult> Verify([FromBody] RegisterUserRequestDto registerRequestDto)
-        {
-
-            var identityUser = new User
-            {
-                UserName = registerRequestDto.Username,
-                Email = registerRequestDto.Username
-            };
-
-
-            var identityResult = await userManager.CreateAsync(identityUser, registerRequestDto.Password);
-
-
-            if (identityResult.Succeeded)
-            {
-
-               
-                if (registerRequestDto.Roles != null && registerRequestDto.Roles.Any())
-                {
-                    identityResult = await userManager.AddToRolesAsync(identityUser, registerRequestDto.Roles);
-                    if (identityResult.Succeeded)
-                    {
-                        var identity_user = await userRepository.CreateAsync(identityUser);
-                        if (identity_user == null)
-                        {
-
-                            await userManager.DeleteAsync(identityUser);
-
-                            return BadRequest("Oops! something went wrong!");
-                        }
-
-                        var userDTO = mapper.Map<UserDto>(identity_user);
-                        return CreatedAtAction(nameof(GetById), new { id = userDTO.Id }, userDTO);
-
-
-                    }
-                }
-            }
-
-            await userRepository.DeleteAsync(identityUser.Id);
-            await userManager.DeleteAsync(identityUser);
-
-            return BadRequest("Oops! something went wrong!");
-
-        }
-
-       
-
-       
-            
-
-       
 
         [HttpPost]
         [Route("OCR/{id}")]
@@ -257,7 +208,6 @@ namespace Adhaar.API.Controllers
         }
 
 
-
         [HttpGet]
         [Route("{id}")]
         //[Authorize(Roles = "User,Admin")]
@@ -277,6 +227,11 @@ namespace Adhaar.API.Controllers
               return Ok(userDto);
 
 
+        }
+
+        public void SetFileSystem(System.IO.Abstractions.IFileSystem @object)
+        {
+            throw new NotImplementedException();
         }
     }
 }

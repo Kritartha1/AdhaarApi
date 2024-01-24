@@ -40,8 +40,12 @@ namespace Adhaar.API.Controllers
             logger1.LogInformation("GetAll users Action method was invoked");
 
             var imagesDomain = await imageRepository.GetAllAsync();
+            if (imagesDomain == null)
+            {
+                return NotFound("No users found");
+            }
 
-           
+  
 
             logger1.LogInformation($"Finished GetAllUsers request with data:{JsonSerializer.Serialize(imagesDomain)}");
 
@@ -93,12 +97,14 @@ namespace Adhaar.API.Controllers
 
             imageDomainModel = await imageRepository.CreateAsync(imageDomainModel);
 
-            logger1.LogInformation($"Id of image is : {imageDomainModel.Id}");
+            
 
             if(imageDomainModel == null)
             {
                 return BadRequest("Oops! Something is wrong. Try again!");
             }
+
+            logger1.LogInformation($"Id of image is : {imageDomainModel.Id}");
 
             var user = userRepository.GetByIdAsync(id);
             if (user == null)
@@ -184,9 +190,9 @@ namespace Adhaar.API.Controllers
         /// ////////////////////////////////////////////////////////////////////////////////////  
 
 
-        [HttpPut]
+       /* [HttpPut]
         [Route("{id:Guid}")]
-        /* [Authorize(Roles = "User")]*/
+        *//* [Authorize(Roles = "User")]*//*
 
         public async Task<IActionResult> Update([FromRoute] Guid id, [FromBody] UpdateImageRequestDto updateImageRequestDto)
         {
@@ -202,7 +208,7 @@ namespace Adhaar.API.Controllers
             var imageDto = mapper.Map<ImageDto>(imageDomainModel);
             return Ok(imageDto);
 
-        }
+        }*/
 
         /// ////////////////////////////////////////////////////////////////////////////////////  
 

@@ -10,10 +10,10 @@ namespace Adhaar.API.Mappings
 
             CreateMap<User, UserDto>().ReverseMap();
             CreateMap<AddUserRequestDto, User>().ReverseMap();
-            CreateMap<UpdateUserRequestDto, User>().ReverseMap();
+           // CreateMap<UpdateUserRequestDto, User>().ReverseMap();
             CreateMap<ImageAd,ImageDto>().ReverseMap(); 
             CreateMap<AddImageRequestDto, ImageAd>().ReverseMap();
-            CreateMap<UpdateImageRequestDto, ImageAd>().ReverseMap();
+           // CreateMap<UpdateImageRequestDto, ImageAd>().ReverseMap();
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿namespace Adhaar.API.Models.DTO
+﻿
+namespace Adhaar.API.Models.DTO
 {
     public class RegisterUserRequestDto
     {
@@ -7,5 +8,7 @@
         public string Password { get; set; }
 
         public string[] Roles { get; set; }
+
+      
     }
 }

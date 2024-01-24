@@ -253,3 +253,6 @@ C:\Users\Nath\source\repos\New folder\New folder (2)\AdhaarApi\Adhaar.API\bin\De
 C:\Users\Nath\source\repos\New folder\New folder (2)\AdhaarApi\Adhaar.API\bin\Debug\net7.0\runtimes\win-x86\native\osd.traineddata
 C:\Users\Nath\source\repos\New folder\New folder (2)\AdhaarApi\Adhaar.API\bin\Debug\net7.0\runtimes\win-x86\native\pdf.ttf
 C:\Users\Nath\source\repos\New folder\New folder (2)\AdhaarApi\Adhaar.API\bin\Debug\net7.0\runtimes\win-x86\native\pdf.ttx
+C:\Users\Nath\source\repos\New folder\New folder (2)\AdhaarApi\Adhaar.API\bin\Debug\net7.0\System.IO.Abstractions.dll
+C:\Users\Nath\source\repos\New folder\New folder (2)\AdhaarApi\Adhaar.API\bin\Debug\net7.0\TestableIO.System.IO.Abstractions.dll
+C:\Users\Nath\source\repos\New folder\New folder (2)\AdhaarApi\Adhaar.API\bin\Debug\net7.0\TestableIO.System.IO.Abstractions.Wrappers.dll
