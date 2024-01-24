@@ -11,12 +11,19 @@ using global::Adhaar.API.Models.Domain;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using NUnit.Framework;
+using FluentAssertions.Common;
+using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
+using System.Transactions;
+
+
+
 
 namespace Adhaar.API.Tests.MigrationTest
 {
-   
 
-    
+
+    /*
         [TestFixture]
         public class MigrationTests
         {
@@ -36,13 +43,16 @@ namespace Adhaar.API.Tests.MigrationTest
 
                 _context = new AdhaarApiDbContext(builder.Options);
                 _context.Database.EnsureCreated();
+
             }
 
             [Test]
             public void CanApplyMigrations()
             {
-                // Arrange
-                var migrations = _context.Database.GetPendingMigrations().ToList();
+            // Arrange
+        
+
+            var migrations = _context.Database.GetPendingMigrations().ToList();
 
                 // Act
                 foreach (var migration in migrations)
@@ -78,7 +88,70 @@ namespace Adhaar.API.Tests.MigrationTest
                 // Clean up resources
                 _context.Dispose();
             }
+        }*/
+
+   
+
+    
+        [TestFixture]
+        public class MigrationTests
+        {
+            private AdhaarApiDbContext _context;
+
+            [SetUp]
+            public void Setup()
+            {
+                // Set up an in-memory database
+               /* var builder = new DbContextOptionsBuilder<AdhaarApiDbContext>()
+                    .UseInMemoryDatabase(databaseName: "InMemoryDatabase")
+                    .Options;*/
+                 var builder = new DbContextOptionsBuilder<AdhaarApiDbContext>()
+                   .UseInMemoryDatabase(databaseName: "InMemoryDatabase")
+                   .Options;
+
+            _context = new AdhaarApiDbContext(builder);
+                _context.Database.EnsureCreated();
+            }
+
+            [Test]
+            public void CanApplyMigrations()
+            {
+            // Arrange & Act
+            using var scope = new TransactionScope(TransactionScopeAsyncFlowOption.Enabled);
+
+            // Act
+            var migrator = _context.Database.GetService<IMigrator>();
+            migrator.Migrate();
+
+            // Assert
+            Assert.IsEmpty(_context.Database.GetPendingMigrations());
+        }
+
+            [Test]
+            public void DatabaseSchemaMatchesExpectations()
+            {
+                // Arrange
+                var model = _context.Model;
+
+                // Act
+
+                var imagesTableExists = model.FindEntityType(typeof(ImageAd)) != null;
+                var usersTableExists = model.FindEntityType(typeof(User)) != null;
+
+                // Assert
+                Assert.IsTrue(imagesTableExists);
+                Assert.IsTrue(usersTableExists);
+            }
+
+            [TearDown]
+            public void TearDown()
+            {
+                // Clean up resources
+                _context.Database.EnsureDeleted();
+                _context.Dispose();
+            }
         }
     
+
 
 }
