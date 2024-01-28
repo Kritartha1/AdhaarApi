@@ -10,7 +10,12 @@ namespace Adhaar.API.Data
             
         }
 
+        public AdhaarApiDbContext() : base()
+        {
+            // Additional initialization if needed
+        }
+
         public DbSet<User> Users { get; set; }
-        public DbSet<ImageAd> Images { get; set; }    
+        public virtual DbSet<ImageAd> Images { get; set; }    
     }
 }

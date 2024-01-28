@@ -229,6 +229,8 @@ namespace Adhaar.API.Controllers
 
         }
 
+        [NonAction]
+
         public void SetFileSystem(System.IO.Abstractions.IFileSystem @object)
         {
             throw new NotImplementedException();

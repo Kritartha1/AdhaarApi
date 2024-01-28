@@ -31,9 +31,11 @@ namespace Adhaar.API.Tests.RepositoriesTest.ImplementationTest
                 _configuration = new ConfigurationBuilder()
                     .AddInMemoryCollection(new Dictionary<string, string>
                     {
-                    {"Jwt:Key", "yourSecretKey"},
-                    {"Jwt:Issuer", "yourIssuer"},
-                    {"Jwt:Audience", "yourAudience"}
+                    {"Jwt:Key",  "djnvkjnewkdsnvoeloSIJINDVNNijvknd122dkn#kn@nvkJJFNn73451"},
+                    {"Jwt:Issuer", "https://localhost:7006"},
+                    {"Jwt:Audience", "https://localhost:7006"}
+
+                       
                     })
                     .Build();
 

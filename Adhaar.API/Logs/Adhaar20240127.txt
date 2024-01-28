@@ -1,0 +1,60 @@
+2024-01-27 04:54:56.347 +00:00 [INF] User profile is available. Using 'C:\Users\Nath\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-01-27 04:54:58.004 +00:00 [INF] Now listening on: https://localhost:7006
+2024-01-27 04:54:58.050 +00:00 [INF] Now listening on: http://localhost:5123
+2024-01-27 04:54:58.054 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-27 04:54:58.056 +00:00 [INF] Hosting environment: Development
+2024-01-27 04:54:58.057 +00:00 [INF] Content root path: C:\Users\Nath\source\repos\New folder\New folder (2)\AdhaarApi\Adhaar.API
+2024-01-27 04:55:00.674 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7006/swagger/index.html - -
+2024-01-27 04:55:01.252 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7006/swagger/index.html - - - 200 - text/html;charset=utf-8 582.1430ms
+2024-01-27 04:55:01.272 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7006/_framework/aspnetcore-browser-refresh.js - -
+2024-01-27 04:55:01.275 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7006/_vs/browserLink - -
+2024-01-27 04:55:01.281 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7006/_framework/aspnetcore-browser-refresh.js - - - 200 13756 application/javascript;+charset=utf-8 9.4332ms
+2024-01-27 04:55:01.405 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7006/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 130.3036ms
+2024-01-27 04:55:01.482 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7006/swagger/v1/swagger.json - -
+2024-01-27 04:55:01.709 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7006/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 226.2545ms
+2024-01-27 04:55:26.559 +00:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7006/api/Auth/Login - -
+2024-01-27 04:55:26.571 +00:00 [INF] CORS policy execution successful.
+2024-01-27 04:55:26.576 +00:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7006/api/Auth/Login - - - 204 - - 17.3037ms
+2024-01-27 04:55:26.592 +00:00 [INF] Request starting HTTP/2 POST https://localhost:7006/api/Auth/Login application/json 41
+2024-01-27 04:55:26.602 +00:00 [INF] CORS policy execution successful.
+2024-01-27 04:55:26.802 +00:00 [INF] Executing endpoint 'Adhaar.API.Controllers.AuthController.Login (Adhaar.API)'
+2024-01-27 04:55:26.861 +00:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Adhaar.API.Models.DTO.LoginRequestDto) on controller Adhaar.API.Controllers.AuthController (Adhaar.API).
+2024-01-27 04:55:29.881 +00:00 [INF] Executed DbCommand (73ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2024-01-27 04:55:30.385 +00:00 [INF] Executed DbCommand (12ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2024-01-27 04:55:30.504 +00:00 [INF] Executing OkObjectResult, writing value of type 'Adhaar.API.Models.DTO.LoginResponseDto'.
+2024-01-27 04:55:30.526 +00:00 [INF] Executed action Adhaar.API.Controllers.AuthController.Login (Adhaar.API) in 3655.5409ms
+2024-01-27 04:55:30.546 +00:00 [INF] Executed endpoint 'Adhaar.API.Controllers.AuthController.Login (Adhaar.API)'
+2024-01-27 04:55:30.566 +00:00 [INF] Request finished HTTP/2 POST https://localhost:7006/api/Auth/Login application/json 41 - 200 - application/json;+charset=utf-8 3973.3304ms
+2024-01-27 04:55:55.657 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7006/api/Auth/cadd3fc7-ac14-4dc8-ac6a-f34b2c9e8629 - -
+2024-01-27 04:55:55.660 +00:00 [INF] CORS policy execution successful.
+2024-01-27 04:55:55.666 +00:00 [INF] Executing endpoint 'Adhaar.API.Controllers.AuthController.GetById (Adhaar.API)'
+2024-01-27 04:55:55.677 +00:00 [INF] Route matched with {action = "GetById", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetById(System.String) on controller Adhaar.API.Controllers.AuthController (Adhaar.API).
+2024-01-27 04:55:55.949 +00:00 [INF] Executed DbCommand (7ms) [Parameters=[@__id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[ImageId], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName], [i].[Id], [i].[Address], [i].[Age], [i].[District], [i].[FirstName], [i].[LastName], [i].[Locality], [i].[Phone], [i].[State], [i].[UID]
+FROM [Users] AS [u]
+LEFT JOIN [Images] AS [i] ON [u].[ImageId] = [i].[Id]
+WHERE [u].[Id] = @__id_0
+2024-01-27 04:55:56.043 +00:00 [INF] Executing OkObjectResult, writing value of type 'Adhaar.API.Models.DTO.UserDto'.
+2024-01-27 04:55:56.079 +00:00 [INF] Executed action Adhaar.API.Controllers.AuthController.GetById (Adhaar.API) in 398.3281ms
+2024-01-27 04:55:56.082 +00:00 [INF] Executed endpoint 'Adhaar.API.Controllers.AuthController.GetById (Adhaar.API)'
+2024-01-27 04:55:56.084 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7006/api/Auth/cadd3fc7-ac14-4dc8-ac6a-f34b2c9e8629 - - - 200 - application/json;+charset=utf-8 426.7664ms
+2024-01-27 04:55:56.089 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7006/api/Image/cadd3fc7-ac14-4dc8-ac6a-f34b2c9e8629 - -
+2024-01-27 04:55:56.090 +00:00 [INF] CORS policy execution successful.
+2024-01-27 04:55:56.094 +00:00 [INF] Executing endpoint 'Adhaar.API.Controllers.ImageController.GetById (Adhaar.API)'
+2024-01-27 04:55:56.102 +00:00 [INF] Route matched with {action = "GetById", controller = "Image"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetById(System.String) on controller Adhaar.API.Controllers.ImageController (Adhaar.API).
+2024-01-27 04:55:56.129 +00:00 [INF] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[ImageId], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName], [i].[Id], [i].[Address], [i].[Age], [i].[District], [i].[FirstName], [i].[LastName], [i].[Locality], [i].[Phone], [i].[State], [i].[UID]
+FROM [Users] AS [u]
+LEFT JOIN [Images] AS [i] ON [u].[ImageId] = [i].[Id]
+WHERE [u].[Id] = @__id_0
+2024-01-27 04:55:56.143 +00:00 [INF] Executing OkObjectResult, writing value of type 'Adhaar.API.Models.DTO.ImageDto'.
+2024-01-27 04:55:56.149 +00:00 [INF] Executed action Adhaar.API.Controllers.ImageController.GetById (Adhaar.API) in 44.1151ms
+2024-01-27 04:55:56.151 +00:00 [INF] Executed endpoint 'Adhaar.API.Controllers.ImageController.GetById (Adhaar.API)'
+2024-01-27 04:55:56.152 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7006/api/Image/cadd3fc7-ac14-4dc8-ac6a-f34b2c9e8629 - - - 200 - application/json;+charset=utf-8 63.5335ms

@@ -1,0 +1,1921 @@
+{
+  "$schema": "http://json.schemastore.org/sarif-1.0.0",
+  "version": "1.0.0",
+  "runs": [
+    {
+      "tool": {
+        "name": "Microsoft (R) Visual C# Compiler",
+        "version": "4.8.0.0",
+        "fileVersion": "4.8.0-3.23524.11 (f43cd10b)",
+        "semanticVersion": "4.8.0",
+        "language": "en-US"
+      },
+      "results": [
+        {
+          "ruleId": "CS0105",
+          "level": "warning",
+          "message": "The using directive for 'IronOcr' appeared previously in this namespace",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Nath/source/repos/New%20folder/New%20folder%20(2)/AdhaarApi/Adhaar.API/Controllers/AuthController.cs",
+                "region": {
+                  "startLine": 13,
+                  "startColumn": 7,
+                  "endLine": 13,
+                  "endColumn": 14
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 3
+          }
+        },
+        {
+          "ruleId": "CS8604",
+          "level": "warning",
+          "message": "Possible null reference argument for parameter 'value' in 'Claim.Claim(string type, string value)'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Nath/source/repos/New%20folder/New%20folder%20(2)/AdhaarApi/Adhaar.API/Repositories/Implementaion/TokenRepository.cs",
+                "region": {
+                  "startLine": 22,
+                  "startColumn": 45,
+                  "endLine": 22,
+                  "endColumn": 55
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8604",
+          "level": "warning",
+          "message": "Possible null reference argument for parameter 's' in 'byte[] Encoding.GetBytes(string s)'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Nath/source/repos/New%20folder/New%20folder%20(2)/AdhaarApi/Adhaar.API/Repositories/Implementaion/TokenRepository.cs",
+                "region": {
+                  "startLine": 30,
+                  "startColumn": 71,
+                  "endLine": 30,
+                  "endColumn": 95
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8604",
+          "level": "warning",
+          "message": "Possible null reference argument for parameter 's' in 'byte[] Encoding.GetBytes(string s)'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Nath/source/repos/New%20folder/New%20folder%20(2)/AdhaarApi/Adhaar.API/Program.cs",
+                "region": {
+                  "startLine": 103,
+                  "startColumn": 76,
+                  "endLine": 103,
+                  "endColumn": 108
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "Non-nullable property 'Users' must contain a non-null value when exiting constructor. Consider declaring the property as nullable.",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Nath/source/repos/New%20folder/New%20folder%20(2)/AdhaarApi/Adhaar.API/Data/AdhaarApiDbContext.cs",
+                "region": {
+                  "startLine": 8,
+                  "startColumn": 16,
+                  "endLine": 8,
+                  "endColumn": 34
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/Nath/source/repos/New%20folder/New%20folder%20(2)/AdhaarApi/Adhaar.API/Data/AdhaarApiDbContext.cs",
+                "region": {
+                  "startLine": 18,
+                  "startColumn": 28,
+                  "endLine": 18,
+                  "endColumn": 33
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "Non-nullable property 'Images' must contain a non-null value when exiting constructor. Consider declaring the property as nullable.",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Nath/source/repos/New%20folder/New%20folder%20(2)/AdhaarApi/Adhaar.API/Data/AdhaarApiDbContext.cs",
+                "region": {
+                  "startLine": 8,
+                  "startColumn": 16,
+                  "endLine": 8,
+                  "endColumn": 34
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/Nath/source/repos/New%20folder/New%20folder%20(2)/AdhaarApi/Adhaar.API/Data/AdhaarApiDbContext.cs",
+                "region": {
+                  "startLine": 19,
+                  "startColumn": 39,
+                  "endLine": 19,
+                  "endColumn": 45
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "Non-nullable property 'Users' must contain a non-null value when exiting constructor. Consider declaring the property as nullable.",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Nath/source/repos/New%20folder/New%20folder%20(2)/AdhaarApi/Adhaar.API/Data/AdhaarApiDbContext.cs",
+                "region": {
+                  "startLine": 13,
+                  "startColumn": 16,
+                  "endLine": 13,
+                  "endColumn": 34
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/Nath/source/repos/New%20folder/New%20folder%20(2)/AdhaarApi/Adhaar.API/Data/AdhaarApiDbContext.cs",
+                "region": {
+                  "startLine": 18,
+                  "startColumn": 28,
+                  "endLine": 18,
+                  "endColumn": 33
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "Non-nullable property 'Images' must contain a non-null value when exiting constructor. Consider declaring the property as nullable.",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Nath/source/repos/New%20folder/New%20folder%20(2)/AdhaarApi/Adhaar.API/Data/AdhaarApiDbContext.cs",
+                "region": {
+                  "startLine": 13,
+                  "startColumn": 16,
+                  "endLine": 13,
+                  "endColumn": 34
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/Nath/source/repos/New%20folder/New%20folder%20(2)/AdhaarApi/Adhaar.API/Data/AdhaarApiDbContext.cs",
+                "region": {
+                  "startLine": 19,
+                  "startColumn": 39,
+                  "endLine": 19,
+                  "endColumn": 45
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8602",
+          "level": "warning",
+          "message": "Dereference of a possibly null reference.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Nath/source/repos/New%20folder/New%20folder%20(2)/AdhaarApi/Adhaar.API/Controllers/ImageController.cs",
+                "region": {
+                  "startLine": 159,
+                  "startColumn": 33,
+                  "endLine": 159,
+                  "endColumn": 57
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8602",
+          "level": "warning",
+          "message": "Dereference of a possibly null reference.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Nath/source/repos/New%20folder/New%20folder%20(2)/AdhaarApi/Adhaar.API/Controllers/ImageController.cs",
+                "region": {
+                  "startLine": 160,
+                  "startColumn": 36,
+                  "endLine": 160,
+                  "endColumn": 58
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8602",
+          "level": "warning",
+          "message": "Dereference of a possibly null reference.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Nath/source/repos/New%20folder/New%20folder%20(2)/AdhaarApi/Adhaar.API/Controllers/ImageController.cs",
+                "region": {
+                  "startLine": 161,
+                  "startColumn": 36,
+                  "endLine": 161,
+                  "endColumn": 61
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8604",
+          "level": "warning",
+          "message": "Possible null reference argument for parameter 'value' in 'bool string.Contains(string value)'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Nath/source/repos/New%20folder/New%20folder%20(2)/AdhaarApi/Adhaar.API/Controllers/ImageController.cs",
+                "region": {
+                  "startLine": 164,
+                  "startColumn": 34,
+                  "endLine": 164,
+                  "endColumn": 54
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "Non-nullable property 'Id' must contain a non-null value when exiting constructor. Consider declaring the property as nullable.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Nath/source/repos/New%20folder/New%20folder%20(2)/AdhaarApi/Adhaar.API/Models/DTO/UserDto.cs",
+                "region": {
+                  "startLine": 8,
+                  "startColumn": 23,
+                  "endLine": 8,
+                  "endColumn": 25
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/Nath/source/repos/New%20folder/New%20folder%20(2)/AdhaarApi/Adhaar.API/Models/DTO/UserDto.cs",
+                "region": {
+                  "startLine": 8,
+                  "startColumn": 23,
+                  "endLine": 8,
+                  "endColumn": 25
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "Non-nullable property 'Username' must contain a non-null value when exiting constructor. Consider declaring the property as nullable.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Nath/source/repos/New%20folder/New%20folder%20(2)/AdhaarApi/Adhaar.API/Models/DTO/RegisterUserRequestDto.cs",
+                "region": {
+                  "startLine": 6,
+                  "startColumn": 23,
+                  "endLine": 6,
+                  "endColumn": 31
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/Nath/source/repos/New%20folder/New%20folder%20(2)/AdhaarApi/Adhaar.API/Models/DTO/RegisterUserRequestDto.cs",
+                "region": {
+                  "startLine": 6,
+                  "startColumn": 23,
+                  "endLine": 6,
+                  "endColumn": 31
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "Non-nullable property 'Password' must contain a non-null value when exiting constructor. Consider declaring the property as nullable.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Nath/source/repos/New%20folder/New%20folder%20(2)/AdhaarApi/Adhaar.API/Models/DTO/RegisterUserRequestDto.cs",
+                "region": {
+                  "startLine": 8,
+                  "startColumn": 23,
+                  "endLine": 8,
+                  "endColumn": 31
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/Nath/source/repos/New%20folder/New%20folder%20(2)/AdhaarApi/Adhaar.API/Models/DTO/RegisterUserRequestDto.cs",
+                "region": {
+                  "startLine": 8,
+                  "startColumn": 23,
+                  "endLine": 8,
+                  "endColumn": 31
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "Non-nullable property 'Roles' must contain a non-null value when exiting constructor. Consider declaring the property as nullable.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Nath/source/repos/New%20folder/New%20folder%20(2)/AdhaarApi/Adhaar.API/Models/DTO/RegisterUserRequestDto.cs",
+                "region": {
+                  "startLine": 10,
+                  "startColumn": 25,
+                  "endLine": 10,
+                  "endColumn": 30
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/Nath/source/repos/New%20folder/New%20folder%20(2)/AdhaarApi/Adhaar.API/Models/DTO/RegisterUserRequestDto.cs",
+                "region": {
+                  "startLine": 10,
+                  "startColumn": 25,
+                  "endLine": 10,
+                  "endColumn": 30
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "Non-nullable property 'Email' must contain a non-null value when exiting constructor. Consider declaring the property as nullable.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Nath/source/repos/New%20folder/New%20folder%20(2)/AdhaarApi/Adhaar.API/Models/DTO/LoginResponseDto.cs",
+                "region": {
+                  "startLine": 5,
+                  "startColumn": 23,
+                  "endLine": 5,
+                  "endColumn": 28
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/Nath/source/repos/New%20folder/New%20folder%20(2)/AdhaarApi/Adhaar.API/Models/DTO/LoginResponseDto.cs",
+                "region": {
+                  "startLine": 5,
+                  "startColumn": 23,
+                  "endLine": 5,
+                  "endColumn": 28
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "Non-nullable property 'Roles' must contain a non-null value when exiting constructor. Consider declaring the property as nullable.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Nath/source/repos/New%20folder/New%20folder%20(2)/AdhaarApi/Adhaar.API/Models/DTO/LoginResponseDto.cs",
+                "region": {
+                  "startLine": 6,
+                  "startColumn": 29,
+                  "endLine": 6,
+                  "endColumn": 34
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/Nath/source/repos/New%20folder/New%20folder%20(2)/AdhaarApi/Adhaar.API/Models/DTO/LoginResponseDto.cs",
+                "region": {
+                  "startLine": 6,
+                  "startColumn": 29,
+                  "endLine": 6,
+                  "endColumn": 34
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "Non-nullable property 'Id' must contain a non-null value when exiting constructor. Consider declaring the property as nullable.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Nath/source/repos/New%20folder/New%20folder%20(2)/AdhaarApi/Adhaar.API/Models/DTO/LoginResponseDto.cs",
+                "region": {
+                  "startLine": 7,
+                  "startColumn": 23,
+                  "endLine": 7,
+                  "endColumn": 25
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/Nath/source/repos/New%20folder/New%20folder%20(2)/AdhaarApi/Adhaar.API/Models/DTO/LoginResponseDto.cs",
+                "region": {
+                  "startLine": 7,
+                  "startColumn": 23,
+                  "endLine": 7,
+                  "endColumn": 25
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "Non-nullable property 'JwtToken' must contain a non-null value when exiting constructor. Consider declaring the property as nullable.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Nath/source/repos/New%20folder/New%20folder%20(2)/AdhaarApi/Adhaar.API/Models/DTO/LoginResponseDto.cs",
+                "region": {
+                  "startLine": 8,
+                  "startColumn": 23,
+                  "endLine": 8,
+                  "endColumn": 31
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/Nath/source/repos/New%20folder/New%20folder%20(2)/AdhaarApi/Adhaar.API/Models/DTO/LoginResponseDto.cs",
+                "region": {
+                  "startLine": 8,
+                  "startColumn": 23,
+                  "endLine": 8,
+                  "endColumn": 31
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "Non-nullable property 'Username' must contain a non-null value when exiting constructor. Consider declaring the property as nullable.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Nath/source/repos/New%20folder/New%20folder%20(2)/AdhaarApi/Adhaar.API/Models/DTO/LoginRequestDto.cs",
+                "region": {
+                  "startLine": 9,
+                  "startColumn": 23,
+                  "endLine": 9,
+                  "endColumn": 31
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/Nath/source/repos/New%20folder/New%20folder%20(2)/AdhaarApi/Adhaar.API/Models/DTO/LoginRequestDto.cs",
+                "region": {
+                  "startLine": 9,
+                  "startColumn": 23,
+                  "endLine": 9,
+                  "endColumn": 31
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "Non-nullable property 'Password' must contain a non-null value when exiting constructor. Consider declaring the property as nullable.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Nath/source/repos/New%20folder/New%20folder%20(2)/AdhaarApi/Adhaar.API/Models/DTO/LoginRequestDto.cs",
+                "region": {
+                  "startLine": 13,
+                  "startColumn": 23,
+                  "endLine": 13,
+                  "endColumn": 31
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/Nath/source/repos/New%20folder/New%20folder%20(2)/AdhaarApi/Adhaar.API/Models/DTO/LoginRequestDto.cs",
+                "region": {
+                  "startLine": 13,
+                  "startColumn": 23,
+                  "endLine": 13,
+                  "endColumn": 31
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "Non-nullable property 'FirstName' must contain a non-null value when exiting constructor. Consider declaring the property as nullable.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Nath/source/repos/New%20folder/New%20folder%20(2)/AdhaarApi/Adhaar.API/Models/DTO/AddImageRequestDto.cs",
+                "region": {
+                  "startLine": 8,
+                  "startColumn": 23,
+                  "endLine": 8,
+                  "endColumn": 32
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/Nath/source/repos/New%20folder/New%20folder%20(2)/AdhaarApi/Adhaar.API/Models/DTO/AddImageRequestDto.cs",
+                "region": {
+                  "startLine": 8,
+                  "startColumn": 23,
+                  "endLine": 8,
+                  "endColumn": 32
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "Non-nullable property 'LastName' must contain a non-null value when exiting constructor. Consider declaring the property as nullable.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Nath/source/repos/New%20folder/New%20folder%20(2)/AdhaarApi/Adhaar.API/Models/DTO/AddImageRequestDto.cs",
+                "region": {
+                  "startLine": 10,
+                  "startColumn": 23,
+                  "endLine": 10,
+                  "endColumn": 31
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/Nath/source/repos/New%20folder/New%20folder%20(2)/AdhaarApi/Adhaar.API/Models/DTO/AddImageRequestDto.cs",
+                "region": {
+                  "startLine": 10,
+                  "startColumn": 23,
+                  "endLine": 10,
+                  "endColumn": 31
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "Non-nullable property 'Address' must contain a non-null value when exiting constructor. Consider declaring the property as nullable.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Nath/source/repos/New%20folder/New%20folder%20(2)/AdhaarApi/Adhaar.API/Models/DTO/AddImageRequestDto.cs",
+                "region": {
+                  "startLine": 12,
+                  "startColumn": 23,
+                  "endLine": 12,
+                  "endColumn": 30
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/Nath/source/repos/New%20folder/New%20folder%20(2)/AdhaarApi/Adhaar.API/Models/DTO/AddImageRequestDto.cs",
+                "region": {
+                  "startLine": 12,
+                  "startColumn": 23,
+                  "endLine": 12,
+                  "endColumn": 30
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "Non-nullable property 'Phone' must contain a non-null value when exiting constructor. Consider declaring the property as nullable.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Nath/source/repos/New%20folder/New%20folder%20(2)/AdhaarApi/Adhaar.API/Models/DTO/AddImageRequestDto.cs",
+                "region": {
+                  "startLine": 17,
+                  "startColumn": 23,
+                  "endLine": 17,
+                  "endColumn": 28
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/Nath/source/repos/New%20folder/New%20folder%20(2)/AdhaarApi/Adhaar.API/Models/DTO/AddImageRequestDto.cs",
+                "region": {
+                  "startLine": 17,
+                  "startColumn": 23,
+                  "endLine": 17,
+                  "endColumn": 28
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "Non-nullable property 'Locality' must contain a non-null value when exiting constructor. Consider declaring the property as nullable.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Nath/source/repos/New%20folder/New%20folder%20(2)/AdhaarApi/Adhaar.API/Models/DTO/AddImageRequestDto.cs",
+                "region": {
+                  "startLine": 19,
+                  "startColumn": 23,
+                  "endLine": 19,
+                  "endColumn": 31
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/Nath/source/repos/New%20folder/New%20folder%20(2)/AdhaarApi/Adhaar.API/Models/DTO/AddImageRequestDto.cs",
+                "region": {
+                  "startLine": 19,
+                  "startColumn": 23,
+                  "endLine": 19,
+                  "endColumn": 31
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "Non-nullable property 'District' must contain a non-null value when exiting constructor. Consider declaring the property as nullable.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Nath/source/repos/New%20folder/New%20folder%20(2)/AdhaarApi/Adhaar.API/Models/DTO/AddImageRequestDto.cs",
+                "region": {
+                  "startLine": 21,
+                  "startColumn": 23,
+                  "endLine": 21,
+                  "endColumn": 31
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/Nath/source/repos/New%20folder/New%20folder%20(2)/AdhaarApi/Adhaar.API/Models/DTO/AddImageRequestDto.cs",
+                "region": {
+                  "startLine": 21,
+                  "startColumn": 23,
+                  "endLine": 21,
+                  "endColumn": 31
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "Non-nullable property 'State' must contain a non-null value when exiting constructor. Consider declaring the property as nullable.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Nath/source/repos/New%20folder/New%20folder%20(2)/AdhaarApi/Adhaar.API/Models/DTO/AddImageRequestDto.cs",
+                "region": {
+                  "startLine": 23,
+                  "startColumn": 23,
+                  "endLine": 23,
+                  "endColumn": 28
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/Nath/source/repos/New%20folder/New%20folder%20(2)/AdhaarApi/Adhaar.API/Models/DTO/AddImageRequestDto.cs",
+                "region": {
+                  "startLine": 23,
+                  "startColumn": 23,
+                  "endLine": 23,
+                  "endColumn": 28
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "Non-nullable property 'UID' must contain a non-null value when exiting constructor. Consider declaring the property as nullable.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Nath/source/repos/New%20folder/New%20folder%20(2)/AdhaarApi/Adhaar.API/Models/DTO/AddImageRequestDto.cs",
+                "region": {
+                  "startLine": 26,
+                  "startColumn": 23,
+                  "endLine": 26,
+                  "endColumn": 26
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/Nath/source/repos/New%20folder/New%20folder%20(2)/AdhaarApi/Adhaar.API/Models/DTO/AddImageRequestDto.cs",
+                "region": {
+                  "startLine": 26,
+                  "startColumn": 23,
+                  "endLine": 26,
+                  "endColumn": 26
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "Non-nullable property 'File' must contain a non-null value when exiting constructor. Consider declaring the property as nullable.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Nath/source/repos/New%20folder/New%20folder%20(2)/AdhaarApi/Adhaar.API/Models/DTO/AddImageRequestDto.cs",
+                "region": {
+                  "startLine": 28,
+                  "startColumn": 26,
+                  "endLine": 28,
+                  "endColumn": 30
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/Nath/source/repos/New%20folder/New%20folder%20(2)/AdhaarApi/Adhaar.API/Models/DTO/AddImageRequestDto.cs",
+                "region": {
+                  "startLine": 28,
+                  "startColumn": 26,
+                  "endLine": 28,
+                  "endColumn": 30
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S125",
+          "level": "warning",
+          "message": "Remove this commented out code.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Nath/source/repos/New%20folder/New%20folder%20(2)/AdhaarApi/Adhaar.API/Controllers/AuthController.cs",
+                "region": {
+                  "startLine": 32,
+                  "startColumn": 9,
+                  "endLine": 32,
+                  "endColumn": 54
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S125",
+          "level": "warning",
+          "message": "Remove this commented out code.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Nath/source/repos/New%20folder/New%20folder%20(2)/AdhaarApi/Adhaar.API/Controllers/AuthController.cs",
+                "region": {
+                  "startLine": 35,
+                  "startColumn": 1,
+                  "endLine": 35,
+                  "endColumn": 11
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S125",
+          "level": "warning",
+          "message": "Remove this commented out code.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Nath/source/repos/New%20folder/New%20folder%20(2)/AdhaarApi/Adhaar.API/Controllers/AuthController.cs",
+                "region": {
+                  "startLine": 71,
+                  "startColumn": 13,
+                  "endLine": 71,
+                  "endColumn": 109
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S125",
+          "level": "warning",
+          "message": "Remove this commented out code.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Nath/source/repos/New%20folder/New%20folder%20(2)/AdhaarApi/Adhaar.API/Controllers/ImageController.cs",
+                "region": {
+                  "startLine": 154,
+                  "startColumn": 1,
+                  "endLine": 154,
+                  "endColumn": 16
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S125",
+          "level": "warning",
+          "message": "Remove this commented out code.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Nath/source/repos/New%20folder/New%20folder%20(2)/AdhaarApi/Adhaar.API/Controllers/ImageController.cs",
+                "region": {
+                  "startLine": 184,
+                  "startColumn": 13,
+                  "endLine": 184,
+                  "endColumn": 69
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S125",
+          "level": "warning",
+          "message": "Remove this commented out code.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Nath/source/repos/New%20folder/New%20folder%20(2)/AdhaarApi/Adhaar.API/Controllers/ImageController.cs",
+                "region": {
+                  "startLine": 198,
+                  "startColumn": 1,
+                  "endLine": 198,
+                  "endColumn": 10
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S125",
+          "level": "warning",
+          "message": "Remove this commented out code.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Nath/source/repos/New%20folder/New%20folder%20(2)/AdhaarApi/Adhaar.API/Mappings/AutoMapperprofiles.cs",
+                "region": {
+                  "startLine": 12,
+                  "startColumn": 11,
+                  "endLine": 12,
+                  "endColumn": 65
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S125",
+          "level": "warning",
+          "message": "Remove this commented out code.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Nath/source/repos/New%20folder/New%20folder%20(2)/AdhaarApi/Adhaar.API/Mappings/AutoMapperprofiles.cs",
+                "region": {
+                  "startLine": 16,
+                  "startColumn": 12,
+                  "endLine": 16,
+                  "endColumn": 72
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S125",
+          "level": "warning",
+          "message": "Remove this commented out code.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Nath/source/repos/New%20folder/New%20folder%20(2)/AdhaarApi/Adhaar.API/Models/Domain/ImageAd.cs",
+                "region": {
+                  "startLine": 36,
+                  "startColumn": 9,
+                  "endLine": 36,
+                  "endColumn": 52
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S125",
+          "level": "warning",
+          "message": "Remove this commented out code.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Nath/source/repos/New%20folder/New%20folder%20(2)/AdhaarApi/Adhaar.API/Models/DTO/UserDto.cs",
+                "region": {
+                  "startLine": 10,
+                  "startColumn": 9,
+                  "endLine": 10,
+                  "endColumn": 48
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S125",
+          "level": "warning",
+          "message": "Remove this commented out code.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Nath/source/repos/New%20folder/New%20folder%20(2)/AdhaarApi/Adhaar.API/Repositories/Implementaion/ImageRepository.cs",
+                "region": {
+                  "startLine": 126,
+                  "startColumn": 16,
+                  "endLine": 126,
+                  "endColumn": 65
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S125",
+          "level": "warning",
+          "message": "Remove this commented out code.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Nath/source/repos/New%20folder/New%20folder%20(2)/AdhaarApi/Adhaar.API/Repositories/Implementaion/SQLUserRepository.cs",
+                "region": {
+                  "startLine": 45,
+                  "startColumn": 13,
+                  "endLine": 45,
+                  "endColumn": 129
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S125",
+          "level": "warning",
+          "message": "Remove this commented out code.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Nath/source/repos/New%20folder/New%20folder%20(2)/AdhaarApi/Adhaar.API/Repositories/Interface/IUserRepository.cs",
+                "region": {
+                  "startLine": 9,
+                  "startColumn": 9,
+                  "endLine": 9,
+                  "endColumn": 46
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S125",
+          "level": "warning",
+          "message": "Remove this commented out code.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Nath/source/repos/New%20folder/New%20folder%20(2)/AdhaarApi/Adhaar.API/Repositories/Interface/IUserRepository.cs",
+                "region": {
+                  "startLine": 15,
+                  "startColumn": 9,
+                  "endLine": 15,
+                  "endColumn": 55
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S4487",
+          "level": "warning",
+          "message": "Remove this unread private field 'dbContext' or refactor the code to use its value.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Nath/source/repos/New%20folder/New%20folder%20(2)/AdhaarApi/Adhaar.API/Controllers/ImageController.cs",
+                "region": {
+                  "startLine": 21,
+                  "startColumn": 45,
+                  "endLine": 21,
+                  "endColumn": 54
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S4487",
+          "level": "warning",
+          "message": "Remove this unread private field 'logger' or refactor the code to use its value.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Nath/source/repos/New%20folder/New%20folder%20(2)/AdhaarApi/Adhaar.API/Controllers/AuthController.cs",
+                "region": {
+                  "startLine": 24,
+                  "startColumn": 50,
+                  "endLine": 24,
+                  "endColumn": 56
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S4487",
+          "level": "warning",
+          "message": "Remove this unread private field 'dbContext' or refactor the code to use its value.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Nath/source/repos/New%20folder/New%20folder%20(2)/AdhaarApi/Adhaar.API/Controllers/AuthController.cs",
+                "region": {
+                  "startLine": 28,
+                  "startColumn": 45,
+                  "endLine": 28,
+                  "endColumn": 54
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S101",
+          "level": "warning",
+          "message": "Rename class '_2ndMigration' to match pascal case naming rules, trim underscores from the name.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Nath/source/repos/New%20folder/New%20folder%20(2)/AdhaarApi/Adhaar.API/Migrations/20240116045635_2nd%20Migration.cs",
+                "region": {
+                  "startLine": 8,
+                  "startColumn": 26,
+                  "endLine": 8,
+                  "endColumn": 39
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S101",
+          "level": "warning",
+          "message": "Rename class '_2ndMigration' to match pascal case naming rules, trim underscores from the name.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Nath/source/repos/New%20folder/New%20folder%20(2)/AdhaarApi/Adhaar.API/Migrations/AdhaarApiAuthDb/20240116043547_2nd%20Migration.cs",
+                "region": {
+                  "startLine": 11,
+                  "startColumn": 26,
+                  "endLine": 11,
+                  "endColumn": 39
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S101",
+          "level": "warning",
+          "message": "Rename class 'SQLUserRepository' to match pascal case naming rules, consider using 'SqlUserRepository'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Nath/source/repos/New%20folder/New%20folder%20(2)/AdhaarApi/Adhaar.API/Repositories/Implementaion/SQLUserRepository.cs",
+                "region": {
+                  "startLine": 8,
+                  "startColumn": 18,
+                  "endLine": 8,
+                  "endColumn": 35
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CA2254",
+          "level": "note",
+          "message": "The logging message template should not vary between calls to 'LoggerExtensions.LogInformation(ILogger, string?, params object?[])'",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Nath/source/repos/New%20folder/New%20folder%20(2)/AdhaarApi/Adhaar.API/Controllers/ImageController.cs",
+                "region": {
+                  "startLine": 50,
+                  "startColumn": 36,
+                  "endLine": 50,
+                  "endColumn": 118
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S4792",
+          "level": "warning",
+          "message": "Make sure that this logger's configuration is safe.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Nath/source/repos/New%20folder/New%20folder%20(2)/AdhaarApi/Adhaar.API/Program.cs",
+                "region": {
+                  "startLine": 17,
+                  "startColumn": 14,
+                  "endLine": 17,
+                  "endColumn": 39
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S6444",
+          "level": "warning",
+          "message": "Pass a timeout to limit the execution time.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Nath/source/repos/New%20folder/New%20folder%20(2)/AdhaarApi/Adhaar.API/Controllers/ImageController.cs",
+                "region": {
+                  "startLine": 127,
+                  "startColumn": 31,
+                  "endLine": 127,
+                  "endColumn": 62
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S6444",
+          "level": "warning",
+          "message": "Pass a timeout to limit the execution time.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Nath/source/repos/New%20folder/New%20folder%20(2)/AdhaarApi/Adhaar.API/Controllers/ImageController.cs",
+                "region": {
+                  "startLine": 129,
+                  "startColumn": 20,
+                  "endLine": 129,
+                  "endColumn": 51
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1066",
+          "level": "warning",
+          "message": "Merge this if statement with the enclosing one.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Nath/source/repos/New%20folder/New%20folder%20(2)/AdhaarApi/Adhaar.API/Controllers/AuthController.cs",
+                "region": {
+                  "startLine": 80,
+                  "startColumn": 17,
+                  "endLine": 80,
+                  "endColumn": 19
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/Nath/source/repos/New%20folder/New%20folder%20(2)/AdhaarApi/Adhaar.API/Controllers/AuthController.cs",
+                "region": {
+                  "startLine": 76,
+                  "startColumn": 13,
+                  "endLine": 76,
+                  "endColumn": 15
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S5122",
+          "level": "warning",
+          "message": "Make sure this permissive CORS policy is safe here.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Nath/source/repos/New%20folder/New%20folder%20(2)/AdhaarApi/Adhaar.API/Program.cs",
+                "region": {
+                  "startLine": 126,
+                  "startColumn": 5,
+                  "endLine": 126,
+                  "endColumn": 29
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CA2254",
+          "level": "note",
+          "message": "The logging message template should not vary between calls to 'LoggerExtensions.LogInformation(ILogger, string?, params object?[])'",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Nath/source/repos/New%20folder/New%20folder%20(2)/AdhaarApi/Adhaar.API/Controllers/ImageController.cs",
+                "region": {
+                  "startLine": 107,
+                  "startColumn": 36,
+                  "endLine": 107,
+                  "endColumn": 77
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CA2254",
+          "level": "note",
+          "message": "The logging message template should not vary between calls to 'LoggerExtensions.LogInformation(ILogger, string?, params object?[])'",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Nath/source/repos/New%20folder/New%20folder%20(2)/AdhaarApi/Adhaar.API/Controllers/ImageController.cs",
+                "region": {
+                  "startLine": 138,
+                  "startColumn": 40,
+                  "endLine": 138,
+                  "endColumn": 44
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CA2254",
+          "level": "note",
+          "message": "The logging message template should not vary between calls to 'LoggerExtensions.LogInformation(ILogger, string?, params object?[])'",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Nath/source/repos/New%20folder/New%20folder%20(2)/AdhaarApi/Adhaar.API/Controllers/ImageController.cs",
+                "region": {
+                  "startLine": 143,
+                  "startColumn": 36,
+                  "endLine": 143,
+                  "endColumn": 40
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "SYSLIB1045",
+          "level": "note",
+          "message": "Use 'GeneratedRegexAttribute' to generate the regular expression implementation at compile-time.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Nath/source/repos/New%20folder/New%20folder%20(2)/AdhaarApi/Adhaar.API/Controllers/ImageController.cs",
+                "region": {
+                  "startLine": 127,
+                  "startColumn": 31,
+                  "endLine": 127,
+                  "endColumn": 62
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "SYSLIB1045",
+          "level": "note",
+          "message": "Use 'GeneratedRegexAttribute' to generate the regular expression implementation at compile-time.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Nath/source/repos/New%20folder/New%20folder%20(2)/AdhaarApi/Adhaar.API/Controllers/ImageController.cs",
+                "region": {
+                  "startLine": 129,
+                  "startColumn": 20,
+                  "endLine": 129,
+                  "endColumn": 51
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CA2254",
+          "level": "note",
+          "message": "The logging message template should not vary between calls to 'LoggerExtensions.LogInformation(ILogger, string?, params object?[])'",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Nath/source/repos/New%20folder/New%20folder%20(2)/AdhaarApi/Adhaar.API/Repositories/Implementaion/ImageRepository.cs",
+                "region": {
+                  "startLine": 144,
+                  "startColumn": 39,
+                  "endLine": 144,
+                  "endColumn": 49
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1186",
+          "level": "warning",
+          "message": "Add a nested comment explaining why this method is empty, throw a 'NotSupportedException' or complete the implementation.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Nath/source/repos/New%20folder/New%20folder%20(2)/AdhaarApi/Adhaar.API/Migrations/20240126081729_new%20migration.cs",
+                "region": {
+                  "startLine": 17,
+                  "startColumn": 33,
+                  "endLine": 17,
+                  "endColumn": 37
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1186",
+          "level": "warning",
+          "message": "Add a nested comment explaining why this method is empty, throw a 'NotSupportedException' or complete the implementation.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Nath/source/repos/New%20folder/New%20folder%20(2)/AdhaarApi/Adhaar.API/Migrations/AdhaarApiAuthDb/20240126081747_new%20migration.cs",
+                "region": {
+                  "startLine": 17,
+                  "startColumn": 33,
+                  "endLine": 17,
+                  "endColumn": 37
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        }
+      ],
+      "rules": {
+        "CA2254": {
+          "id": "CA2254",
+          "shortDescription": "Template should be a static expression",
+          "fullDescription": "The logging message template should not vary between calls.",
+          "defaultLevel": "note",
+          "helpUri": "https://learn.microsoft.com/dotnet/fundamentals/code-analysis/quality-rules/ca2254",
+          "properties": {
+            "category": "Usage",
+            "isEnabledByDefault": true,
+            "tags": [
+              "Telemetry",
+              "EnabledRuleInAggressiveMode"
+            ]
+          }
+        },
+        "CS0105": {
+          "id": "CS0105",
+          "shortDescription": "Using directive appeared previously in this namespace",
+          "defaultLevel": "warning",
+          "helpUri": "https://msdn.microsoft.com/query/roslyn.query?appId=roslyn&k=k(CS0105)",
+          "properties": {
+            "category": "Compiler",
+            "isEnabledByDefault": true,
+            "tags": [
+              "Compiler",
+              "Telemetry"
+            ]
+          }
+        },
+        "CS8602": {
+          "id": "CS8602",
+          "shortDescription": "Dereference of a possibly null reference.",
+          "defaultLevel": "warning",
+          "helpUri": "https://msdn.microsoft.com/query/roslyn.query?appId=roslyn&k=k(CS8602)",
+          "properties": {
+            "category": "Compiler",
+            "isEnabledByDefault": true,
+            "tags": [
+              "Compiler",
+              "Telemetry"
+            ]
+          }
+        },
+        "CS8604": {
+          "id": "CS8604",
+          "shortDescription": "Possible null reference argument.",
+          "defaultLevel": "warning",
+          "helpUri": "https://msdn.microsoft.com/query/roslyn.query?appId=roslyn&k=k(CS8604)",
+          "properties": {
+            "category": "Compiler",
+            "isEnabledByDefault": true,
+            "tags": [
+              "Compiler",
+              "Telemetry"
+            ]
+          }
+        },
+        "CS8618": {
+          "id": "CS8618",
+          "shortDescription": "Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.",
+          "defaultLevel": "warning",
+          "helpUri": "https://msdn.microsoft.com/query/roslyn.query?appId=roslyn&k=k(CS8618)",
+          "properties": {
+            "category": "Compiler",
+            "isEnabledByDefault": true,
+            "tags": [
+              "Compiler",
+              "Telemetry"
+            ]
+          }
+        },
+        "S101": {
+          "id": "S101",
+          "shortDescription": "Types should be named in PascalCase",
+          "fullDescription": "Shared naming conventions allow teams to collaborate efficiently.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-101",
+          "properties": {
+            "category": "Minor Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "MainSourceScope",
+              "TestSourceScope",
+              "SonarWay"
+            ]
+          }
+        },
+        "S1066": {
+          "id": "S1066",
+          "shortDescription": "Mergeable \"if\" statements should be combined",
+          "fullDescription": "Nested code - blocks of code inside blocks of code - is eventually necessary, but increases complexity. This is why keeping the code as flat as possible, by avoiding unnecessary nesting, is considered a good practice.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-1066",
+          "properties": {
+            "category": "Major Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "MainSourceScope",
+              "TestSourceScope",
+              "SonarWay"
+            ]
+          }
+        },
+        "S1186": {
+          "id": "S1186",
+          "shortDescription": "Methods should not be empty",
+          "fullDescription": "An empty method is generally considered bad practice and can lead to confusion, readability, and maintenance issues. Empty methods bring no functionality and are misleading to others as they might think the method implementation fulfills a specific and identified requirement.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-1186",
+          "properties": {
+            "category": "Critical Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "MainSourceScope",
+              "TestSourceScope",
+              "SonarWay"
+            ]
+          }
+        },
+        "S125": {
+          "id": "S125",
+          "shortDescription": "Sections of code should not be commented out",
+          "fullDescription": "Commented-out code distracts the focus from the actual executed code. It creates a noise that increases maintenance code. And because it is never executed, it quickly becomes out of date and invalid.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-125",
+          "properties": {
+            "category": "Major Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "MainSourceScope",
+              "TestSourceScope",
+              "SonarWay"
+            ]
+          }
+        },
+        "S4487": {
+          "id": "S4487",
+          "shortDescription": "Unread \"private\" fields should be removed",
+          "fullDescription": "Private fields which are written but never read are a case of \"dead store\". Changing the value of such a field is useless and most probably indicates an error in the code.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-4487",
+          "properties": {
+            "category": "Critical Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "MainSourceScope",
+              "TestSourceScope",
+              "SonarWay"
+            ]
+          }
+        },
+        "S4792": {
+          "id": "S4792",
+          "shortDescription": "Configuring loggers is security-sensitive",
+          "fullDescription": "Configuring loggers is security-sensitive. It has led in the past to the following vulnerabilities:",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-4792",
+          "properties": {
+            "category": "Critical Security Hotspot",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "MainSourceScope",
+              "SonarWay"
+            ]
+          }
+        },
+        "S5122": {
+          "id": "S5122",
+          "shortDescription": "Having a permissive Cross-Origin Resource Sharing policy is security-sensitive",
+          "fullDescription": "Having a permissive Cross-Origin Resource Sharing policy is security-sensitive. It has led in the past to the following vulnerabilities:",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-5122",
+          "properties": {
+            "category": "Minor Security Hotspot",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "MainSourceScope",
+              "SonarWay"
+            ]
+          }
+        },
+        "S6444": {
+          "id": "S6444",
+          "shortDescription": "Not specifying a timeout for regular expressions is security-sensitive",
+          "fullDescription": "Not specifying a timeout for regular expressions can lead to a Denial-of-Service attack. Pass a timeout when using System.Text.RegularExpressions to process untrusted input because a malicious user might craft a value for which the evaluation lasts excessively long.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-6444",
+          "properties": {
+            "category": "Major Security Hotspot",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "MainSourceScope",
+              "SonarWay"
+            ]
+          }
+        },
+        "SYSLIB1045": {
+          "id": "SYSLIB1045",
+          "shortDescription": "Convert to 'GeneratedRegexAttribute'.",
+          "defaultLevel": "note",
+          "properties": {
+            "category": "GeneratedRegex",
+            "isEnabledByDefault": true
+          }
+        }
+      }
+    }
+  ]
+}
