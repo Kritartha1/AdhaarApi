@@ -90,14 +90,14 @@ namespace Adhaar.API.Tests.MigrationTest
 
         // Add similar tests for dropping other tables
 
-        [TearDown]
+       /* [TearDown]
         public void Cleanup()
         {
             using (var context = new AdhaarApiAuthDbContext(_options))
             {
                 context.Database.EnsureDeleted();
             }
-        }
+        }*/
     }
 
 }

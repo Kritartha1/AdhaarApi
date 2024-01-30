@@ -54,6 +54,7 @@ C:\Users\Nath\source\repos\New folder\New folder (2)\AdhaarApi\Adhaar.API\Logs\A
 C:\Users\Nath\source\repos\New folder\New folder (2)\AdhaarApi\Adhaar.API\Logs\Adhaar20240126.txt
 C:\Users\Nath\source\repos\New folder\New folder (2)\AdhaarApi\Adhaar.API\Logs\Adhaar20240127.txt
 C:\Users\Nath\source\repos\New folder\New folder (2)\AdhaarApi\Adhaar.API\Logs\Adhaar20240128.txt
+C:\Users\Nath\source\repos\New folder\New folder (2)\AdhaarApi\Adhaar.API\Logs\Adhaar20240129.txt
 C:\Users\Nath\source\repos\New folder\New folder (2)\AdhaarApi\Adhaar.API\Properties\launchSettings.json
 C:\Users\Nath\source\repos\New folder\New folder (2)\AdhaarApi\.editorconfig
 C:\Users\Nath\.nuget\packages\tesseract\5.2.0\x86\leptonica-1.82.0.dll

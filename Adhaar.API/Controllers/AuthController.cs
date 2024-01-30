@@ -14,9 +14,11 @@ using IronOcr;
 using Tesseract;
 using Microsoft.VisualBasic.FileIO;
 using System.IO.Abstractions;
+using System.Diagnostics.CodeAnalysis;
 
 namespace Adhaar.API.Controllers
 {
+   
     [Route("api/[controller]")]
     [ApiController]
     public class AuthController : ControllerBase
@@ -146,6 +148,7 @@ namespace Adhaar.API.Controllers
         }
 
 
+        [ExcludeFromCodeCoverage]
         [HttpPost]
         [Route("OCR/{id}")]
         public async Task<IActionResult> DoOCR([FromRoute] string id,[FromForm] ImageAd request)

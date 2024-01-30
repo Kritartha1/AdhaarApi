@@ -143,13 +143,13 @@ namespace Adhaar.API.Tests.MigrationTest
                 Assert.IsTrue(usersTableExists);
             }
 
-            [TearDown]
+           /* [TearDown]
             public void TearDown()
             {
                 // Clean up resources
                 _context.Database.EnsureDeleted();
                 _context.Dispose();
-            }
+            }*/
         }
     
 

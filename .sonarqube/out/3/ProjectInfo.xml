@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ProjectInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.sonarsource.com/msbuild/integration/2015/1">
-  <ProjectName>Adhaar.API.Tests</ProjectName>
+  <ProjectName>Adhaar.API</ProjectName>
   <ProjectLanguage>C#</ProjectLanguage>
-  <ProjectType>Test</ProjectType>
-  <ProjectGuid>a343b63d-b1f4-429b-a9b8-104092f94250</ProjectGuid>
-  <FullPath>C:\Users\Nath\source\repos\New folder\New folder (2)\AdhaarApi\Adhaar.API.Tests\Adhaar.API.Tests.csproj</FullPath>
+  <ProjectType>Product</ProjectType>
+  <ProjectGuid>abe1fb7b-7657-48f8-aa95-e9a655315407</ProjectGuid>
+  <FullPath>C:\Users\Nath\source\repos\New folder\New folder (2)\AdhaarApi\Adhaar.API\Adhaar.API.csproj</FullPath>
   <IsExcluded>false</IsExcluded>
   <AnalysisResults>
     <AnalysisResult Id="FilesToAnalyze" Location="C:\Users\Nath\source\repos\New folder\New folder (2)\AdhaarApi\.sonarqube\conf\3\FilesToAnalyze.txt" />

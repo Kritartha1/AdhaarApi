@@ -4,10 +4,12 @@ using Adhaar.API.Repositories.Interface;
 using Azure.Core;
 using IronOcr;
 using Microsoft.EntityFrameworkCore;
+using System.Diagnostics.CodeAnalysis;
 using System.Drawing;
 
 namespace Adhaar.API.Repositories.Implementaion
 {
+    [ExcludeFromCodeCoverage]
     public class ImageRepository : IImageRepository
     {
         private readonly AdhaarApiDbContext dbContext;

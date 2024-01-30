@@ -8,11 +8,13 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using SixLabors.ImageSharp.Drawing;
+using System.Diagnostics.CodeAnalysis;
 using System.Text.Json;
 using System.Text.RegularExpressions;
 
 namespace Adhaar.API.Controllers
 {
+   // [ExcludeFromCodeCoverage]
     [Route("api/[controller]")]
     [ApiController]
     public class ImageController : ControllerBase
