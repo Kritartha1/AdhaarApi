@@ -1,7 +1,11 @@
 using Adhaar.API.Data;
+using Adhaar.API.Helper;
 using Adhaar.API.Mappings;
+using Adhaar.API.Models.Domain;
 using Adhaar.API.Repositories.Implementaion;
 using Adhaar.API.Repositories.Interface;
+using Adhaar.API.Services;
+using Adhaar.API.SMS;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -10,6 +14,8 @@ using Microsoft.OpenApi.Models;
 using Serilog;
 using System.Diagnostics.CodeAnalysis;
 using System.Text;
+using Twilio;
+using Twilio.Rest.Api.V2010.Account;
 
 [ExcludeFromCodeCoverage]
 public class Program
@@ -38,8 +44,17 @@ public class Program
             options.SwaggerDoc("v1", new OpenApiInfo
             {
                 Title = "Adhaar API",
-                Version = "v1"
-            });
+                Version = "v1",
+                Contact=new OpenApiContact
+                {
+                    Name="IdentifyMe Contact",
+                    Email="example@email.com",
+                    Url=new Uri("https://example.com/Contact"),
+                   /* smtp://live.smtp.mailtrap.io:587*/
+
+                }
+
+            }) ;
             options.AddSecurityDefinition(JwtBearerDefaults.AuthenticationScheme, new OpenApiSecurityScheme
             {
                 Name = "Authorization",
@@ -66,6 +81,25 @@ public class Program
     });
         });
 
+      /*  string accountSid = Keys.SMSAccountIdentification;
+        string authToken = Keys.SMSAccountPassword;
+
+        TwilioClient.Init(accountSid, authToken);
+
+        var mssg = MessageResource.CreateAsync(
+            body: "This is the ship that made the Kessel Run in fourteen parsecs?",
+            from: new Twilio.Types.PhoneNumber(Keys.SMSAccountFrom),
+            to: new Twilio.Types.PhoneNumber("+917008196889")
+        );*/
+
+        builder.Services.Configure<EmailSettings>(builder.Configuration.GetSection("EmailSettings"));
+
+        ///////////////////////////////////////////////////////////////////////////////////////////
+        builder.Services.Configure<IdentityOptions>(opts=>opts.SignIn.RequireConfirmedEmail = true);
+        ///////////////////////////////////////////////////////////////////////////////////////////
+        ///
+        builder.Services.AddTransient<IMailService, MailService>();
+
         builder.Services.AddDbContext<AdhaarApiDbContext>(options =>
         options.UseSqlServer(builder.Configuration.GetConnectionString("AdhaarConnectionString"))
         );
@@ -77,6 +111,7 @@ public class Program
         builder.Services.AddScoped<IUserRepository, SQLUserRepository>();
         builder.Services.AddScoped<ITokenRepository, TokenRepository>();
         builder.Services.AddScoped<IImageRepository, ImageRepository>();
+       
 
 
         builder.Services.AddAutoMapper(typeof(AutoMapperprofiles));
@@ -95,6 +130,7 @@ public class Program
             options.Password.RequiredLength = 6;
             options.Password.RequiredUniqueChars = 1;
         });
+       
 
         builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(
             options =>

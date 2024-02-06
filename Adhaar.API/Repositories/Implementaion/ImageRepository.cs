@@ -47,6 +47,7 @@ namespace Adhaar.API.Repositories.Implementaion
             return await dbContext.Images.ToListAsync();
         }
 
+        [ExcludeFromCodeCoverage]
         public async Task<ImageAd?> GetByIdAsync(Guid id)
         {
             return await dbContext.Images.FirstOrDefaultAsync(x => (x.Id).Equals(id));

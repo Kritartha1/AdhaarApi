@@ -10,6 +10,8 @@ namespace Adhaar.API.Models.Domain
         public Guid? ImageId { get; set; }
         public ImageAd? Image { get; set; }
 
+        
+
 
     }
 }

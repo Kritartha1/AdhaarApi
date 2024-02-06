@@ -21,5 +21,7 @@ namespace Adhaar.API.Models.DTO
          public string? State { get; set; }*/
         public Guid? ImageId { get; set; }
         public ImageAd? Image { get; set; }
+
+
     }
 }

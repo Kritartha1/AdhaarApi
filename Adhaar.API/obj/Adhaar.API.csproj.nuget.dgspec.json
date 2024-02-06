@@ -52,6 +52,10 @@
               "target": "Package",
               "version": "[2024.1.17, )"
             },
+            "MailKit": {
+              "target": "Package",
+              "version": "[3.5.0, )"
+            },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
               "version": "[7.0.14, )"
@@ -81,6 +85,10 @@
             "Microsoft.IdentityModel.Tokens": {
               "target": "Package",
               "version": "[7.2.0, )"
+            },
+            "MimeKit": {
+              "target": "Package",
+              "version": "[4.3.0, )"
             },
             "Serilog": {
               "target": "Package",
@@ -113,6 +121,10 @@
             "Tesseract": {
               "target": "Package",
               "version": "[5.2.0, )"
+            },
+            "Twilio": {
+              "target": "Package",
+              "version": "[6.16.1, )"
             }
           },
           "imports": [
