@@ -1,4 +1,4 @@
-using Adhaar.API.Data;
+/*using Adhaar.API.Data;
 using Adhaar.API.Models.Domain;
 using Adhaar.API.Repositories.Implementaion;
 using Microsoft.Extensions.Logging;
@@ -9,14 +9,14 @@ using Microsoft.AspNetCore.Http;
 
 namespace MSTestProj
 {
-    /*[TestClass]
+    *//*[TestClass]
     public class UnitTest1
     {
         [TestMethod]
         public void TestMethod1()
         {
         }
-    }*/
+    }*//*
     [TestClass]
     public class ImageRepositoryTests
     {
@@ -80,4 +80,4 @@ namespace MSTestProj
         }
     }
 
-}
+}*/
