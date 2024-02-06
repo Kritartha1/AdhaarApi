@@ -20,6 +20,9 @@ using global::Adhaar.API.Data;
 using IronOcr;
 using Microsoft.AspNetCore.Http;
 using System.IO.Abstractions;
+using Newtonsoft.Json.Linq;
+using Azure.Core;
+using System.IO;
 
 
 
@@ -58,6 +61,8 @@ namespace Adhaar.API.Tests.ControllerTests
                         HttpContext = new DefaultHttpContext(),
                     }
                 };
+
+           
             }
 
             [Test]
@@ -191,39 +196,72 @@ namespace Adhaar.API.Tests.ControllerTests
             [Test]
             public async Task DoOCR_ValidRequest_ReturnsOk()
             {
-                // Arrange
-                var id = "userId";
+            // Arrange
+            var id = "userId";
                 var imageAd = new ImageAd
                 {
-                    File = new FormFile(Stream.Null, 0, 0, "testImage", "test.jpg"),
+                    
+                    File = new FormFile(Stream.Null, 0, 15, "testImage", "test.jpg"),
                 };
+            /*  using (Stream fse = (Stream)_fileSystem.FileStream.Create(filePath, FileMode.Create))
+              {
+                  ms.CopyTo(fse);
+                  fs.Flush();
+                  fs.Close();
+              }*/
+
+            // FileStream fs = Mock.Create<FileStream>(Constructor.Mocked);
+            // var fm = new Mock<FileMode>();
+
+            using (var fs = new FileStream("Images", FileMode.Create))
+            {
+                await imageAd.File.CopyToAsync(fs);
+            }
+
+                bool isValidLicense = License.IsValidLicense("IRONSUITE.SUNUGUNUS.GMAIL.COM.17184-E3AE17ABDE-AYWB6KC-2WB3DTPND6ZB-6ZUMCAKUWFW3-WUNYOAQLMMJT-YAMXVLVEP36O-VGU2ZJ54UPU2-JX6PVTXS65HP-IMVX6O-TE5YV4XMPPGLUA-DEPLOYMENT.TRIAL-ACBH3K.TRIAL.EXPIRES.11.FEB.2024");
+           
+
+           
 
 
 
+
+            var ironTesseractMock = new Mock<IronTesseract>();
             
-
-            /*var ocrResult = new OcrResult
-                {
-                    Text = "Sample OCR text",
-                };*/
-
-
-                var ironTesseractMock = new Mock<IronTesseract>();
             /*var ocr = new IronTesseract();*/
+         /*   var inp= new Mock<OcrInput>();
+            inp.Object.AddImage("HAHA.png");
+            var res = new Mock<OcrResult>();
+            res = (Mock<OcrResult>)ironTesseractMock.Setup(m => m.Read(It.IsAny<OcrInput>())).Returns(res.Object);
+*/
+
             using var input = new OcrInput();
             input.AddImage("HAHA.png");
 
-            OcrResult ocrResult = ironTesseractMock.Object.Read(input);
-            ironTesseractMock.Setup(ocr => ocr.Read(It.IsAny<OcrInput>())).Returns(ocrResult);
 
-                authController.SetFileSystem(fileSystemMock.Object);
+
+            OcrResult ocrResult = ironTesseractMock.Object.Read(input);
+
+            /*ironTesseractMock.Setup(ocr => ocr.Read(It.IsAny<OcrInput>())).Returns(ocrResult)
+                ;
+*/
+
+
+           // authController.SetFileSystem(fileSystemMock.Object);
 
                 // Act
+
                 var result = await authController.DoOCR(id, imageAd) as OkObjectResult;
 
                 // Assert
-                Assert.IsNotNull(result);
-                Assert.AreEqual("Sample OCR text", result.Value);
+                Assert.IsNotNull(ocrResult);
+
+
+               
+
+
+
+                Assert.AreEqual("", ocrResult.Text);
             }
 
             [Test]

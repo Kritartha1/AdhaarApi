@@ -170,6 +170,7 @@ namespace Adhaar.API.Tests.ControllerTests
 
             mapperMock.Setup(m => m.Map<ImageAd>(It.IsAny<AddImageRequestDto>()))
                 .Returns(imageDomainModel);
+            
 
             userRepositoryMock.Setup(ur => ur.GetByIdAsync(It.IsAny<string>()))
                 .ReturnsAsync(new User { Id = id });
