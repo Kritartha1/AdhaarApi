@@ -33,9 +33,9 @@ namespace Adhaar.API.Services
             TwilioClient.Init(accountSid, authToken);
 
             var mssg =await MessageResource.CreateAsync(
-                body: "This is the ship that made the Kessel Run in fourteen parsecs?",
+                body: message.Body,
                 from: new Twilio.Types.PhoneNumber(Keys.SMSAccountFrom),
-                to: new Twilio.Types.PhoneNumber("+917008196889")
+                to: new Twilio.Types.PhoneNumber(message.Destination)
             );
 
             Trace.WriteLine( mssg.Status );

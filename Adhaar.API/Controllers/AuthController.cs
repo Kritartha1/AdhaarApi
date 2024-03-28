@@ -92,7 +92,6 @@ namespace Adhaar.API.Controllers
 
             if (identityResult.Succeeded)
             {
-
                 //Add roles to this User
                 if (registerRequestDto.Roles != null && registerRequestDto.Roles.Any())
                 {
@@ -102,7 +101,6 @@ namespace Adhaar.API.Controllers
                         var identity_user = await userRepository.CreateAsync(identityUser);
                         if (identity_user == null)
                         {
-
                             await userManager.DeleteAsync(identityUser);
 
                             return BadRequest("Oops! something went wrong!");
@@ -123,7 +121,7 @@ namespace Adhaar.API.Controllers
         }
 
 
-        [HttpPost]
+        /*[HttpPost]
         [Route("register/confEmail")]
 
         public async Task<IActionResult> RegisterEmailConf([FromBody] RegisterUserRequestDto registerRequestDto)
@@ -213,12 +211,12 @@ namespace Adhaar.API.Controllers
 
             return BadRequest("Oops! something went wrong!");
 
-        }
+        }*/
 
        
         [HttpGet]
         [Route("Token/{id}")]
-        public async Task<IActionResult> GenerateToken([FromRoute] string id)
+        public async Task<IActionResult> GenerateEmailToken([FromRoute] string id)
         {
             var user = await userRepository.GetByIdAsync(id);
             
@@ -231,24 +229,22 @@ namespace Adhaar.API.Controllers
 
             if (token == null)
             {
-              
-
                 return StatusCode(StatusCodes.Status500InternalServerError, "Token not created");
-
             }
 
-            var confirmationLink = Url.Action( nameof(ConfirmEmail), "auth", new { token, email = user.Email });
-            if (confirmationLink == null)
+            /*var confirmationLink = Url.Action( nameof(ConfirmEmail), "auth", new { token, email = user.Email });*/
+            
+            /*if (confirmationLink == null)
             {
                 return StatusCode(StatusCodes.Status406NotAcceptable, "Token link not created!");
 
-            }
+            }*/
 
             var message = new MailRequest();
             message.ToEmail = user.Email;
             message.Subject = "Confirmation email link";
-            message.Body = confirmationLink;
-            
+            /* message.Body = confirmationLink;*/
+            message.Body = "Copy this token:  " + token;
 
             var t = await mailService.SendMailAsync(message);
 
@@ -256,20 +252,8 @@ namespace Adhaar.API.Controllers
             {
                 return StatusCode(StatusCodes.Status500InternalServerError, "Email not sent");
             }
-            return Ok("Email sent successfully!");
+            return Ok(new { mssg= "Email sent successfully" });
         }
-
-        
-       
-
-
-
-
-
-
-
-
-
 
         //Post :  /api/Auth/Login
 
@@ -289,8 +273,6 @@ namespace Adhaar.API.Controllers
                     if (roles != null)
                     {
                         var jwtToken = tokenRepository.CreateJWTToken(user, roles.ToList());
-                        
-                     
                         var response = new LoginResponseDto
                         {
                             Email = loginRequestDto.Username,
@@ -300,11 +282,7 @@ namespace Adhaar.API.Controllers
                         };
                         return Ok(response);
 
-                        
-                        
-
                     }
-                    
                     //create token
                     return BadRequest("No roles provided!");
                 }
@@ -314,8 +292,6 @@ namespace Adhaar.API.Controllers
         }
 
         
-
-
         [ExcludeFromCodeCoverage]
         [HttpPost]
         [Route("OCR/{id}")]
@@ -407,14 +383,14 @@ namespace Adhaar.API.Controllers
             throw new NotImplementedException();
         }
 
-        [HttpGet]
+        [HttpPost]
         [Route("ConfirmEmail")]
-        public async Task<IActionResult> ConfirmEmail(string token,string email)
+        public async Task<IActionResult> ConfirmEmail([FromBody]ConfirmEmailRequestDto req)
         {
-            var user = await userManager.FindByEmailAsync(email);
+            var user = await userManager.FindByEmailAsync(req.Email);
             if (user != null)
             {
-                var result = await userManager.ConfirmEmailAsync(user,token);
+                var result = await userManager.ConfirmEmailAsync(user,req.Token);
                 if (result.Succeeded)
                 {
                     var u=await userRepository.GetByIdAsync(user.Id);
@@ -428,13 +404,114 @@ namespace Adhaar.API.Controllers
 
 
                     //create token
-                    return Ok("Email verified successfully");
+                    return Ok(new { mssg="Email verified successfully" });
                 }
-                return StatusCode(StatusCodes.Status412PreconditionFailed,"Email not verified!");
+                return StatusCode(StatusCodes.Status412PreconditionFailed,"Invalid token!");
             }
             return NotFound("No user found!");
 
         }
+
+        [HttpGet]
+        [Route("CheckConfirmEmail/{id}")]
+
+        public async Task<IActionResult> CheckEmailConfirmed([FromRoute]string id)
+        {
+
+            var user =await  userRepository.GetByIdAsync(id);
+            if (user == null)
+            {
+                return NotFound("No user found");
+            }
+            bool t=user.EmailConfirmed;
+            if (t)
+            {
+                return Ok(new {mssg= "Email was validated" });
+            }
+
+            return NotFound("Token not valid!");
+
+        }
+
+
+        [HttpGet]
+        [Route("PasswordReset/{email}")]
+        public async Task<IActionResult> GeneratePasswordResetToken([FromRoute] string email)
+        {
+            var user=await userManager.FindByEmailAsync(email);
+            
+
+           // var user = await userRepository.GetByIdAsync(id);
+
+            if (user == null)
+            {
+                return NotFound("User not found");
+            }
+
+            var token = await userManager.GeneratePasswordResetTokenAsync(user);
+           // var token = await userManager.GenerateEmailConfirmationTokenAsync(user);
+
+            if (token == null)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, "Token not created");
+            }
+
+            var message = new MailRequest();
+            message.ToEmail = user.Email;
+            message.Subject = "Password reset token";
+            /* message.Body = confirmationLink;*/
+            message.Body = "Copy this token:  " + token;
+
+
+            var t = await mailService.SendMailAsync(message);
+
+            if (!t)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, "Email not sent");
+            }
+            return Ok(new { mssg = "Email sent successfully" });
+        }
+
+
+        [HttpPost]
+        [Route("change-password")]
+        public async Task<IActionResult> ChangePassword([FromBody] ResetPassword req)
+        {
+            var user = await userManager.FindByEmailAsync(req.Email);
+            if (user != null)
+            {
+                var result= await userManager.ResetPasswordAsync(user,req.Token,req.Password);
+               // var result = await userManager.ConfirmEmailAsync(user, req.Token);
+                if (result.Succeeded)
+               
+                {
+                   /* var u = await userRepository.GetByIdAsync(user.Id);
+                    if (u == null)
+                    {
+                        return BadRequest("haha");
+                    }
+                    u.EmailConfirmed = true;
+                    await dbContext.SaveChangesAsync();
+                    //Get the roles of user
+*/
+
+                    //create token
+                    return Ok(new { mssg = "Password changed successfully" });
+                }
+
+                foreach (var err in result.Errors)
+                {
+                    ModelState.AddModelError(err.Code, err.Description);
+                }
+
+               // return BadRequest(ModelState);
+                return StatusCode(StatusCodes.Status412PreconditionFailed, ModelState);
+            }
+            return NotFound("No user found!");
+
+        }
+
+
     }
 }
 

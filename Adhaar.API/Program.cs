@@ -99,6 +99,7 @@ public class Program
         ///////////////////////////////////////////////////////////////////////////////////////////
         ///
         builder.Services.AddTransient<IMailService, MailService>();
+        builder.Services.AddTransient<IIdentityMessageService, SmsService>();
 
         builder.Services.AddDbContext<AdhaarApiDbContext>(options =>
         options.UseSqlServer(builder.Configuration.GetConnectionString("AdhaarConnectionString"))
@@ -130,6 +131,8 @@ public class Program
             options.Password.RequiredLength = 6;
             options.Password.RequiredUniqueChars = 1;
         });
+
+        builder.Services.Configure<DataProtectionTokenProviderOptions>(options => options.TokenLifespan=TimeSpan.FromMinutes(5) );
        
 
         builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(
@@ -166,6 +169,7 @@ public class Program
             options.AllowAnyHeader();
             options.AllowAnyMethod();
             options.AllowAnyOrigin();
+            //options.AllowCredentials();
         });
 
         app.UseAuthentication();
